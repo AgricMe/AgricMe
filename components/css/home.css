@@ -1,0 +1,7 @@
+.nav-bar-cont{
+    display: flex;
+    justify-content: center;
+}
+.nav-bar{
+    width: 85%;
+}
