@@ -16,5 +16,23 @@
 }
 .nav-link{
     font-size: 20px;
-    font-weight: 700;
+    color: #274C5B;
+}
+.hero-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.hero-cont{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.yellow-btn{
+    color: var(--logo-black);
+    background-color: var(--logo-yellow);
+    border : none;
+    border-radius: var(--border-radius);
+    padding: 16px 23px;
+    cursor: pointer;
 }
