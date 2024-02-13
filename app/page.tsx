@@ -3,14 +3,17 @@ import Nav from '@/components/home/Nav'
 import Hero from '@/components/home/Hero'
 import FirstSection from '@/components/home/FirstSection'
 import AnimationWrapper from './AnimationWrapper'
+import ThirdSection from '@/components/home/thirdSection'
+
 function Home() {
   return (
     <div>
       <Nav />
       <AnimationWrapper>
+        <FirstSection />
         <Hero />
+        <ThirdSection />
       </AnimationWrapper>
-      <FirstSection />
     </div>
   )
 }
