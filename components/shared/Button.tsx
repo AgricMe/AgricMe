@@ -7,7 +7,7 @@ type buttonVariant = {
 
 const Button = ({text, clas}:buttonVariant) => {
   return (
-    <div><button className={clas}>{text}</button></div>
+    <button className={clas}>{text}</button>
   )
 }
 

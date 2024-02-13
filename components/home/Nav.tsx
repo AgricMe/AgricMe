@@ -15,7 +15,7 @@ const Nav = () => {
             <div className='nav-bar'>
                 <Image 
                 src="/logo/agricme-logo.png"
-                alt="fuck you"
+                alt="logo"
                 width={160}
                 height={36.91}
                 />
