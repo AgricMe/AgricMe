@@ -9,7 +9,7 @@ const Hero = () => {
                 <div className='hero-btn-txt'>
                     <p className='custom-txt'>100% Natural Food</p>
                     <h2>Choose the best healthier way of life(Dummie Text)</h2>
-                    <div className='btn-div'>
+                    <div className='.green-btn'>
                         <Button clas={"yellow-btn"} text={"Sign up"} />
                         <Button clas={"green-btn"} text={"Login"} />
                     </div>
