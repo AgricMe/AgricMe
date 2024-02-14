@@ -78,5 +78,12 @@
 }
 .first-sec{
     background-color: rgb(216, 233, 233);
-    height: 300px;
+    padding: 0px 10px 0px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 700px;
+}
+.first-sec section{
+    height: 100%;
+    position: relative;
 }

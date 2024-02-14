@@ -10,8 +10,8 @@ function Home() {
     <div>
       <Nav />
       <AnimationWrapper>
-        <FirstSection />
         <Hero />
+        <FirstSection />
         <ThirdSection />
       </AnimationWrapper>
     </div>
