@@ -7,6 +7,7 @@ import ThirdSection from '@/components/home/thirdSection'
 import SecondSection from '@/components/home/secondSection'
 import Products from '@/components/home/Products'
 import FourthSection from '@/components/home/FourthSection'
+import Footer from '@/components/home/Footer'
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
       <ThirdSection />
       <Products />
       <FourthSection/>
+      <Footer />
     </div>
   )
 }
