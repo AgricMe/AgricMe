@@ -399,3 +399,17 @@
     backdrop-filter: opacity(0.2);
     border-radius: 50%;
 }
+.fourth-sec{
+    background-color: #fcfcfc;
+    height: 500px;
+    position: relative;
+}
+.abs-img-left{
+    height: 100% !important;
+    width: 60% !important;
+    object-fit: cover;
+    position: absolute;
+    left: -400px !important;
+    top: 0;
+    transform: rotate(-180deg);
+}
