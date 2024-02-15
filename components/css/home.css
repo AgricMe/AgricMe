@@ -450,7 +450,7 @@
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-60%);
+    transform: translateY(-50%);
     height: 220px;
     width: 0.8px;
     background-color: #525C60;
@@ -460,7 +460,7 @@
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-60%);
+    transform: translateY(-50%);
     height: 220px;
     width: 0.8px;
     background-color: #525C60;
@@ -496,15 +496,43 @@
     font-size: 13px;
     font-weight: 400;
 }
-.footer section article section{
+.agri{
     display: flex;
-    gap: 20pc;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 20px;
 }
-.footer section article section span{
+.agri1{
     width: 50px;
+    justify-content: center;
+    align-items: center;
     aspect-ratio: 1;
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background-color: #7EB693;
+    background-color: #eff6f1;
+}
+.iconfoot{
+    font-size: 25px;
+}
+.copyright{
+    margin-top: 50px;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #525C60;
+}
+.textFoot{
+    text-align: center;
+    color: #274C5B;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+.boldAgri{
+    font-size: 18px;
+    font-weight: 700;
 }

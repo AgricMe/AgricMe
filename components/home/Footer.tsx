@@ -1,4 +1,7 @@
 import Image from "next/image"
+import { CgCopyright } from "react-icons/cg"
+import { FaFacebook, FaInstagramSquare, FaTwitter } from "react-icons/fa"
+import { FaPinterest } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -30,11 +33,20 @@ const Footer = () => {
                     />
                 </div>
                 <div style={{textAlign: "center", color: "#525C60", fontSize: "13px", fontWeight: "400"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga dolorem rem voluptatum magnam maiores, earum, magni culpa quas ad.</div>
-                <section>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </section>
+                <h3 className="agri">
+                    <span className="agri1">
+                        <FaInstagramSquare className="iconfoot" />
+                    </span>
+                    <span className="agri1">
+                        <FaFacebook className="iconfoot" />
+                    </span>
+                    <span className="agri1">
+                        <FaTwitter className="iconfoot" />
+                    </span>
+                    <span className="agri1">
+                        <FaPinterest className="iconfoot"/>
+                    </span>
+                </h3>
             </article>
             <article>
                 <section className="line2"></section>
@@ -46,6 +58,12 @@ const Footer = () => {
                 <span>Changelog</span>
             </article>
         </section>
+        <div className="copyright">
+            <span className="textFoot">
+                Copyright <CgCopyright />
+                <span className="boldAgri">AgricMe</span>
+            </span>
+        </div>
     </section>
   )
 }
