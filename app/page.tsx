@@ -5,6 +5,8 @@ import FirstSection from '@/components/home/FirstSection'
 import AnimationWrapper from './AnimationWrapper'
 import ThirdSection from '@/components/home/thirdSection'
 import SecondSection from '@/components/home/secondSection'
+import Products from '@/components/home/Products'
+import FourthSection from '@/components/home/FourthSection'
 
 function Home() {
   return (
@@ -12,10 +14,12 @@ function Home() {
       <Nav />
       <AnimationWrapper>
         <Hero />
-        <FirstSection />
-        <SecondSection />
-        <ThirdSection />
       </AnimationWrapper>
+      <FirstSection />
+      <SecondSection />
+      <ThirdSection />
+      <Products />
+      <FourthSection/>
     </div>
   )
 }
