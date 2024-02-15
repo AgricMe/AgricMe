@@ -8,6 +8,12 @@ const FourthSection = () => {
         className="abs-img-left"
         fill 
         />
+        <Image
+        src={"/component-images/fourth-sec2.png"}
+        alt="fourth-sec2"
+        className="abs-img-right"
+        fill 
+        />
     </div>
   )
 }

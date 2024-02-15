@@ -409,7 +409,15 @@
     width: 60% !important;
     object-fit: cover;
     position: absolute;
-    left: -400px !important;
+    left: -430px !important;
     top: 0;
     transform: rotate(-180deg);
+}
+.abs-img-right{
+    height: 100% !important;
+    width: 60% !important;
+    object-fit: cover;
+    position: absolute;
+    left: 1000px !important;
+    top: 0;
 }
