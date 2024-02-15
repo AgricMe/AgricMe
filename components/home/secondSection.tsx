@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-
-=======
 import Image from "next/image"
 import image1 from "@/public/icons/secondSections/image1.jpg"
 import image2 from "@/public/icons/secondSections/image2.jpg"
->>>>>>> Nathbranch
 const SecondSection = () => {
   return (
     <section className="blog">
@@ -22,9 +18,6 @@ const SecondSection = () => {
                     </button>
                 </div>
             </div>
-<<<<<<< HEAD
-            <div className="blogMid"></div>
-=======
             <div className="blogMid">
                 <article style={{backgroundImage: `url(${image1.src})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
                     <div>
@@ -73,7 +66,6 @@ const SecondSection = () => {
                     </div>
                 </article>
             </div>
->>>>>>> Nathbranch
         </section>
     </section>
   )
