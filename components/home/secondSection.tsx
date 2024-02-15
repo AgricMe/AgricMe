@@ -1,4 +1,6 @@
-
+import Image from "next/image"
+import image1 from "@/public/icons/secondSections/image1.jpg"
+import image2 from "@/public/icons/secondSections/image2.jpg"
 const SecondSection = () => {
   return (
     <section className="blog">
@@ -16,7 +18,54 @@ const SecondSection = () => {
                     </button>
                 </div>
             </div>
-            <div className="blogMid"></div>
+            <div className="blogMid">
+                <article style={{backgroundImage: `url(${image1.src})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
+                    <div>
+                        <span>
+                            25 Nov
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                        <Image 
+                        src="/icons/secondSections/Vectorperson.png"
+                        alt='admin'
+                        width={15}
+                        height={15}
+                        />
+                        <span>By Rachi Card</span>
+                        </span>
+                        <span>The Benefits of Vitamin D & How to Get It</span>
+                        <span>Simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
+                        <button>
+                            Read More
+                        </button>
+                    </div>
+                </article>
+                <article style={{backgroundImage: `url(${image2.src})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
+                    <div>
+                        <span>
+                            25 Nov
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                        <Image 
+                        src="/icons/secondSections/Vectorperson.png"
+                        alt='admin'
+                        width={15}
+                        height={15}
+                        />
+                        <span>By Rachi Card</span>
+                        </span>
+                        <span>The Benefits of Vitamin D & How to Get It</span>
+                        <span>Simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
+                        <button>
+                            Read More
+                        </button>
+                    </div>
+                </article>
+            </div>
         </section>
     </section>
   )

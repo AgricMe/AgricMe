@@ -184,6 +184,8 @@
 .blog section{
     width: 100%;
     max-width: 1000px;
+    padding-top: 20px;
+    padding-bottom: 40px;
     display: flex;
     gap: 46px;
     flex-direction: column;
@@ -194,7 +196,7 @@
     flex-direction: column;
 }
 .blogTop span{
-    font-size: 18px;
+    font-size: 20px;
     color: #7EB693;
 }
 .blogTop div{
@@ -203,5 +205,197 @@
 }
 .blogTop > div > span{
     margin-right: auto;
-    font-size: 30px;
+    font-size: 40px;
+    color: #274C5B;
+    max-width: 600px;
+    font-weight: 800;
+}
+.blogMid{
+    display: flex;
+    gap: 46px;
+}
+.blogMid article{
+    width: 500px;
+    height: 350px;
+    border-radius: 32px;
+    position: relative;
+}
+.blogMid div:nth-child(1){
+    position: absolute;
+    top: 33px;
+    left: 22px;
+    width: 60px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.blogMid div:nth-child(1) span{
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin: 2px;
+}
+.blogMid div:nth-child(2){
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    right: 20px;
+    border-radius: 16px;
+    background-color: white;
+    height: 200px;
+    box-shadow: 0px 20px 35px 0px #A7A7A740;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.blogMid div:nth-child(2) span:nth-child(1){
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 14px;
+}
+.blogMid div:nth-child(2) span:nth-child(2){
+    color: #274C5B;
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.blogMid div:nth-child(2) span:nth-child(3){
+    color: #525C60;
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+.blogMid div:nth-child(2) button{
+    width: 150px;
+    padding-block: 10px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background-color: #EFD372;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: #274C5B; 
+}
+/* products */
+.products{
+    width: 100vw;
+    padding-block: 40px;
+    display: grid;
+    place-items: center;
+}
+.products article{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+.products article section{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.product{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.product div:nth-child(1){
+    height: 220px;
+    display: grid;
+    place-items: center;
+    background-color: #EBF4F3;
+    position: relative;
+}
+.product div:nth-child(1) img{
+    transform: scale(0.8);
+}
+.product div:nth-child(1):hover article{
+    opacity: 1;
+}
+.product div:nth-child(1) article{
+    opacity: 0;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: all;
+    transition-duration: 300ms;
+}
+.product div:nth-child(1) article span{
+    display: grid;
+    place-items: center;
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+.product div:nth-child(1) article span:hover{
+    background-color: white;
+}
+.product div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding-top: 8px;
+}
+.product div:nth-child(2) span{
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+.product div:nth-child(2) div{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.product div:nth-child(2) div span{
+    width: 10px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    border: 1px solid #525C60;
+}
+.product div:nth-child(2) div a:nth-child(1){
+    font-size: 15px;
+    font-weight: 400;
+    color: #525C60;
+}
+.product div:nth-child(2) div a:nth-child(2){
+    font-size: 15px;
+    font-weight: 400;
+    color: #7EB693;
+    text-decoration: line-through;
+}
+.products article button{
+    align-self: center;
+    width: 180px;
+    display: grid;
+    place-items: center;
+    height: 60px;
+    border-radius: 16px;
+    border: none;
+    background-color: #7EB693;
+}
+.products article button div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.products article button div span:nth-child(1){
+   font-size: 18px;
+   font-weight: 700;
+   color: #ffffff; 
+}
+.products article button div span:nth-child(2){
+    padding: 10px;
+    backdrop-filter: opacity(0.2);
+    border-radius: 50%;
 }
