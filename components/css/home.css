@@ -403,6 +403,8 @@
     background-color: #fcfcfc;
     height: 500px;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 .abs-img-left{
     height: 100% !important;
@@ -420,4 +422,7 @@
     position: absolute;
     left: 1000px !important;
     top: 0;
+}
+.fourth-sec-items{
+    text-align: center;
 }
