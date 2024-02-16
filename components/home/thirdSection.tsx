@@ -1,5 +1,4 @@
 import Image from "next/image"
-import "../css/thirdSection.css"
 
 const ThirdSection = () => {
   return (
