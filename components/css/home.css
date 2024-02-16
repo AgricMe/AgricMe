@@ -471,7 +471,28 @@
     right: 0;
     border-radius: 12px;
     top: 12%;
-    padding: 0 60px;
+    padding: 0 75px;
+    display: flex;
+    align-items: center;
+}
+.fourth-sec-abs-cont h3{
+    color: #274C5B;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.fourth-sec-content{
+    margin-top: 15px;
+}
+.fourth-sec-content-text{
+    margin-top: 10px;
+}
+.fourth-sec-content-text h4{
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #274C5B;
+}
+.fourth-sec-content-text p{
+    font-size: 14px;
 }
 /* footer */
 .footer{
