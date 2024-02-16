@@ -8,6 +8,7 @@ import SecondSection from '@/components/home/secondSection'
 import Products from '@/components/home/Products'
 import Testimonial from '@/components/home/Testimonial'
 import Footer from '@/components/home/Footer'
+import FourthSection from '@/components/home/FourthSection'
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
       <ThirdSection />
       <Products />
       <Testimonial />
+      <FourthSection />
       <Footer />
     </div>
   )
