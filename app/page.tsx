@@ -9,6 +9,7 @@ import Products from '@/components/home/Products'
 import Testimonial from '@/components/home/Testimonial'
 import Footer from '@/components/home/Footer'
 import FourthSection from '@/components/home/FourthSection'
+import NewsLetter from '@/components/home/NewsLetter'
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
       <Products />
       <Testimonial />
       <FourthSection />
+      <NewsLetter />
       <Footer />
     </div>
   )

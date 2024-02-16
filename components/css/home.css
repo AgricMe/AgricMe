@@ -494,6 +494,16 @@
 .fourth-sec-content-text p{
     font-size: 14px;
 }
+/* News-letter */
+.news-letter{
+    display: flex;
+    justify-content: center;
+}
+.news-letter-cont{
+    width: 70%;
+    height: 300px;
+    border-radius: 20px;
+}
 /* footer */
 .footer{
     margin-top: 50px;
