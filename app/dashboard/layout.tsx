@@ -16,7 +16,9 @@ export default function RootLayout({
         <div className="sidebar">
 
         </div>
-        <div className="dashboard-children">{children}</div>
+        <div className="dashboard-children">
+            <div className="dashboard-children-cont">{children}</div>
+        </div>
     </div>
   );
 }
