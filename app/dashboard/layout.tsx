@@ -17,7 +17,7 @@ export default function RootLayout({
 
         </div>
         <div className="dashboard-children">
-            <div className="dashboard-children-cont">{children}</div>
+            <div className="dashboard-children-cont cursor-pointer">{children}</div>
         </div>
     </div>
   );

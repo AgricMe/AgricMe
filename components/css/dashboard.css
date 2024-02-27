@@ -16,6 +16,15 @@
 .dashboard-children-cont{
     width: 95%;
 }
-.inp-btn{
+/* Dasboard Nav */
+.dash-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
+}
+.inp-btn{
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
