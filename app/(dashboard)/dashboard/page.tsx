@@ -6,7 +6,7 @@ import Image from 'next/image';
 const page = () => {
     return (
         <div>
-            <div className="dash-nav">
+            <div className="dash-nav shadow-slate-300">
                 <div className="inp-btn">
                     <div>
                         <label className="input input-bordered flex items-center gap-2 bg-white rounded-full border-slate-400 focus-within:outline-none focus-within:border-slate-600">
