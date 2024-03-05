@@ -1,11 +1,17 @@
 .dashboard-wrapper{
    /* background-color: rgb(246, 248, 251); */
 }
+/* Sidebar */
 .sidebar{
-    background-color: rgb(45, 45, 45);
+    background-color: rgba(45, 45, 45, 0.902);
     height: 100%;
     width: 250px;
     position: fixed;
+}
+.lightbulb{
+    /* width: 800px !important;
+    height: 150px !important; */
+    max-width: none !important ;
 }
 .dashboard-children{
     margin-left: 250px;
