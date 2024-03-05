@@ -9,9 +9,8 @@
     position: fixed;
 }
 .lightbulb{
-    /* width: 800px !important;
-    height: 150px !important; */
     max-width: none !important ;
+    margin-left: -5px !important;
 }
 .dashboard-children{
     margin-left: 250px;

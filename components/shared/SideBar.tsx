@@ -1,6 +1,7 @@
 import Image from "next/image"
 import SideBarIcons from "../dashboard/SideBarIcons";
 import { IoHelpCircleSharp } from "react-icons/io5";
+import { IoIosLogOut } from "react-icons/io";
 import Link from "next/link";
 
 const SideBar = () => {
@@ -28,19 +29,27 @@ const SideBar = () => {
                 <div className="bg-[#EFD372] h-[130px] w-[170px] rounded-[12px]">
                     <div className="flex justify-center">
                         <div className="bg-[#EFD372] h-[60px] w-[60px] rounded-full mt-[-30px] flex justify-center items-center">
-                            <div className="flex justify-center">
+                            <div className="">
                                 <Image
                                 src={"/dashboard/lightbulb.png"}
                                 alt="lightbulb"
                                 width={120}
                                 height={150}
-                                className="lightbulb"
+                                className="lightbulb object-cover"
                                 />
                             </div>
                         </div>
                     </div>
+                    <div className="text-center text-[12px] flex flex-col items-center text-black">
+                        <span className="text-[10px]">Thoughts time</span>
+                        <p className="w-[90%] leading-4 mt-1">If you aren’t willing to own a stock for 10 years, don’t even think about owning it for 10 minutes.</p>
+                    </div>
                 </div>
            </div>
+           <Link href={""} className="flex items-center gap-3 text-[#D4D4D4] px-[20px] py-[10px]">
+                <IoIosLogOut className="text-[20px] text-red-400"/>
+                <p>Logout</p>
+            </Link>
         </div>
     )
 }
