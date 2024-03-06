@@ -3,13 +3,16 @@ import Nav from "@/components/dashboard/Nav"
 const page = () => {
     return (
         <div>
-            <Nav/>
+            <Nav />
             <div className="flex justify-between items-end mt-[40px]">
-                <div className="w-[70%] h-40 bg-slate-800 rounded-xl"></div>
-                <div className="w-[27%] h-32 bg-red-500 rounded-xl"></div>
+                <div className="w-[67%] h-40 bg-slate-800 rounded-xl"></div>
+                <div className="w-[31%] h-32 bg-red-500 rounded-xl"></div>
             </div>
             {/* Posts Section */}
-            <div></div>
+            <div className="flex justify-between mt-[40px]">
+                <div className="w-[73%] h-[700px] bg-slate-900"></div>
+                <div className="w-[22%] h-32 bg-emerald-900 sticky right-0 top-10"></div>
+            </div>
         </div>
     )
 }
