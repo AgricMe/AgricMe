@@ -50,6 +50,7 @@ const SideBar = () => {
                 <IoIosLogOut className="text-[20px] text-red-400"/>
                 <p>Logout</p>
             </Link>
+            
         </div>
     )
 }

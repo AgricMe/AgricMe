@@ -1,36 +1,15 @@
-import React from 'react'
-import { FaAngleRight } from "react-icons/fa6";
-import { FaBell } from "react-icons/fa6";
-import Image from 'next/image';
+import Nav from "@/components/dashboard/Nav"
 
 const page = () => {
     return (
         <div>
-            <div className="dash-nav shadow-slate-300">
-                <div className="inp-btn">
-                    <div>
-                        <label className="input input-bordered flex items-center gap-2 bg-white rounded-full border-slate-400 focus-within:outline-none focus-within:border-slate-600">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70 text-slate-600"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
-                            <input type="text" className="grow focus:outline-none" placeholder="Search" />
-                        </label>
-                    </div>
-                    <div>
-                        <button className='bg-[#274C5B] rounded-2xl text-white py-3 px-6 flex items-center gap-2'>Explore <FaAngleRight /></button>
-                    </div>
-                </div>
-                <div className="profile-acct flex items-center gap-5">
-                    <div> <FaBell className='text-50 text-2xl rotate-12'/></div>
-                    <div>
-                        <Image
-                        src={"/dashboard/dash-profile-img.jpg"}
-                        alt='pfp-img'
-                        width={40}
-                        height={40}
-                        className='object-cover rounded-full'
-                        />
-                    </div>
-                </div>
+            <Nav/>
+            <div className="flex justify-between items-end mt-[40px]">
+                <div className="w-[70%] h-40 bg-slate-800 rounded-xl"></div>
+                <div className="w-[27%] h-32 bg-red-500 rounded-xl"></div>
             </div>
+            {/* Posts Section */}
+            <div></div>
         </div>
     )
 }
