@@ -11,7 +11,7 @@ const page = () => {
             {/* Posts Section */}
             <div className="flex justify-between mt-[40px]">
                 <div className="w-[73%] h-[700px] bg-slate-900"></div>
-                <div className="w-[22%] h-32 bg-emerald-900 sticky right-0 top-10"></div>
+                <div className="w-[18%] h-32 bg-emerald-900 fixed right-6"></div>
             </div>
         </div>
     )
