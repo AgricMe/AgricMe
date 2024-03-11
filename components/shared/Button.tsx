@@ -3,11 +3,12 @@ import React from 'react'
 type buttonVariant = {
     text: string
     clas: string
+    click: React.MouseEventHandler<HTMLButtonElement>
 }
 
-const Button = ({text, clas}:buttonVariant) => {
+const Button = ({text, clas, click}:buttonVariant) => {
   return (
-    <button className={clas}>{text}</button>
+    <button onClick={click} className={clas}>{text}</button>
   )
 }
 
