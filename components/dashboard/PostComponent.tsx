@@ -8,9 +8,9 @@ const PostComponent = () => {
                 {/* User Info with Three-Dot Menu */}
                 <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-2">
-                        <img src="https://placekitten.com/40/40" alt="User Avatar" className="w-8 h-8 rounded-full" />
+                        <img src="/dashboard/dash-profile-img.jpg" alt="User Avatar" className="w-8 h-8 rounded-full" />
                         <div>
-                            <p className="text-gray-800 font-semibold">John Doe</p>
+                            <p className="text-gray-800 font-semibold">Farmer Duro</p>
                             <p className="text-gray-500 text-sm">Posted 2 hours ago</p>
                         </div>
                     </div>
@@ -27,13 +27,13 @@ const PostComponent = () => {
                 </div>
                 {/* Message */}
                 <div className="mb-4">
-                    <p className="text-gray-800">Just another day with at the kittens farm🐱 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sed similique recusandae earum iusto molestias ex repudiandae eaque beatae nostrum.
-                        <a href="" className="text-blue-600">#CuteKittenFarm</a>
+                    <p className="text-gray-800">Just another day at the farm🐱 Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sed similique recusandae earum iusto molestias ex repudiandae eaque beatae nostrum.
+                        <a href="" className="text-blue-600">#FarmingMadeEasy</a>
                     </p>
                 </div>
                 {/* Image */}
                 <div className="mb-4">
-                    <img src="https://placekitten.com/400/300" alt="Post Image" className="w-full h-48 object-cover rounded-md" />
+                    <img src="/dashboard/post-image.jpeg" alt="Post Image" className="w-full object-cover rounded-md" />
                 </div>
                 {/* Like and Comment Section */}
                 <div className="flex items-center justify-between text-gray-500">

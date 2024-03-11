@@ -29,14 +29,15 @@ const SideBar = () => {
                 <div className="bg-[#EFD372] h-[130px] w-[170px] rounded-[12px]">
                     <div className="flex justify-center">
                         <div className="bg-[#EFD372] h-[60px] w-[60px] rounded-full mt-[-30px] flex justify-center items-center">
-                            <div className="">
-                                <Image
+                            <div className="flex justify-center">
+                                {/* <Image
                                 src={"/dashboard/lightbulb.png"}
                                 alt="lightbulb"
                                 width={120}
                                 height={150}
                                 className="lightbulb object-cover"
-                                />
+                                /> */}
+                                <img src="/dashboard/lightbulb.png" alt="lightbulb"  className="lightbulb object-cover h-[130px] w-[120px]"/>
                             </div>
                         </div>
                     </div>

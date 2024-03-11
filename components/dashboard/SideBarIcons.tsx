@@ -2,13 +2,13 @@ import Link from "next/link"
 const SideBarIcons = () => {
     return (
         <div>
-            <Link href={""} className="icon-link flex items-center gap-3 text-[#D4D4D4] mt-[20px]">
+            <Link href={"/dashboard"} className="icon-link flex items-center gap-3 text-[#D4D4D4] mt-[20px]">
                 <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.8548 1.39402C3.64328 1.39402 0.226562 4.80876 0.226562 9.02225C0.226562 13.2357 3.64131 16.6525 7.8548 16.6525C12.0683 16.6525 15.483 13.2377 15.483 9.02225H7.8548V1.39402ZM17.3984 8.14894C17.3984 6.04318 16.5448 4.13563 15.1651 2.75599L9.7702 8.14894H17.3984ZM8.82035 0.344078V7.97035L14.2133 2.5774C12.7238 1.08787 10.7711 0.344078 8.82035 0.344078Z" fill="#7EB693" />
                 </svg>
                 <p>Dashboard</p>
             </Link>
-            <Link href={""} className="icon-link flex items-center gap-3 text-[#D4D4D4] mt-[20px]">
+            <Link href={"/agrions"} className="icon-link flex items-center gap-3 text-[#D4D4D4] mt-[20px]">
                 <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.5 22.1877L11.5 3.86356" stroke="#D4D4D4" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
                     <path d="M3.625 22.1877V5.31265M19.375 18.8127V11.5002M19.375 6.43765V1.93765" stroke="#D4D4D4" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
