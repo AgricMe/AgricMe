@@ -14,10 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <div className="dashboard-wrapper">
-       <SideBar />
-        <div className="dashboard-children">
-            <div className="dashboard-children-cont cursor-pointer">{children}</div>
-        </div>
+      <SideBar />
+      <div className="dashboard-children">
+        <div className="dashboard-children-cont cursor-pointer">{children}</div>
+      </div>
     </div>
   );
 }
