@@ -18,7 +18,7 @@ const page = () => {
                     <PostComponent />
                     <PostComponent />
                 </div>
-                <div className="w-[19%] fixed right-6">
+                <div className="w-[19%] sticky top-10 right-6">
                     <div className="bg-white rounded-lg shadow-md w-full">
                         <div className="p-3 text-black">
                             <h2 className=" font-semibold">Trends For You</h2>
