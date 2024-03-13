@@ -7,8 +7,8 @@ const page = () => {
         <div>
             <Nav />
             <div className="flex justify-between items-end mt-[40px]">
-                <div className="w-[67%] h-40 bg-slate-800 rounded-xl"></div>
-                <div className="w-[31%] h-32 bg-red-500 rounded-xl"></div>
+                <div className="w-[67%] h-40 bg-[green] rounded-xl"></div>
+                <div className="w-[31%] h-32 bg-[red] rounded-xl"></div>
             </div>
             {/* Posts Section */}
             <div className="flex justify-between mt-[40px]">
