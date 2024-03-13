@@ -6,6 +6,12 @@ const config = {
  
   ],
   theme: {
+    // colors: {
+    //   black : '#274C5B',
+    //   yellow : '#EFD372',
+    //   green : '#7EB693',
+    //   white : '#ffff'
+    // },
     extend: {},
   },
   plugins: [
