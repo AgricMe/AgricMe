@@ -11,15 +11,15 @@ const page = () => {
                 <div className="w-[31%] h-32 bg-[red] rounded-xl"></div>
             </div>
             {/* Posts Section */}
-            <div className="flex justify-between mt-[40px] w-[100%] h-[100vh] relative">
+            <div className="flex justify-between mt-[40px] w-[100%] h-[200vh] relative">
                 <div className="w-[72%]">
                     <UploadPost />
                     <PostComponent />
                     <PostComponent />
                     <PostComponent />
                 </div>
-                <div className="w-[23%] sticky top-[20px]">
-                    <div className="bg-white rounded-lg shadow-md w-full">
+                <div className="w-[23%]">
+                    <div className="bg-white rounded-lg shadow-md w-full sticky top-[20px]">
                         <div className="p-3 text-black">
                             <h2 className=" font-semibold">Trends For You</h2>
                         </div>

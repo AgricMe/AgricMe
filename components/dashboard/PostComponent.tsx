@@ -36,18 +36,18 @@ const PostComponent = () => {
                     <img src="/dashboard/post-image.jpeg" alt="Post Image" className="w-full object-cover rounded-md" />
                 </div>
                 {/* Like and Comment Section */}
-                <div className="flex items-center justify-between text-gray-500">
+                <div className="flex items-center justify-between text-[gray]">
                     <div className="flex items-center space-x-2">
-                        <button className="flex justify-center items-center gap-2 px-2 hover:bg-gray-50 rounded-full p-1">
+                        <button className="flex justify-center items-center gap-2 px-2 hover:bg-[#ececec] rounded-full p-1">
                             <FaRegHeart />
                             <span>Like</span>
                         </button>
-                        <button className="flex justify-center items-center gap-2 px-2 hover:bg-gray-50 rounded-full p-1">
+                        <button className="flex justify-center items-center gap-2 px-2 hover:bg-[#ececec] rounded-full p-1">
                             <FaRegCommentAlt />
                             <span>Comment</span>
                         </button>
                     </div>
-                    <button className="flex justify-center items-center gap-2 px-2 hover:bg-gray-50 rounded-full p-1">
+                    <button className="flex justify-center items-center gap-2 px-2 hover:bg-[#ececec] rounded-full p-1">
                         <IoShareSocialOutline />
                         <span>Share</span>
                     </button>
