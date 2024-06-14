@@ -10,6 +10,7 @@ const config = {
       black : '#274C5B',
       yellow : '#EFD372',
       green : '#7EB693',
+      lightgreen: '#68A47F',
       white : '#ffff'
     },
     extend: {},
