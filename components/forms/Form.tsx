@@ -15,7 +15,7 @@ export default function Form({ page }: formVariant) {
       <div className="form-container">
         <div className="logo">
           <Link href={"/"}>
-            <Image src={"/logo/agricme-logo.png"} width={200} alt="" />
+            <Image src={logo} width={200} alt="" />
           </Link>
         </div>
         <div>
