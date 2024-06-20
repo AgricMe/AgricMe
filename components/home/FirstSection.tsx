@@ -66,12 +66,14 @@ const FirstSection = () => {
             </div>
           </div>
           <div className="first flex">
-            <Image
-              src="/icons/firstscetionicons/second-icon.png"
-              alt="first section"
-              width={46}
-              height={38}
-            />
+            <div>
+              <Image
+                src="/icons/firstscetionicons/second-icon.png"
+                alt="first section"
+                width={46}
+                height={38}
+              />
+            </div>
             <div>
               <span style={{ fontSize: "clamp(12px, 2vw, 25px)" }}>
                 Organic Foods Only

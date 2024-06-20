@@ -13,6 +13,8 @@ const PostComponent = () => {
               src="/dashboard/dash-profile-img.jpg"
               alt="User Avatar"
               className="w-8 h-8 rounded-full"
+              width={300}
+              height={300}
             />
             <div>
               <p className="text-gray-800 font-semibold">Farmer Duro</p>
@@ -57,6 +59,8 @@ const PostComponent = () => {
             src="/dashboard/post-image.jpeg"
             alt="Post Image"
             className="w-full object-cover rounded-md"
+            width={300}
+            height={300}
           />
         </div>
         {/* Like and Comment Section */}

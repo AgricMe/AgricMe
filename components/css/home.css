@@ -603,20 +603,23 @@
 .footer{
     margin-top: 50px;
     width: 100vw;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     place-items: center;
 }
 
 .footer section{
     width: 100%;
     max-width: 1000px;
-    display: grid;
-    grid-template-columns: auto 500px auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: auto 500px auto; */
 }
 
 .footer section article{
     position: relative;
     padding: 30px;
+    width: 30vw;
 }
 
 .footer section article .line{
