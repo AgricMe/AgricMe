@@ -1,3 +1,4 @@
+import LeftSection from "@/components/forms/LeftSection";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 // import "./globals.css";
@@ -9,16 +10,14 @@ export const metadata: Metadata = {
   description: "Login to AgricMe",
 };
 
-export default function SignupLayout({
+export default function LoginLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <>
-        <main>
-            {children}
-        </main>
+      <main>{children}</main>
     </>
   );
 }

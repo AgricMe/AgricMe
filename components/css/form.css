@@ -8,33 +8,6 @@
 .side-display {
     background-image: url('../../public/component-images/Agricme-logo-bg.png');
     background-size: cover;
-    background-repeat: no-repeat;
-    height: 90vh;
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0px 0px 50px 50px;
-}
-
-.side-display h1, .side-display p{
-    text-align: start;
-    width: 70%;
-    color: var(--logo-black);
-}
-
-.side-display h1 {
-    font-size: 50px;
-    font-weight: 800;
-}
-
-.side-display p {
-    font-weight: 600;
-}
-
-.form-container {
-    width: 40vw;
 }
 
 .form-container .logo{
@@ -48,11 +21,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.form-container .form .label{
-    display: grid;
-    gap: 7px;
 }
 
 .form-container .oauth{
@@ -87,12 +55,6 @@
     color: rgb(164, 164, 164);
 }
 
-.form-container .form .remember{
-    display: flex;
-    align-items: center;
-    padding-block: 0px !important;
-    height: fit-content;
-}
 .form-container .form .label input{
     border: 1.5px solid var(--logo-green);
     border-radius: 10px;
@@ -102,18 +64,10 @@
     outline-color: var(--logo-black);
 }
 
-.form-container .form .remember input{
-    height: fit-content !important;
-}
-
 .form-container .label a{
     color: var(--logo-green);
     font-weight: bolder;
     font-size: larger;
-}
-
-.form-container .account{
-    margin-top: 20px;
 }
 
 .form-container .form .submit{
@@ -138,14 +92,14 @@
     color: var(--logo-green);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     .side-display{
         display: none;
     }
     .form-div{
         width: 100vw;
         background-image: url('../../public/component-images/Agricme-logo-bg.png');
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.8);
         background-blend-mode: lighten;
     }
     .form-container .logo{

@@ -1,11 +1,8 @@
-import React from 'react';
+import Dashboard from "@/components/(dashboard)/dashboard";
+import React from "react";
 
 function PostComponent() {
-    return (
-      <div className='flex justify-center bg-green-700'>
-        <p>coming soon</p>
-      </div>
-    );
+  return <Dashboard />;
 }
 
 export default PostComponent;

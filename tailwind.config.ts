@@ -3,15 +3,15 @@ const config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
   ],
   theme: {
-    // colors: {
-    //   black : '#274C5B',
-    //   yellow : '#EFD372',
-    //   green : '#7EB693',
-    //   white : '#ffff'
-    // },
+    colors: {
+      black : '#274C5B',
+      yellow : '#EFD372',
+      green : '#7EB693',
+      lightgreen: '#68A47F',
+      white : '#ffff'
+    },
     extend: {},
   },
   plugins: [

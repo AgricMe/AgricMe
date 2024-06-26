@@ -5,20 +5,18 @@ import { Inter } from "next/font/google";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Login",
-  description: "Login to AgricMe",
+  title: "Create Account",
+  description: "Create an AgricMe account",
 };
 
-export default function LoginLayout({
+export default function SignupLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <>
-        <main>
-            {children}
-        </main>
+      <main>{children}</main>
     </>
   );
 }
