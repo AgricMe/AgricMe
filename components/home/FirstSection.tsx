@@ -15,7 +15,7 @@ const FirstSection = () => {
             <article className="topp">
                 <span style={{fontSize: "24px"}}>About Us</span>
                 <span style={{fontSize: "34px"}}>We Believe in Dummie Text</span>
-                <span>Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</span>
+                <span>Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.</span>
             </article>
             <article className="middlee">
                 <div className="first">

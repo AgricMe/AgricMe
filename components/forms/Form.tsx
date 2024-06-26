@@ -13,7 +13,7 @@ export default function Form({page}: formVariant) {
     <>
         <div className='form-container'>
             <div className='logo'>
-                <Link href={'/'}><img src={'/logo/agricme-logo.png'} width={200} alt="" /></Link>
+                {/* <Link href={'/'}><img src={'/logo/agricme-logo.png'} width={200} alt="" /></Link> */}
             </div>
             <div>
                 <h3>{page}</h3>
@@ -42,7 +42,7 @@ export default function Form({page}: formVariant) {
                 {
                     page == 'Log In'?
                     <span className='label account'>Already have an account? <Link href={'/signup'}>Create Account</Link></span>:
-                    <span className='label account'>Don't have an account? <Link href={'/login'}>Log In</Link></span>
+                    <span className='label account'>Dont have an account? <Link href={'/login'}>Log In</Link></span>
                 }
             </div>
         </div>

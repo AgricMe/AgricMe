@@ -37,7 +37,7 @@ const SideBar = () => {
                                 height={150}
                                 className="lightbulb object-cover"
                                 /> */}
-                                <img src="/dashboard/lightbulb.png" alt="lightbulb"  className="lightbulb object-cover h-[130px] w-[120px]"/>
+                                {/* <img src="/dashboard/lightbulb.png" alt="lightbulb"  className="lightbulb object-cover h-[130px] w-[120px]"/> */}
                             </div>
                         </div>
                     </div>
