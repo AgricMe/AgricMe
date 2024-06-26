@@ -286,10 +286,11 @@
 }
 /* products */
 .products{
-    width: 100vw;
+    /* width: 100vw; */
     padding-block: 40px;
     display: grid;
     place-items: center;
+    background-color: red;
 }
 .products article{
     width: 100%;

@@ -7,8 +7,15 @@ const page = () => {
         <div>
             <Nav />
             <div className="flex justify-between items-end mt-[40px]">
-                <div className="w-[67%] h-40 bg-[green] rounded-xl"></div>
-                <div className="w-[31%] h-32 bg-[red] rounded-xl"></div>
+                <div className="w-[67%] h-[210px] rounded-xl agrion-banner flex items-center">
+                    <div className="ml-11">
+                        <span></span>
+                        <h2 className="mt-4 mb-4 text-[30px] text-black font-bold">Hello, Apostle Paul</h2>
+                        <p className="font-bold text-[15px]">Get <span className="text-[#7EB693]">FREE DELIVERY</span> on every weekend</p>
+                        <button className="bg-[#7EB693] p-2 rounded-md text-white text-[12px] mt-4">Post an Advert</button>
+                    </div>
+                </div>
+                <div className="w-[31%] h-36 rounded-xl hamburger-img"></div>
             </div>
             {/* Posts Section */}
             <div className="flex justify-between mt-[40px] w-[100%] h-[200vh] relative">

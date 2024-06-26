@@ -29,3 +29,12 @@
     gap: 30px;
     align-items: center;
 }
+.agrion-banner{
+    background-image: url('../../public/dashboard/agrion-banner.png');
+    box-shadow: 3px 4px 3px rgba(193, 193, 193, 0.594);
+    background-size: cover;
+}
+.hamburger-img{
+    background-image: url('../../public/dashboard/hamburger-img.png');
+    background-size: cover;
+}
