@@ -1,9 +1,13 @@
 import Image from "next/image";
 
+import cart from "@/public/icons/products/Vectorcart.png";
+import search from "@/public/icons/products/Vectorsearch.png";
+import heart from "@/public/icons/products/Vectorheart.png";
+
 const Products = () => {
   return (
     <section className="products">
-      <article className="2xl:w-2/3 md:w-4/5 w-11/12">
+      <article className="">
         <section>
           <div className="product aspect-[3/4]">
             <div>
@@ -18,28 +22,13 @@ const Products = () => {
 
               <article>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorcart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={cart} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorsearch.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={search} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorheart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={heart} alt="cart" width={12} height={12} />
                 </span>
               </article>
             </div>
@@ -69,28 +58,13 @@ const Products = () => {
 
               <article>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorcart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={cart} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorsearch.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={search} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorheart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={heart} alt="cart" width={12} height={12} />
                 </span>
               </article>
             </div>
@@ -120,28 +94,13 @@ const Products = () => {
 
               <article>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorcart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={cart} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorsearch.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={search} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorheart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={heart} alt="cart" width={12} height={12} />
                 </span>
               </article>
             </div>
@@ -171,28 +130,13 @@ const Products = () => {
 
               <article>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorcart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={cart} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorsearch.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={search} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorheart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={heart} alt="cart" width={12} height={12} />
                 </span>
               </article>
             </div>
@@ -222,28 +166,13 @@ const Products = () => {
 
               <article>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorcart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={cart} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorsearch.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={search} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorheart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={heart} alt="cart" width={12} height={12} />
                 </span>
               </article>
             </div>
@@ -273,28 +202,13 @@ const Products = () => {
 
               <article>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorcart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={cart} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorsearch.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={search} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorheart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={heart} alt="cart" width={12} height={12} />
                 </span>
               </article>
             </div>
@@ -324,28 +238,13 @@ const Products = () => {
 
               <article>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorcart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={cart} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorsearch.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={search} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorheart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={heart} alt="cart" width={12} height={12} />
                 </span>
               </article>
             </div>
@@ -375,28 +274,13 @@ const Products = () => {
 
               <article>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorcart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={cart} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorsearch.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={search} alt="cart" width={12} height={12} />
                 </span>
                 <span>
-                  <Image
-                    src="/icons/products/Vectorheart.png"
-                    alt="cart"
-                    width={12}
-                    height={12}
-                  />
+                  <Image src={heart} alt="cart" width={12} height={12} />
                 </span>
               </article>
             </div>

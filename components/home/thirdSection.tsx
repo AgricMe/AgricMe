@@ -14,7 +14,7 @@ const ThirdSection = () => {
         <span className={`tail ${yelllowTail.className}`}>What we Offer</span>
         <span>Better Agriculture for Better Future</span>
       </article>
-      <article className="art flex w-11/12 lg:w-4/5 md:gap-10 gap-2">
+      <article className="art flex w-11/12 lg:w-4/5 md:gap-10 gap-2 justify-center">
         <div className="div w-[30%] ">
           <section className="sect">
             <article>
@@ -26,10 +26,10 @@ const ThirdSection = () => {
                 />
                 <div></div>
               </span>
-              <h1>lorem</h1>
+              <h1>Community-Driven</h1>
               <span className="desc">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptat
-                accusantium doloremqlaudantium. Sed ut perspiciatis
+                Agricme brings farmers together, creating a supportive network
+                where members can share experiences and grow collectively.
               </span>
             </article>
             <article>
@@ -41,13 +41,13 @@ const ThirdSection = () => {
                 />
                 <div></div>
               </span>
-              <h1>lorem</h1>
+              <h1>Streamlined Communication</h1>
               <span className="desc">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptat
-                accusantium doloremqlaudantium. Sed ut perspiciatis
+                Our user-centric interface simplifies communication, making it
+                easier for farmers to connect and collaborate.
               </span>
             </article>
-            <article>
+            {/* <article>
               <span>
                 <Image
                   src="/icons/thirdSectionIcons/delivery-icon.png"
@@ -61,10 +61,10 @@ const ThirdSection = () => {
                 Sed ut perspiciatis unde omnis iste natus error sit voluptat
                 accusantium doloremqlaudantium. Sed ut perspiciatis
               </span>
-            </article>
+            </article> */}
           </section>
         </div>
-        <div className="w-[40%] md:grid  ">
+        <div className="w-[40%] md:grid  hidden">
           {/*  */}
           <div className="relative my-auto aspect-[4/6]">
             <Image
@@ -85,10 +85,10 @@ const ThirdSection = () => {
                 />
                 <div></div>
               </span>
-              <h1>lorem</h1>
+              <h1>Trade and Commerce</h1>
               <span className="desc2">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptat
-                accusantium doloremqlaudantium. Sed ut perspiciatis
+                Agricme facilitates efficient trade, allowing farmers to buy,
+                sell, and exchange goods and services within the community.
               </span>
             </article>
             <article>
@@ -100,13 +100,13 @@ const ThirdSection = () => {
                 />
                 <div></div>
               </span>
-              <h1>lorem</h1>
+              <h1>Knowledge Sharing</h1>
               <span className="desc2">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptat
-                accusantium doloremqlaudantium. Sed ut perspiciatis
+                Access valuable insights, tips, and best practices from fellow
+                farmers and agricultural experts.
               </span>
             </article>
-            <article>
+            {/* <article>
               <span>
                 <Image
                   src="/icons/thirdSectionIcons/fresh-vegetable-icon.png"
@@ -120,7 +120,7 @@ const ThirdSection = () => {
                 Sed ut perspiciatis unde omnis iste natus error sit voluptat
                 accusantium doloremqlaudantium. Sed ut perspiciatis
               </span>
-            </article>
+            </article> */}
           </section>
         </div>
       </article>

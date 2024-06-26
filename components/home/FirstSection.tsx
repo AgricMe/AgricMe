@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
 
+import image from "@/public/icons/firstscetionicons/image.svg";
+import firstIcon from "@/public/icons/firstscetionicons/first-icon.png";
+import secondIcon from "@/public/icons/firstscetionicons/second-icon.png";
+
 // FONTS
 import { Yellowtail } from "next/font/google";
 const yelllowTail = Yellowtail({
@@ -14,11 +18,7 @@ const FirstSection = () => {
       {/* <section>
       </section> */}
       <div className="relative lg:w-[50vw] max-w-[875px] aspect-[5/4]">
-        <Image
-          src="/icons/firstscetionicons/image.svg"
-          alt="first section"
-          fill
-        />
+        <Image src={image} alt="first section" fill />
       </div>
       {/* <section>
         <article className="topp"> */}
@@ -33,23 +33,25 @@ const FirstSection = () => {
           className="mb-4 text-[#274C5B]"
           style={{ fontSize: "clamp(23px, 3vw, 50px)" }}
         >
-          We Believe in Dummie Text
+          A Social Platform for Farmers
         </span>
         <span
           className="leading-7 mb-4 text-[#525C60]"
           style={{ fontSize: "clamp(8.5px, 1vw, 18px)" }}
         >
-          Simply dummy text of the printing and typesetting industry. Lorem had
-          ceased to been the industry &apos; s standard dummy text ever since
-          the 1500s, when an unknown printer took a galley.
+          Agricme is a pioneering social platform exclusively designed to unite
+          farmers, fostering a robust community-driven network within the
+          agricultural landscape. Our platform serves as a digital hub,
+          providing farmers with the tools and resources to connect,
+          collaborate, and thrive together.
         </span>
         {/* </article>
         <article className="middlee"> */}
-        <div className="flex flex-col !gap-[30px]">
-          <div className="first flex">
+        <div className="flex flex-col !gap-[50px]">
+          <div className="first flex items-start">
             <div>
               <Image
-                src="/icons/firstscetionicons/first-icon.png"
+                src={firstIcon}
                 alt="first section"
                 width={46}
                 height={38}
@@ -57,18 +59,18 @@ const FirstSection = () => {
             </div>
             <div>
               <span style={{ fontSize: "clamp(12px, 2vw, 25px)" }}>
-                Organic Foods Only
+                Community-Driven
               </span>
               <span style={{ fontSize: "clamp(8.5px, 2vw, 18px)" }}>
-                Simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum
+                Agricme brings farmers together, creating a supportive network
+                where members can share experiences and grow collectively.
               </span>
             </div>
           </div>
-          <div className="first flex">
+          <div className="first flex items-start">
             <div>
               <Image
-                src="/icons/firstscetionicons/second-icon.png"
+                src={secondIcon}
                 alt="first section"
                 width={46}
                 height={38}
@@ -76,18 +78,18 @@ const FirstSection = () => {
             </div>
             <div>
               <span style={{ fontSize: "clamp(12px, 2vw, 25px)" }}>
-                Organic Foods Only
+                Trade and Commerce
               </span>
               <span style={{ fontSize: "clamp(8.5px, 2vw, 18px)" }}>
-                Simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum
+                Agricme facilitates efficient trade, allowing farmers to buy,
+                sell, and exchange goods and services within the community.
               </span>
             </div>
           </div>
         </div>
         {/* </article>
         <article className="bottomm"> */}
-        <button className="py-7 px-8 mt-[46px] flex items-center gap-[10px] text-xl text-white rounded-2xl bg-black">
+        <button className="py-7 px-8 mt-[50px] flex items-center gap-[10px] text-xl text-white rounded-2xl bg-black">
           Shop now
           <svg
             width="9"

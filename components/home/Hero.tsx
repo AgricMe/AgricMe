@@ -1,9 +1,14 @@
 "use client";
 import React from "react";
-import Button from "../shared/Button";
-import "../css/home.css";
+
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+
+import "../css/home.css";
+import heroImg from "@/public/component-images/hero-img.png";
+
+import Button from "../shared/Button";
+
 import { Yellowtail, Roboto } from "next/font/google";
 const roboto = Roboto({
   weight: "700",
@@ -24,13 +29,12 @@ const Hero = () => {
             <p
               className={`custom-txt text-lightgreen ${yelllowTail.className}`}
             >
-              100% Natural Food
+              Welcome to Agricme
             </p>
-            <h2 className={`${roboto.className} font-extrabold`}>
-              Choose the best healthier way{" "}
-              <br className="hidden md:block lg:hidden" /> of life{" "}
-              <br className="hidden md:block lg:hidden" />
-              (Dummie Text)
+            <h2 className={`${roboto.className} font-extrabold w-4/5`}>
+              {/* <br className="hidden md:block lg:hidden" />{" "} */}
+              {/* <br className="hidden md:block lg:hidden" /> */}
+              Empowering Farmers, Building Communities
             </h2>
           </div>
           <div className="flex gap-2 lg:gap-4">
@@ -49,12 +53,7 @@ const Hero = () => {
         <div className="relative hidden md:block aspect-[5/4] 2xl:h-[675px] max-w-[907px] w-1/2">
           <div className="hero-border absolute h-full -top-[34px]"></div>
           <div className="absolute h-full w-full top-[0] left-[40px]">
-            <Image
-              className=""
-              src="/component-images/hero-img.png"
-              alt="hero-img"
-              fill
-            />
+            <Image className="" src={heroImg} alt="hero-img" fill priority />
           </div>
         </div>
       </div>

@@ -61,9 +61,9 @@ const Testimonial = () => {
           </div>
           <div className="testimonial-msg">
             <p>
-              Simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been.
+              Agricme has transformed the way I connect with other farmers. The
+              community support and resources have been invaluable for my
+              farm&apos;s growth.
             </p>
             <h3>Sara Taylor</h3>
             <small>Consumer</small>
