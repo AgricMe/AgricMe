@@ -1,4 +1,7 @@
 import Image from "next/image";
+
+import butcher from "@/public/component-images/hero-image.jpg";
+
 const FourthSection = () => {
   return (
     <>
@@ -6,7 +9,7 @@ const FourthSection = () => {
         {/* <div> */}
         <div className="relative md:w-1/2 md:h-full h-3/4">
           <Image
-            src={"/component-images/butcher-image.jpg"}
+            src={butcher}
             alt="butcher-image"
             fill
             style={{ objectFit: "cover" }}

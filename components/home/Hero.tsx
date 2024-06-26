@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import "../css/home.css";
-import heroImg from "@/public/component-images/hero-img.png";
+import heroImg from "@/public/component-images/butcher-image.jpg";
 
 import Button from "../shared/Button";
 
