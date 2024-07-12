@@ -61,7 +61,7 @@ const FirstSection = () => {
             </article>
         </section>
     </div>
-  )
+  );
 }
 
 export default FirstSection

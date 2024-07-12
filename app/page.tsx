@@ -10,6 +10,7 @@ import Testimonial from '@/components/home/Testimonial'
 import Footer from '@/components/home/Footer'
 import FourthSection from '@/components/home/FourthSection'
 import NewsLetter from '@/components/home/NewsLetter'
+import BackgroundBeam from '@/components/home/BackgroundBeam'
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <AnimationWrapper>
         <Hero />
       </AnimationWrapper>
+      <BackgroundBeam/>
       <FirstSection />
       <SecondSection />
       <ThirdSection />
