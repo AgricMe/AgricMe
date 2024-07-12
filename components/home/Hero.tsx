@@ -10,21 +10,21 @@ const Hero = () => {
         <div className='hero-wrapper'>
             <div className='hero-cont'>
                 <div className='hero-btn-txt'>
-                    <p className='custom-txt'>100% Natural Food</p>
-                    <h2>Choose the best healthier way of life(Dummie Text)</h2>
-                    <div className='.green-btn'>
+                    <p className='font-bold text-[#274C5B]'>A Social Platform for Farmers</p>
+                    <h2 className='font-bold'>Welcome to Agricme: Empowering Farmers, Building Communities</h2>
+                    <div>
                         <Button click={()=> router.push('/signup')} clas={"yellow-btn"} text={"Sign up"} />
                         <Button click={()=> router.push('/login')} clas={"green-btn"} text={"Login"} />
                     </div>
                 </div>
                 <div>
-                    <div className="hero-border"></div>
                     <div className='hero-img'>
+                        <div className="hero-border"></div>
                         <Image 
-                        src="/component-images/hero-img.png"
+                        src="/component-images/hero-img.jpeg"
                         alt="hero-img"
                         width={650}
-                        height={436}
+                        height={0}
                         />
                     </div>
                 </div>

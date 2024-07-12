@@ -30,13 +30,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 550px;  
+    height: 500px;  
 }
 .hero-btn-txt{
     width: 50%;
 }
 .hero-btn-txt h2{
-    font-size: 50px;
+    font-size: 35px;
     color: var(--logo-black);
 }
 .btn-div{
@@ -51,7 +51,7 @@
     padding: 15px 23px;
     cursor: pointer;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 10px 3px;
 }
 .green-btn{
     color: white;
@@ -61,19 +61,21 @@
     padding: 15px 23px;
     cursor: pointer;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 10px 3px;
 }
 .hero-img{
-    position: absolute;
-    right: 0;
-    top: 40px;
+    position: relative;
+}
+.hero-img img{
+    object-fit: cover;
+    height: 400px;
 }
 .hero-border{
     position: absolute;
     right: 0;
-    top: 20px;
-    width: 670px;
-    height: 436px;
+    bottom: 0px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
     border-left: 5px solid var(--logo-yellow);
     border-top: 5px solid var(--logo-yellow);
     border-bottom: 5px solid var(--logo-yellow);
