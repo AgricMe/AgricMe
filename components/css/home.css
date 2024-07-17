@@ -9,6 +9,7 @@
     width: 85%;
     display: flex;
     justify-content: space-between;
+    max-width: 85%;  
 }
 .nav-links{
     display: flex;
@@ -30,14 +31,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 500px;  
+    height: 500px;
+    max-width: 85%;  
 }
 .hero-btn-txt{
     width: 50%;
 }
 .hero-btn-txt h2{
-    font-size: 35px;
+    font-size: 33px;
     color: var(--logo-black);
+    width: 90%;
 }
 .btn-div{
     display: flex;
@@ -88,6 +91,9 @@
     grid-template-columns: repeat(2, 1fr);
     height: 700px;
     padding-left: 50px;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    color: #274C5B;
 }
 .first-sec section{
     height: 100%;

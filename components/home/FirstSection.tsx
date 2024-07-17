@@ -3,7 +3,7 @@ import React from 'react'
 
 const FirstSection = () => {
   return (
-    <div className='first-sec'>
+    <div className='first-sec relative'>
         <section>
             <Image 
             src="/icons/firstscetionicons/image.svg"
@@ -14,8 +14,8 @@ const FirstSection = () => {
         <section>
             <article className="topp">
                 <span style={{fontSize: "24px"}}>About Us</span>
-                <span style={{fontSize: "34px"}}>We Believe in Dummie Text</span>
-                <span>Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.</span>
+                <span style={{fontSize: "34px"}}>Why Agric Me?</span>
+                <span>Agricme is a pioneering social platform exclusively designed to unite farmers, fostering a robust community-driven network within the agricultural landscape. Our platform serves as a digital hub, providing farmers with the tools and resources to connect, collaborate, and thrive together..</span>
             </article>
             <article className="middlee">
                 <div className="first">
