@@ -1,7 +1,6 @@
 import React from 'react'
 import Nav from '@/components/home/Nav'
 import Hero from '@/components/home/Hero'
-import OldFirstSection from '@/components/home/OldFirstSection'
 import AnimationWrapper from './AnimationWrapper'
 import ThirdSection from '@/components/home/thirdSection'
 import SecondSection from '@/components/home/secondSection'
@@ -10,8 +9,9 @@ import Testimonial from '@/components/home/Testimonial'
 import Footer from '@/components/home/Footer'
 import FourthSection from '@/components/home/FourthSection'
 import NewsLetter from '@/components/home/NewsLetter'
-import BackgroundBeam from '@/components/home/BackgroundBeam'
+import BackgroundBeam from '@/components/aceternity-sections/BackgroundBeam'
 import FirstSection from '@/components/home/FirstSection'
+import Testing from '@/components/home/Testing'
 
 function Home() {
   return (
@@ -22,9 +22,9 @@ function Home() {
       </AnimationWrapper>
       <BackgroundBeam/>
       <FirstSection/>
-      {/* <OldFirstSection /> */}
       <SecondSection />
-      <ThirdSection />
+      <Testing />
+      {/* <ThirdSection /> */}
       <Products />
       <Testimonial />
       <FourthSection />
