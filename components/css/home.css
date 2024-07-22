@@ -4,6 +4,8 @@
     justify-content: center;
     height: 90px;
     align-items: center;
+    position: relative;
+    z-index: 20;
 }
 .nav-bar{
     width: 88%;
@@ -27,6 +29,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    z-index: 30;
 }
 .hero-cont{
     width: 88%;
@@ -51,12 +54,8 @@
 .yellow-btn{
     color: var(--logo-black);
     background-color: var(--logo-yellow);
-    border : none;
-    border-radius: var(--border-radius);
-    padding: 15px 23px;
     cursor: pointer;
     font-weight: bold;
-    margin: 10px 3px;
 }
 .green-btn{
     color: white;

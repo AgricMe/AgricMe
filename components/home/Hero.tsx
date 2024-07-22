@@ -4,6 +4,7 @@ import Button from '../shared/Button'
 import "../css/home.css"
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import LoginModalElements from '../subcomponents/LoginModalElements'
 const Hero = () => {
     const router = useRouter()
     return (
@@ -12,10 +13,11 @@ const Hero = () => {
                 <div className='hero-btn-txt'>
                     <p className='font-bold text-[#274C5B]'>A Social Platform for Farmers</p>
                     <h2 className='font-bold'>An Avenue for Empowering Farmers, Building Communities</h2>
-                    <div>
+                    {/* <div>
                         <Button click={()=> router.push('/signup')} clas={"yellow-btn"} text={"Sign up"} />
                         <Button click={()=> router.push('/login')} clas={"green-btn"} text={"Login"} />
-                    </div>
+                    </div> */}
+                    <LoginModalElements/>
                 </div>
                 <div>
                     <div className='hero-img'>

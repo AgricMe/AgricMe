@@ -11,12 +11,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  loginmodal,
+  modall
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
+  loginmodal: React.ReactNode;
+  modall: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        {loginmodal}
+      </body>
     </html>
   );
 }

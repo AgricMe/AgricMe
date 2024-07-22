@@ -1,6 +1,12 @@
 .dashboard-wrapper{
-   /* background-color: rgb(246, 248, 251); */
+   background-color: rgb(246, 248, 251);
+   display: flex;
+   justify-content: center;
 }
+.dashboard-children{
+    width: 95%;
+}
+
 /* Sidebar */
 .sidebar{
     background-color: rgba(45, 45, 45, 0.902);
@@ -8,15 +14,8 @@
     width: 250px;
     position: fixed;
 }
-.dashboard-children{
-    margin-left: 250px;
-    display: flex;
-    justify-content: center;
-    width: calc(100% -250px);
-}
-.dashboard-children-cont{
-    width: 95%;
-}
+/* end of sidebar */
+
 /* Dasboard Nav */
 .dash-nav{
     display: flex;
