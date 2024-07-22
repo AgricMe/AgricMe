@@ -10,7 +10,7 @@ import FourthSection from '@/components/home/FourthSection'
 import NewsLetter from '@/components/home/NewsLetter'
 import BackgroundBeam from '@/components/subcomponents/BackgroundBeam'
 import FirstSection from '@/components/home/FirstSection'
-import ThirdSection from '@/components/home/ThirdSection'
+import OfferSection from '@/components/home/OfferSection'
 
 function Home() {
   return (
@@ -22,7 +22,7 @@ function Home() {
       <BackgroundBeam/>
       <FirstSection/>
       <SecondSection />
-      <ThirdSection />
+      <OfferSection />
       <Products />
       <Testimonial />
       <FourthSection />
