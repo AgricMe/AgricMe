@@ -61,8 +61,6 @@
     color: white;
     background-color: var(--logo-green);
     border : none;
-    border-radius: var(--border-radius);
-    padding: 15px 23px;
     cursor: pointer;
     font-weight: bold;
     margin: 10px 3px;

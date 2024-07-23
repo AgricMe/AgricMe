@@ -254,7 +254,7 @@ export default function LoginModalElements() {
   return (
     <div className="">
         <Modal>
-            <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn green-btn">
+            <ModalTrigger className="bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn green-btn py-3 px-6 rounded-lg">
             <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
             Get Started
             </span>
