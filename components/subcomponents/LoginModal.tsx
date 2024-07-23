@@ -10,6 +10,7 @@ import React, {
   useState,
 } from "react";
 import { useRouter } from 'next/navigation'
+import { setTimeout } from "timers/promises";
 
 interface ModalContextType {
   open: boolean;
@@ -19,7 +20,7 @@ interface ModalContextType {
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <ModalContext.Provider value={{ open, setOpen }}>
@@ -52,8 +53,9 @@ export const ModalTrigger = ({
   const { setOpen } = useModal();
   const router = useRouter()
   function redirecttoLogin(){
-        setOpen(true)
-        // router.push("/login")
+        router.push("/login")
+        
+        
     }
   return (
     <button
@@ -79,7 +81,8 @@ export const ModalBody = ({
 
   const modalRef = useRef(null);
   const { setOpen } = useModal();
-  useOutsideClick(modalRef, () => setOpen(false));
+  // useOutsideClick(modalRef, () => setOpen(false));
+
 
   return (
     <AnimatePresence>
@@ -192,9 +195,11 @@ const Overlay = ({ className }: { className?: string }) => {
 
 const CloseIcon = () => {
   const { setOpen } = useModal();
+  const router = useRouter()
+
   return (
     <button
-      onClick={() => setOpen(false)}
+      onClick={() => router.back()}
       className="absolute top-4 right-4 group"
     >
       <svg
