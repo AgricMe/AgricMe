@@ -10,7 +10,7 @@ import React, {
   useState,
 } from "react";
 import { useRouter } from 'next/navigation'
-import { setTimeout } from "timers/promises";
+
 
 interface ModalContextType {
   open: boolean;
@@ -20,7 +20,7 @@ interface ModalContextType {
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export const ModalProvider = ({ children }: { children: ReactNode }) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <ModalContext.Provider value={{ open, setOpen }}>
@@ -52,18 +52,13 @@ export const ModalTrigger = ({
 }) => {
   const { setOpen } = useModal();
   const router = useRouter()
-  function redirecttoLogin(){
-        router.push("/login")
-        
-        
-    }
   return (
     <button
       className={cn(
         "px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
         className
       )}
-      onClick={() => redirecttoLogin()}
+      onClick={() => setOpen(true)}
     >
       {children}
     </button>
@@ -81,7 +76,7 @@ export const ModalBody = ({
 
   const modalRef = useRef(null);
   const { setOpen } = useModal();
-  // useOutsideClick(modalRef, () => setOpen(false));
+  useOutsideClick(modalRef, () => setOpen(false));
 
 
   return (
@@ -106,7 +101,7 @@ export const ModalBody = ({
           <motion.div
             ref={modalRef}
             className={cn(
-              "min-h-[50%] max-h-[90%] md:max-w-[40%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+              "min-h-[50%] max-h-[90%] md:max-w-[44%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
               className
             )}
             initial={{
@@ -149,7 +144,7 @@ export const ModalContent = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col flex-1 p-8 md:p-10", className)}>
+    <div className={cn("flex flex-col flex-1 p-2 md:p-10", className)}>
       {children}
     </div>
   );
@@ -199,7 +194,7 @@ const CloseIcon = () => {
 
   return (
     <button
-      onClick={() => router.back()}
+      onClick={() => setOpen(false)}
       className="absolute top-4 right-4 group"
     >
       <svg

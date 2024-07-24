@@ -21,7 +21,7 @@ const Nav = () => {
                 />
                 <div className='nav-links'>
                     <Link href={"/"} className={`nav-link ${roboto.className}`}>Home</Link>
-                    <Link href={"/"} className={`nav-link ${roboto.className}`}>About</Link>
+                    <Link href={"/agrions"} className={`nav-link ${roboto.className}`}>Dashboard</Link>
                     <Link href={"/"} className={`nav-link ${roboto.className}`}>Services</Link>
                     <Link href={"/"} className={`nav-link ${roboto.className}`}>Product</Link>
                     <Link href={"/"} className={`nav-link ${roboto.className}`}>Contact</Link>

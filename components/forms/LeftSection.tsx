@@ -8,10 +8,10 @@ type textVariant = {
 export default function LeftSection({text, small}: textVariant) {
   return (
     <>
-        <div className='side-display'>
+        {/* <div className='side-display'>
             <h1>{text}</h1>
             <p>{small}</p>
-        </div>
+        </div> */}
     </>
   )
 }

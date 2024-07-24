@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import '@/components/css/form.css'
+// import { Roboto, Open_Sans } from "next/font/google";
 // import "./globals.css";
 
-// const inter = Inter({ subsets: ["latin"] });
+// const inter = Open_Sans({ subsets: ["cyrillic"], weight: "300" });
 
 export const metadata: Metadata = {
   title: "Login",
@@ -16,7 +17,7 @@ export default function SignupLayout({
 }>) {
   return (
     <>
-        <main>
+        <main className={`form-layout`}>
             {children}
         </main>
     </>

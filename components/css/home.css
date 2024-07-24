@@ -59,7 +59,7 @@
 }
 .green-btn{
     color: white;
-    background-color: var(--logo-green);
+    background-color: var(--logo-lightgreen);
     border : none;
     cursor: pointer;
     font-weight: bold;

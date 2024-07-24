@@ -7,7 +7,6 @@ import logo from '@/public/logo/agricme-logo.png'
 type formVariant = {
     page: string
 }
-
 export default function Form({page}: formVariant) {
   return (
     <>
@@ -15,8 +14,8 @@ export default function Form({page}: formVariant) {
             <div className='logo'>
                 {/* <Link href={'/'}><img src={'/logo/agricme-logo.png'} width={200} alt="" /></Link> */}
             </div>
-            <div>
-                <h3>{page}</h3>
+            <div className='form-background'>
+                <h3 className='text-[white] flex justify-center font-bold text-3xl'>{page}</h3>
                 <div className="oauth">
                     <button className='auth'><span><FcGoogle /></span> Continue with Google</button>
                     <button className='auth'><span><FaFacebook /></span> Continue with facebook</button>
@@ -24,28 +23,34 @@ export default function Form({page}: formVariant) {
                 <form className='form' action="">
                     {
                         page == "Create Account" &&
-                        <label className='label flex flex-col items-stretch' htmlFor="username">Username
-                            <input className=' bg-white' type="username" name="username" id="username" />
+                        <label className='w-full text-white text-[13px] pb-3 font-semibold' htmlFor="username">Username
+                            <input className='w-full bg-white/40 p-3 outline-offset-0 outline-none text-[black]' type="username" name="username" id="username" />
                         </label>
                     }
-                    <label className='label grid' htmlFor="email">Email
-                        <input className='w-full bg-white' type="email" name="email" id="email" />
+                    <label className='w-full text-white text-[13px] pb-3 font-semibold' htmlFor="email">Email
+                        <input className='w-full bg-white/40 p-3 outline-offset-0 outline-none text-[black]' type="email" name="email" id="email" />
                     </label>
-                    <label className='label grid' htmlFor="password">Password
+                    <label className='w-full text-white text-[13px] pb-3 font-semibold' htmlFor="password">Password
+                        <input className='w-full bg-white/40 p-3 outline-offset-0 outline-none text-[black]' type="password" name="password" id="password" />
+                    </label>
+                    {/* <label className='label grid' htmlFor="password">Password
                         <input className='w-full bg-white' type="password" name="password" id="password" />
-                    </label>
-                    <label className='label remember' htmlFor="remember">
-                        <input className='text-white bg-white' type="checkbox" name="remember" id="remember" /> Remember me
+                    </label> */}
+                    <label className='remember' htmlFor="remember">
+                        <input className='text-white bg-white' type="checkbox" name="remember" id="remember" />
+                        <span className='checkmark'></span>
+                         Remember me
                     </label>
                     <button className='submit'>Continue</button>
                 </form>
                 {
                     page == 'Log In'?
-                    <span className='label account'>Already have an account? <Link href={'/signup'}>Create Account</Link></span>:
-                    <span className='label account'>Dont have an account? <Link href={'/login'}>Log In</Link></span>
+                    <span className='label account'>Dont have an account? <Link href={'/signup'}>Create Account</Link></span>:
+                    <span className='label account'>Already have an account? <Link href={'/login'}>Log In</Link></span>
                 }
             </div>
         </div>
     </>
   )
 }
+

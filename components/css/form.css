@@ -1,3 +1,8 @@
+.form-layout{
+    background-image: url('../../public/component-images/Agricme-logo-bg.png');
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+}
 .form-div {
     display: flex;
     align-items: center;
@@ -5,18 +10,20 @@
     min-height: 100vh;
 }
 
-.side-display {
+/* .side-display {
     background-image: url('../../public/component-images/Agricme-logo-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 100vh;
     width: 30vw;
+    position: absolute;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 0px 0px 50px 50px;
-}
+} */
 
 .side-display h1, .side-display p{
     text-align: start;
@@ -34,7 +41,14 @@
 }
 
 .form-container {
-    width: 40vw;
+    width: 50vw;
+    backdrop-filter: blur(9px) saturate(200%);
+    -webkit-backdrop-filter: blur(9px) saturate(200%);
+    background-color: rgba(27, 62, 50, 0.42);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 35px;
+    height: fit-content !important;
 }
 
 .form-container .logo{
@@ -58,11 +72,10 @@
 .form-container .oauth{
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-around;
-    align-items: stretch;
-    padding-block: 40px 20px;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    justify-content: center;
+    padding-block: 20px 20px;
 }
 
 .form-container .oauth .auth{
@@ -74,6 +87,8 @@
     align-items: center;
     gap: 10px;
     white-space: nowrap;
+    color: white;
+    font-weight: 600;
 }
 
 .form-container .oauth .auth span{
@@ -92,7 +107,59 @@
     align-items: center;
     padding-block: 0px !important;
     height: fit-content;
+    color: white;
+    gap: 8px;
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    padding-left: 30px;
+    user-select: none;
 }
+
+/* Hide the default checkbox */
+.remember input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom checkbox style */
+.remember .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #ccc;
+    border-radius: 3px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.remember input[type="checkbox"]:checked ~ .checkmark {
+    background-color: var(--logo-lightgreen);
+}
+
+/* Add the checkmark/indicator (hidden when not checked) */
+.remember .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.remember input[type="checkbox"]:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.remember .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
 .form-container .form .label input{
     border: 1.5px solid var(--logo-green);
     border-radius: 10px;
@@ -114,12 +181,13 @@
 
 .form-container .account{
     margin-top: 20px;
+    color: white;
 }
 
 .form-container .form .submit{
     height: 50px;
     border-radius: 10px;
-    background-color: var(--logo-green);
+    background-color: var(--logo-lightgreen);
     border: none;
     color: white;
     font-size: 20px;
@@ -128,7 +196,7 @@
 }
 
 .form-container .form .submit:hover{
-    background-color: var(--logo-black);
+    background-color: var(--logo-green);
     transition: all ease-in-out .5s;
 }
 
@@ -138,15 +206,9 @@
     color: var(--logo-green);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 960px) {
     .side-display{
         display: none;
-    }
-    .form-div{
-        width: 100vw;
-        background-image: url('../../public/component-images/Agricme-logo-bg.png');
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: lighten;
     }
     .form-container .logo{
         display: flex;

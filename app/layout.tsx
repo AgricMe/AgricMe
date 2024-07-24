@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  loginmodal,
 }: Readonly<{
   children: React.ReactNode
   loginmodal: React.ReactNode;
@@ -19,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-         {loginmodal}
         {children}
       </body>
     </html>
