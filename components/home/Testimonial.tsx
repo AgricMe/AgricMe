@@ -1,7 +1,7 @@
 import Image from "next/image"
 const Testimonial = () => {
   return (
-    <div className="testimonial">
+    <div className="testimonial bg-white">
         <div >
            <Image
            src={"/component-images/Imagebg.jpg"}
