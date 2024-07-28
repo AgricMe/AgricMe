@@ -8,9 +8,9 @@
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
- 
-  --logo-black: #274C5B;
-  --logo-yellow: #EFD372;
+
+  --logo-black: #274c5b;
+  --logo-yellow: #efd372;
   --logo-green: #1b3e32;
   --logo-lightgreen: #367b63;
 }
@@ -27,7 +27,6 @@ body {
   overflow-x: hidden;
   background-color: rgb(246, 248, 251) !important;
 }
-
 
 a {
   color: inherit;
