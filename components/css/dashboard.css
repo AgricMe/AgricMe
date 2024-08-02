@@ -1,39 +1,40 @@
-.dashboard-wrapper{
-   background-color: rgb(246, 248, 251);
-   display: flex;
-   justify-content: center;
+.dashboard-wrapper {
+  background-color: rgb(246, 248, 251);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-.dashboard-children{
-    width: 95%;
+.dashboard-children {
+  width: 95%;
 }
 
 /* Sidebar */
-.sidebar{
-    background-color: rgba(45, 45, 45, 0.902);
-    height: 100%;
-    width: 250px;
-    position: fixed;
+.sidebar {
+  background-color: rgba(45, 45, 45, 0.902);
+  height: 100%;
+  width: 250px;
+  position: fixed;
 }
 /* end of sidebar */
 
 /* Dasboard Nav */
-.dash-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
+.dash-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
 }
-.inp-btn{
-    display: flex;
-    gap: 30px;
-    align-items: center;
+.inp-btn {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
-.agrion-banner{
-    background-image: url('../../public/dashboard/agrion-banner.png');
-    box-shadow: 3px 4px 3px rgba(193, 193, 193, 0.594);
-    background-size: cover;
+.agrion-banner {
+  background-image: url("../../public/dashboard/agrion-banner.png");
+  box-shadow: 3px 4px 3px rgba(193, 193, 193, 0.594);
+  background-size: cover;
 }
-.hamburger-img{
-    background-image: url('../../public/dashboard/hamburger-img.png');
-    background-size: cover;
+.hamburger-img {
+  background-image: url("../../public/dashboard/hamburger-img.png");
+  background-size: cover;
 }

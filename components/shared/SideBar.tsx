@@ -51,7 +51,7 @@
 //                 <IoIosLogOut className="text-[20px] text-red-400"/>
 //                 <p>Logout</p>
 //             </Link>
-            
+
 //         </div>
 //     )
 // }
@@ -179,8 +179,7 @@ export const MobileSidebar = ({
         {...props}
       >
         <div className="flex justify-end z-20 w-full">
-            <button  onClick={() => setOpen(!open)}>Open Up</button>
-          
+          <button onClick={() => setOpen(!open)}>Open Up</button>
         </div>
         <AnimatePresence>
           {open && (
@@ -239,7 +238,7 @@ export const SidebarLink = ({
           display: animate ? (open ? "inline-block" : "none") : "inline-block",
           opacity: animate ? (open ? 1 : 0) : 1,
         }}
-        className="text-neutral-700 dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+        className="dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
       >
         {link.label}
       </motion.span>

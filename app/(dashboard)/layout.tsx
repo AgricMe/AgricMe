@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../../components/css/dashboard.css"
+import "../../components/css/dashboard.css";
 import { cn } from "@/utils/cn";
 import SideBarElements from "@/components/dashboard/SideBarElements";
 
@@ -13,7 +13,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
- 
   return (
     <div
       className={cn(
@@ -23,9 +22,7 @@ export default function RootLayout({
     >
       <SideBarElements />
       <div className="dashboard-wrapper">
-        <div className="dashboard-children">
-          {children}
-        </div>
+        <div className="dashboard-children">{children}</div>
       </div>
     </div>
   );
