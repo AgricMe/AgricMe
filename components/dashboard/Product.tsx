@@ -10,7 +10,7 @@ const Product = ({ id, img, name, category, price, quantity }: IProduct) => {
           <Image src={img} alt={name} />
         </div>
         <div className="ml-4">
-          <p className="text-[.85rem] pb-1">{name}</p>
+          <p className="text-[.85rem] text-[#000] pb-1">{name}</p>
           <p className="text-[.75rem] text-gray-400">{category}</p>
         </div>
       </div>
