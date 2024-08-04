@@ -20,7 +20,9 @@ const page = () => {
         leftSide={
           <>
             <div className="flex justify-between items-start pb-4">
-              <h3 className="text-[1.2rem] font-bold">Sales Data</h3>
+              <h3 className="text-[1.2rem] text-[#000] font-bold">
+                Sales Data
+              </h3>
               <p className="text-[.85rem] text-green-400">Detail</p>
             </div>
             <Image src={img1} alt="Sales Data Image" className="h-[250px]" />
@@ -29,7 +31,9 @@ const page = () => {
         rightSide={
           <>
             <div className="flex justify-between items-start pb-4">
-              <h3 className="text-[1.2rem] font-bold">Top Products</h3>
+              <h3 className="text-[1.2rem] text-[#000] font-bold">
+                Top Products
+              </h3>
               <select
                 name="period"
                 id="period"
@@ -70,7 +74,9 @@ const page = () => {
         leftSide={
           <>
             <div className="flex justify-between items-start pb-4">
-              <h3 className="text-[1.2rem] font-bold">Latest Transactions</h3>
+              <h3 className="text-[1.2rem] text-[#000] font-bold">
+                Latest Transactions
+              </h3>
               <select
                 name="period"
                 id="period"
@@ -116,7 +122,9 @@ const page = () => {
         rightSide={
           <>
             <div className="flex justify-between items-start pb-4">
-              <h3 className="text-[1.2rem] font-bold">Customer Segmentation</h3>
+              <h3 className="text-[1.2rem] text-[#000] font-bold">
+                Customer Segmentation
+              </h3>
               <select
                 name="period"
                 id="period"

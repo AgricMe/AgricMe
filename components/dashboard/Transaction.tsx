@@ -10,10 +10,16 @@ const Transaction = ({
 }: ITransaction) => {
   return (
     <>
-      <p className="basis-[26%] text-[.85rem]">{customer}</p>
-      <p className="basis-[22%] text-[.85rem] text-center">{product}</p>
-      <p className="basis-[19%] text-[.85rem] text-center">{brand}</p>
-      <p className="basis-[17%] text-[.85rem] text-center">{quantity}</p>
+      <p className="basis-[26%] text-[#000] text-[.85rem]">{customer}</p>
+      <p className="basis-[22%] text-[#000] text-[.85rem] text-center">
+        {product}
+      </p>
+      <p className="basis-[19%] text-[#000] text-[.85rem] text-center">
+        {brand}
+      </p>
+      <p className="basis-[17%] text-[#000] text-[.85rem] text-center">
+        {quantity}
+      </p>
       <p
         className={`basis-[17%] ${
           status === "Done"
