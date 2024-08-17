@@ -5,7 +5,7 @@
   justify-content: center;
 }
 .dashboard-children {
-  width: 95%;
+  width: 100%;
 }
 
 /* Sidebar */
@@ -22,11 +22,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 8px;
 }
 .inp-btn {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
 }
 .agrion-banner {

@@ -62,6 +62,7 @@ import { cn } from "@/utils/cn";
 import Link, { LinkProps } from "next/link";
 import React, { useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { MdClose, MdMenu } from "react-icons/md";
 // import { IconMenu2, IconX } from "@tabler/icons-react";
 
 interface Links {
@@ -179,7 +180,11 @@ export const MobileSidebar = ({
         {...props}
       >
         <div className="flex justify-end z-20 w-full">
-          <button onClick={() => setOpen(!open)}>Open Up</button>
+          <MdMenu
+            size={35}
+            onClick={() => setOpen(!open)}
+            className="text-[#758A89] cursor-pointer"
+          />
         </div>
         <AnimatePresence>
           {open && (
@@ -201,7 +206,7 @@ export const MobileSidebar = ({
                 onClick={() => setOpen(!open)}
               >
                 {/* <IconX /> */}
-                <button className="text-yellow-400">Close Up</button>
+                <MdClose size={28} className="text-[#758A89] cursor-pointer" />
               </div>
               {children}
             </motion.div>
