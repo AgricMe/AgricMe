@@ -26,3 +26,10 @@ export interface Transaction {
   quantity: string;
   status: TransactionStatus;
 }
+
+export interface Chat {
+  id: number;
+  name: string;
+  content: string;
+  img: StaticImageData;
+}

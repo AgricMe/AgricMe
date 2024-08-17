@@ -1,5 +1,12 @@
 import productImg from "@/public/icons/products/vecteezy_fresh-healthy-vegetable-in-wicker-basket-food-concept-ai_28648765 1veg.png";
 import { TransactionStatus } from "@/schema/enums";
+import avatar2 from "@/public/dashboard/avatar2.jpg";
+import avatar3 from "@/public/dashboard/avatar3.jpg";
+import avatar4 from "@/public/dashboard/avatar4.png";
+import avatar5 from "@/public/dashboard/avatar5.jpg";
+import avatar6 from "@/public/dashboard/avatar6.jpg";
+import avatar7 from "@/public/dashboard/avatar7.jpg";
+import avatar8 from "@/public/dashboard/avatar8.jpg";
 
 export const metrixData = [
   {
@@ -84,5 +91,78 @@ export const transactionData = [
     brand: "Pull & Bear",
     quantity: "1 pc",
     status: TransactionStatus.DONE,
+  },
+];
+
+export const chatListData = [
+  {
+    id: 1,
+    name: "Bessie Cooper",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, laboriosam.",
+    img: avatar2,
+  },
+  {
+    id: 2,
+    name: "Cameron Williamson",
+    content: "Lorem ipsum dolor sit amet consectetur adipisiores, laboriosam.",
+    img: avatar3,
+  },
+  {
+    id: 3,
+    name: "Robert Fox",
+    content: "Lorem nsectetur adipisicing elit. Dolores, laboriosam.",
+    img: avatar4,
+  },
+  {
+    id: 4,
+    name: "Courtney Henry",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, laboriosam.",
+    img: avatar5,
+  },
+  {
+    id: 5,
+    name: "Kathryn Murphy",
+    content:
+      "Lorem ipsum dolor sectetur adipisicing elit. Dolores, laboriosam.",
+    img: avatar6,
+  },
+  {
+    id: 6,
+    name: "Eleanor Pena",
+    content: "Lorem ipsum dolor sit amet consectetur Dolores, laboriosam.",
+    img: avatar7,
+  },
+  {
+    id: 7,
+    name: "Jenny Wilson",
+    content: "Lorem ipsum dolor sit amet boriosam.",
+    img: avatar8,
+  },
+  {
+    id: 8,
+    name: "Guy Hawkins",
+    content: "Lorem ipsum dolor sit amet el.",
+    img: avatar4,
+  },
+  {
+    id: 9,
+    name: "Robert Fox",
+    content: "Lorem nsectetur adipisicing elit. Dolores, laboriosam.",
+    img: avatar4,
+  },
+  {
+    id: 10,
+    name: "Courtney Henry",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, laboriosam.",
+    img: avatar5,
+  },
+  {
+    id: 11,
+    name: "Jenny Wilson",
+    content: "Lorem ipsum dolor sit amet boriosam.",
+    img: avatar8,
   },
 ];

@@ -9,7 +9,7 @@ import Transaction from "@/components/dashboard/Transaction";
 
 const page = () => {
   return (
-    <section className="pb-10">
+    <section className="pb-10 pl-3 pr-3">
       <Nav />
       <div className="grid grid-cols-3 mt-8 gap-2 md:gap-8">
         {metrixData.map((item) => {

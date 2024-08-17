@@ -4,7 +4,7 @@ import UploadPost from "@/components/dashboard/UploadPost";
 
 const page = () => {
   return (
-    <div>
+    <div className="pl-3">
       <Nav />
       <div className="flex justify-between items-end mt-[40px]">
         <div className="w-[67%] h-[210px] rounded-xl agrion-banner flex items-center">
