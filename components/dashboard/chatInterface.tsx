@@ -76,7 +76,7 @@ const ChatInterface = () => {
   };
 
   return (
-    <div className="flex flex-col w-full h-screen">
+    <div className="flex flex-col w-full h-screen transition-all duration-300">
       <div className="w-full h-auto bg-white p-1 shadow-md rounded-sm flex justify-between items-center mb-1.5">
         <div className="flex justify-start items-center">
           <Image

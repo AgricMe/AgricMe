@@ -16,12 +16,12 @@ const Page = () => {
         <div
           className={`${
             isOpen && "hidden md:block"
-          } w-full md:w-[30%] md:mr-0.5`}
+          } w-full md:w-[30%] md:mr-0.5 transition-all duration-300`}
         >
           <ChatList openChat={() => setIsOpen(true)} />
         </div>
         {isOpen && (
-          <div className="absolute top-[5%] md:top-[1%] right-0 md:block md:w-[70%]">
+          <div className="absolute top-[5%] md:top-[1%] right-0 md:block md:w-[70%] transition-all duration-300">
             <ChatInterface />
           </div>
         )}
