@@ -14,8 +14,13 @@ import {
 } from "react-icons/hi";
 import { VscSmiley } from "react-icons/vsc";
 import { MdSend } from "react-icons/md";
+import Link from "next/link";
 
-const ChatInterface = () => {
+interface Props {
+  openProfile(): void;
+}
+
+const ChatInterface = ({ openProfile }: Props) => {
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -66,7 +71,8 @@ const ChatInterface = () => {
       time: "10:40 AM",
     },
   ]);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState<string>("");
+  const [tabOpened, setTabOpened] = useState<boolean>(false);
 
   const sendMessage = () => {
     // if (input.trim() !== "") {
@@ -94,15 +100,35 @@ const ChatInterface = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-start items-center">
-          <div className="w-8 h-8 border border-gray-300 rounded-full flex justify-center items-center">
+        <div className="relative flex justify-start items-center">
+          <div className="w-8 h-8 border border-gray-300 rounded-full flex justify-center items-center cursor-pointer">
             <FaPhoneAlt size={13} className="text-[#7EB693]" />
           </div>
-          <div className="w-8 h-8 border border-gray-300 rounded-full flex justify-center items-center mx-4">
+          <div className="w-8 h-8 border border-gray-300 rounded-full flex justify-center items-center mx-4 cursor-pointer">
             <FaVideo size={13} className="text-[#7EB693]" />
           </div>
-          <div className="w-8 h-8 border border-gray-300 rounded-full flex justify-center items-center">
+          <div
+            className="w-8 h-8 border border-gray-300 rounded-full flex justify-center items-center cursor-pointer"
+            onClick={() => setTabOpened(!tabOpened)}
+          >
             <FaEllipsisH size={13} className="text-[#7EB693]" />
+
+            {tabOpened && (
+              <div className="absolute scale-up-center top-[115%] right-0 w-[150px] bg-[#fff] rounded-md overflow-hidden z-20">
+                <div
+                  className="w-full bg-transparent hover:bg-[#f2f2f2] block text-[.8rem] py-4 font-medium px-4 cursor-pointer"
+                  onClick={openProfile}
+                >
+                  Profile
+                </div>
+                <Link
+                  href={"#"}
+                  className="w-full bg-transparent hover:bg-[#f2f2f2] block text-[.8rem] py-4 font-medium px-4 cursor-pointer"
+                >
+                  Starred
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>

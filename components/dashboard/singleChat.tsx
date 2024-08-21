@@ -6,10 +6,12 @@ interface Props extends IChat {
   setIsOpen(): void;
 }
 
-const Chat = ({ name, content, img, setIsOpen }: Props) => {
+const Chat = ({ id, name, content, img, setIsOpen }: Props) => {
   return (
     <div
-      className={`w-full flex justify-start items-center pl-[0.32rem] py-2 border-b border-gray-200 cursor-pointer`}
+      className={`w-full flex justify-start items-center ${
+        id === 3 && "bg-[#EFD372]"
+      } pl-[0.32rem] py-2 border-b border-gray-200 cursor-pointer px-2.5`}
       onClick={setIsOpen}
     >
       <Image
@@ -19,7 +21,7 @@ const Chat = ({ name, content, img, setIsOpen }: Props) => {
         height={40}
         className="rounded-full"
       />
-      <div className="w-full ml-2">
+      <div className="w-full pl-2">
         <h2 className="text-[.75rem] text-[#000] font-medium pb-0.5">{name}</h2>
         <p className="text-[#758A89] text-[.55rem]">{content}</p>
       </div>

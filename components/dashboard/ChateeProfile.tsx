@@ -3,11 +3,18 @@ import { MdClose } from "react-icons/md";
 import avatar4 from "@/public/dashboard/avatar4.png";
 import { IoToggleSharp } from "react-icons/io5";
 
-const ChateeProfile = () => {
+interface Props {
+  closeProfile(): void;
+}
+
+const ChateeProfile = ({ closeProfile }: Props) => {
   return (
-    <div className="w-[30%] h-screen bg-white p-3 flex flex-col shadow-md rounded-sm">
+    <div className="w-full h-screen bg-white p-3 flex flex-col shadow-md rounded-sm transition-all duration-300">
       <div className="flex justify-end items-center">
-        <div className="w-8 h-8 border border-gray-300 rounded-full flex justify-center items-center">
+        <div
+          className="w-8 h-8 border border-gray-300 rounded-full flex justify-center items-center cursor-pointer"
+          onClick={closeProfile}
+        >
           <MdClose size={20} className="text-[#758A89]" />
         </div>
       </div>
