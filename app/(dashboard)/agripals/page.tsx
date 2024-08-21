@@ -7,6 +7,7 @@ import { useState } from "react";
 
 const Page = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isProfileOpen, setIsProfileOpen] = useState<boolean>(false);
   return (
     <section className="relative pb-1.5">
       <div className="md:hidden">
@@ -20,12 +21,20 @@ const Page = () => {
         >
           <ChatList openChat={() => setIsOpen(true)} />
         </div>
-        {isOpen && (
-          <div className="absolute top-[5%] md:top-[1%] right-0 md:block md:w-[70%] transition-all duration-300">
-            <ChatInterface />
-          </div>
-        )}
-        {/* <ChateeProfile /> */}
+        <div>
+          {isOpen && (
+            <div className="absolute top-[5%] md:top-[1%] right-0 md:w-[70%] transition-all duration-300">
+              <ChatInterface openProfile={() => setIsProfileOpen(true)} />
+            </div>
+          )}
+        </div>
+        <div>
+          {isProfileOpen && (
+            <div className="absolute top-[5%] md:top-[1%] right-0 w-full md:w-[25%] transition-all duration-300">
+              <ChateeProfile closeProfile={() => setIsProfileOpen(false)} />
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
