@@ -34,7 +34,7 @@ a {
   text-decoration: none;
 }
 
-/* *::-webkit-scrollbar {
+*::-webkit-scrollbar {
   background-color: transparent;
   border-radius: 20px;
   width: 4px;
@@ -42,4 +42,4 @@ a {
 *::-webkit-scrollbar-thumb {
   background-color: #c8d0d0;
   border-radius: 20px;
-} */
+}

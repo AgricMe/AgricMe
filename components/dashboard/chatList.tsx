@@ -35,7 +35,7 @@ const ChatList = ({ openChat }: Props) => {
           <FaPlus size={15} className="text-[#fff]" />
           <p className="text-[.75rem] text-[#fff] ml-3">Start New Chat</p>
         </Link>
-        <div className="w-full flex flex-col overflow-y-scroll py-2 ">
+        <div className="w-full flex flex-col py-2 ">
           {chatListData.map((chat: IChat) => {
             return <Chat key={chat.id} setIsOpen={openChat} {...chat} />;
           })}
