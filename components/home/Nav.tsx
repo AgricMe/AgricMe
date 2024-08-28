@@ -26,7 +26,7 @@ const Nav = () => {
           height={36.91}
         />
         <div className="lg:flex hidden justify-between items-center w-[50%]">
-          <Link href={"/"} className={`nav-link`}>
+          <Link href={"/"} className={`text-[17px] text-[#274c5b]`}>
             Home
           </Link>
           <Link href={"/agrions"} className={`text-[17px] text-[#274c5b] `}>
