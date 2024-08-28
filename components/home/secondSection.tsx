@@ -1,74 +1,104 @@
-import Image from "next/image"
-import image1 from "@/public/icons/secondSections/image1.jpg"
-import image2 from "@/public/icons/secondSections/image2.jpg"
+import Image from "next/image";
+import image1 from "@/public/icons/secondSections/image1.jpg";
+import image2 from "@/public/icons/secondSections/image2.jpg";
 const SecondSection = () => {
   return (
-    <section className="blog">
-        <section>
-            <div className="blogTop">
-                <span>News</span>
-                <div>
-                    <span>Discover weekly content about organic food, & more</span>
-                    <button className="bottom">
-                        <span>More news</span>
-                        <div><svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.4769 1.12891L7.87144 4.19342L4.4769 7.25794M7.39998 4.19342H0.516602" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        </div>
-                    </button>
-                </div>
+    <section className="w-full bg-[#fff] grid place-items-center py-[3rem] lg:py-0 px-[1.5rem] md:px-[3rem] lg:px-[4rem]">
+      <section className="w-full pt-[20px] pb-[40px] flex gap-[46px] flex-col">
+        <div className="flex gap-[9px] flex-col">
+          <span className="text-[20px] text-[#7eb693] text-center md:text-start">
+            News
+          </span>
+          <div className="flex flex-col md:flex-row items-center text-center md:text-start">
+            <span className="mr-auto text-[40px] text-[#274c5b] max-w-[600px] font-bold">
+              Discover weekly content about organic food, & more
+            </span>
+            <button className="bottom mt-2.5 md:mt-0">
+              <span>More news</span>
+              <div>
+                <svg
+                  width="9"
+                  height="8"
+                  viewBox="0 0 9 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.4769 1.12891L7.87144 4.19342L4.4769 7.25794M7.39998 4.19342H0.516602"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div className="blogMid flex flex-col lg:flex-row gap-[5rem] lg:gap-[46px]">
+          <article
+            style={{
+              backgroundImage: `url(${image1.src})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+            className="relative w-full h-[350px] rounded-[32px]"
+          >
+            <div>
+              <span>25 Nov</span>
             </div>
-            <div className="blogMid">
-                <article style={{backgroundImage: `url(${image1.src})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
-                    <div>
-                        <span>
-                            25 Nov
-                        </span>
-                    </div>
-                    <div>
-                        <span>
-                        <Image 
-                        src="/icons/secondSections/Vectorperson.png"
-                        alt='admin'
-                        width={15}
-                        height={15}
-                        />
-                        <span>By Rachi Card</span>
-                        </span>
-                        <span>The Benefits of Vitamin D & How to Get It</span>
-                        <span>Simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
-                        <button>
-                            Read More
-                        </button>
-                    </div>
-                </article>
-                <article style={{backgroundImage: `url(${image2.src})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>
-                    <div>
-                        <span>
-                            25 Nov
-                        </span>
-                    </div>
-                    <div>
-                        <span>
-                        <Image 
-                        src="/icons/secondSections/Vectorperson.png"
-                        alt='admin'
-                        width={15}
-                        height={15}
-                        />
-                        <span>By Rachi Card</span>
-                        </span>
-                        <span>The Benefits of Vitamin D & How to Get It</span>
-                        <span>Simply dummy text of the printing and typesetting industry. Lorem Ipsum</span>
-                        <button>
-                            Read More
-                        </button>
-                    </div>
-                </article>
+            <div>
+              <span>
+                <Image
+                  src="/icons/secondSections/Vectorperson.png"
+                  alt="admin"
+                  width={15}
+                  height={15}
+                />
+                <span>By Rachi Card</span>
+              </span>
+              <span>The Benefits of Vitamin D & How to Get It</span>
+              <span>
+                Simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum
+              </span>
+              <button>Read More</button>
             </div>
-        </section>
+          </article>
+          <article
+            style={{
+              backgroundImage: `url(${image2.src})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+            className="relative w-full h-[350px] rounded-[32px]"
+          >
+            <div>
+              <span>25 Nov</span>
+            </div>
+            <div>
+              <span>
+                <Image
+                  src="/icons/secondSections/Vectorperson.png"
+                  alt="admin"
+                  width={15}
+                  height={15}
+                />
+                <span>By Rachi Card</span>
+              </span>
+              <span>The Benefits of Vitamin D & How to Get It</span>
+              <span>
+                Simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum
+              </span>
+              <button>Read More</button>
+            </div>
+          </article>
+        </div>
+      </section>
     </section>
-  )
-}
+  );
+};
 
-export default SecondSection
+export default SecondSection;
