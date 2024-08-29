@@ -13,7 +13,9 @@ const Testimonial = () => {
       <div className="text-center">
         <div className="testimonial-items-text">
           <p className="custom-txt">Testimonial</p>
-          <h2>What Our Customer is Saying?</h2>
+          <h2 className="text-[28px] md:text-[40px] mt-[10px] text-[#274c5b]">
+            What Our Customer is Saying?
+          </h2>
         </div>
         <div>
           <div className="mt-[30px] flex flex-col justify-center items-center">
