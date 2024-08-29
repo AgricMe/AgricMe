@@ -1,7 +1,7 @@
 import Image from "next/image";
 const FourthSection = () => {
   return (
-    <div className="relative mb-[110%] md:mb-[50%] lg:mb-0">
+    <div className="relative mb-[140%] md:mb-[50%] lg:mb-0">
       <div>
         <Image
           src={"/component-images/butcher-image.jpg"}

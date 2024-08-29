@@ -4,7 +4,7 @@ const Products = () => {
   return (
     <div className="flex justify-center mt-10 mb-12 flex-col items-center  px-[1.5rem] md:px-[3rem] lg:px-[4rem]">
       <div>
-        <h2 className="font-bold text-black text-2xl pb-8">
+        <h2 className="font-bold text-black text-2xl pb-8 text-center">
           View The Trending Products
         </h2>
       </div>

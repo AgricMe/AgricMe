@@ -51,13 +51,13 @@ const OfferSection = () => {
   return (
     <div className="flex justify-center bg-[#fff] px-[1.5rem] md:px-[3rem] lg:px-[4rem]">
       <motion.div
-        className="w-full bg-[#1b3e32] rounded-[20px] my-[10px] pb-[20px]"
+        className="w-full bg-[#1b3e32] rounded-[20px] my-[10px] pb-0 md:pb-[20px]"
         ref={ref}
         style={{ scale: scaleProgress, opacity: opacityProgress }}
       >
         <div className="offers h-[270px] w-full flex justify-center items-center text-[#fff]">
           <div className="flex flex-col items-center gap-[15px]">
-            <h1 className="text-[50px] font-bold">What we Offer</h1>
+            <h1 className="text-[50px] font-bold text-center">What we Offer</h1>
             <p>Better Agriculture for Better Future</p>
           </div>
         </div>

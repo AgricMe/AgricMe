@@ -38,27 +38,14 @@
   gap: 8px;
 }
 .topp span:nth-child(1) {
-  font-size: 36px;
   color: #7eb693;
 }
 .topp span:nth-child(2) {
-  font-size: 50px;
   font-weight: 800;
   color: rgb(255, 255, 255);
 }
 .topp span:nth-child(3) {
   font-weight: 600;
-}
-.middlee {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.first {
-  display: flex;
-  gap: 19px;
-  height: 70px;
-  align-items: center;
 }
 .first div:nth-child(1) {
   height: 62%;
@@ -130,7 +117,6 @@
 }
 .blogMid div:nth-child(1) span {
   transform: scale(0.8);
-  font-size: 20px;
   font-weight: 800;
   text-align: center;
   margin: 2px;
@@ -142,7 +128,7 @@
   right: 20px;
   border-radius: 16px;
   background-color: white;
-  height: 200px;
+  height: auto;
   box-shadow: 0px 20px 35px 0px #a7a7a740;
   padding: 20px;
   display: flex;
@@ -152,9 +138,7 @@
   display: flex;
   gap: 10px;
   align-items: baseline;
-  font-size: 13px;
   font-weight: 400;
-  margin-bottom: 14px;
 }
 .blogMid div:nth-child(2) span:nth-child(2) {
   color: #274c5b;
@@ -190,17 +174,6 @@
   background-position: center;
 }
 /* end of third section */
-
-/* products */
-/* end of products */
-
-/* Testimonial */
-.testimonial-items-text h2 {
-  font-size: 40px;
-  color: var(--logo-black);
-  margin-top: 10px;
-}
-/* end of testimonial */
 
 /* footer */
 .line2 {

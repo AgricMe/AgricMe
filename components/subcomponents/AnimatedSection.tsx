@@ -38,9 +38,9 @@ const AnimatedSection = () => {
         } mb-12 lg:mb-0`}
       >
         <article className="topp">
-          <span style={{ fontSize: "24px" }}>About Us</span>
-          <span style={{ fontSize: "34px" }}>Why Agric Me?</span>
-          <span>
+          <span className="text-[24px] md:text-[36px]">About Us</span>
+          <span className="text-[35px] md:text-[50px]">Why Agric Me?</span>
+          <span className="mb-8 md:mb-0">
             Agricme is a pioneering social platform exclusively designed to
             unite farmers, fostering a robust community-driven network within
             the agricultural landscape. Our platform serves as a digital hub,
@@ -48,9 +48,9 @@ const AnimatedSection = () => {
             collaborate, and thrive together.
           </span>
         </article>
-        <article className="middlee">
-          <div className="first">
-            <div>
+        <article className="flex flex-col gap-[20px]">
+          <div className="first h-auto flex justify-start items-start gap-[19px] mb-3 md:mb-0">
+            <div className="p-1.5">
               <RiCommunityFill className="community-icon" />
             </div>
             <div>
@@ -61,8 +61,8 @@ const AnimatedSection = () => {
               </span>
             </div>
           </div>
-          <div className="first">
-            <div>
+          <div className="first h-auto flex justify-start items-start gap-[19px]">
+            <div className="p-1.5">
               <GiSatelliteCommunication className="community-icon" />
             </div>
             <div>
@@ -74,7 +74,7 @@ const AnimatedSection = () => {
             </div>
           </div>
         </article>
-        <article className="bottomm">
+        <article className="bottomm mt-2.5">
           <button>
             <div>
               <span>Connect Now</span>
@@ -117,21 +117,21 @@ const AnimatedSection = () => {
           isVisible
             ? "left-[103%] opacity-0"
             : "left-0 lg:left-[51%] opacity-100"
-        } mb-12 lg:mb-0`}
+        }`}
       >
         <article className="topp">
-          <span style={{ fontSize: "24px" }}>About Us</span>
-          <span style={{ fontSize: "34px" }}>Why Choose Us?</span>
-          <span>
+          <span className="text-[24px] md:text-[36px]">About Us</span>
+          <span className="text-[35px] md:text-[50px]">Why Choose us?</span>
+          <span className="mb-8 md:mb-0">
             Agricme revolutionizes the way farmers engage with each other and
             the broader agricultural ecosystem. By providing a platform for
             seamless interaction, we empower farmers to achieve greater success
             and sustainability.
           </span>
         </article>
-        <article className="middlee">
-          <div className="first">
-            <div>
+        <article className="flex flex-col gap-[20px]">
+          <div className="first h-auto flex justify-start items-start gap-[19px] mb-3 md:mb-0">
+            <div className="p-1.5">
               <GiTrade className="community-icon" />
             </div>
             <div>
@@ -142,8 +142,8 @@ const AnimatedSection = () => {
               </span>
             </div>
           </div>
-          <div className="first">
-            <div>
+          <div className="first h-auto flex justify-start items-start gap-[19px]">
+            <div className="p-1.5">
               <GiGiftOfKnowledge className="community-icon" />
             </div>
             <div>
@@ -155,7 +155,7 @@ const AnimatedSection = () => {
             </div>
           </div>
         </article>
-        <article className="bottomm">
+        <article className="bottomm mt-2.5">
           <button>
             <div>
               <span>Shop now</span>
