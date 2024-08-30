@@ -11,7 +11,7 @@ import { IoMdStar } from "react-icons/io";
 export function ProductCard() {
   return (
     <CardContainer className="inter-var w-[100%]">
-      <CardBody className="bg-[#367b63] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[white] dark:border-white/[0.2] border-black/[0.1] w-full sm:w-full h-auto rounded-xl p-6 border product-cont">
+      <CardBody className="bg-[#367b63] relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-[white] dark:border-white/[0.2] border-black/[0.1] w-full sm:w-full h-auto rounded-xl p-2 md:p-6 border product-cont">
         <CardItem translateZ="100" className="w-full">
           <Image
             src="/icons/products/vecteezy_fresh-healthy-vegetable-in-wicker-basket-food-concept-ai_28648765 1veg.png"
@@ -69,7 +69,7 @@ export function ProductCard() {
           <CardItem
             translateZ={20}
             as="p"
-            className="dark:text-black text-white text-[20px] font-semibold py-2"
+            className="dark:text-black text-white text-[17px] md:text-[20px] font-semibold py-2"
           >
             #2000
           </CardItem>
