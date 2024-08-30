@@ -8,7 +8,7 @@ const Products = () => {
           View The Trending Products
         </h2>
       </div>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-[2rem] lg:flex lg:justify-between lg:flex-wrap">
+      <div className="w-full grid grid-cols-2 gap-4 md:gap-[2rem] lg:flex lg:justify-between lg:flex-wrap">
         <ProductCard />
         <ProductCard />
         <ProductCard />
