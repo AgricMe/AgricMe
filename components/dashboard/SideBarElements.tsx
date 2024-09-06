@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/shared/SideBar";
 import { sideBarLinks } from "@/components/dashboard/SideBarLinks";
+import { PiExportBold } from "react-icons/pi";
 const SideBarElements = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -22,15 +22,12 @@ const SideBarElements = () => {
           <div>
             <SidebarLink
               link={{
-                label: "Dummy",
-                href: "#",
+                label: "Logout",
+                href: "/",
                 icon: (
-                  <Image
-                    src=""
-                    className="h-7 w-7 flex-shrink-0 rounded-full"
-                    width={50}
-                    height={50}
-                    alt="Avatar"
+                  <PiExportBold
+                    size={20}
+                    className="flex-shrink-0 rotate-90 text-red-600"
                   />
                 ),
               }}

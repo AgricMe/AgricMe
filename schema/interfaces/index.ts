@@ -33,3 +33,22 @@ export interface Chat {
   content: string;
   img: StaticImageData;
 }
+
+export interface Service {
+  id: number;
+  name: string;
+  profession: string;
+  img: StaticImageData;
+  projects: number;
+  tasks: number;
+  insights: number;
+}
+
+export interface ServiceHistory {
+  id: number;
+  date: string;
+  type: string;
+  address: string;
+  paymentMethod: string;
+  amount: number;
+}
