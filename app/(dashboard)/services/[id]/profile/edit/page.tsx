@@ -18,7 +18,7 @@ const page = () => {
       <h3 className="text-[1.2rem] md:text-[1.6rem] text-[#222] font-bold my-4 px-4 md:px-6 lg:px-[3.5rem]">
         Edit Profile
       </h3>
-      <div className="bg-[#eff6f1] px-4 md:px-6 lg:px-[3.5rem]">
+      <div className="bg-[#eff6f1] min-h-screen px-4 md:px-6 lg:px-[3.5rem]">
         <div
           className={`bg-[#fff] flex flex-col md:flex-row justify-between items-center w-full h-auto px-6 py-8 md:py-6 shadow-md rounded-xl`}
         >
