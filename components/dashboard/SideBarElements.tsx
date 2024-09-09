@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/shared/SideBar";
 import { sideBarLinks } from "@/components/dashboard/SideBarLinks";
 import { PiExportBold } from "react-icons/pi";
+import { Courgette } from "next/font/google";
+
+const cursive = Courgette({
+  subsets: ["latin"],
+  weight: "400",
+});
+
 const SideBarElements = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -45,15 +52,15 @@ export const Logo = () => {
   return (
     <Link
       href="#"
-      className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
+      className={`${cursive.className} flex space-x-2 items-center py-1 relative z-20`}
     >
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <div className="h-5 w-6 dark:bg-[#7EB693] bg-[#7EB693] rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="font-semibold text-[1.3rem] text-green-950 dark:text-white whitespace-pre"
+        className="font-semibold text-[1.8rem] text-neutral-200 dark:text-black whitespace-pre"
       >
-        <span className="text-[#7EB693]">Agric</span>me
+        <span className="text-[#7EB693] ml-2">Agric</span>me
       </motion.span>
     </Link>
   );
@@ -64,7 +71,7 @@ export const LogoIcon = () => {
       href="#"
       className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
     >
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
+      <div className="h-5 w-6 bg-[#7EB693] dark:bg-[#7EB693] rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
     </Link>
   );
 };

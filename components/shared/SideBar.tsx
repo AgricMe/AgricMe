@@ -1,69 +1,9 @@
-// import Image from "next/image"
-// import SideBarIcons from "../dashboard/SideBarIcons";
-// import { IoHelpCircleSharp } from "react-icons/io5";
-// import { IoIosLogOut } from "react-icons/io";
-// import Link from "next/link";
-
-// const SideBar = () => {
-//     return (
-//         <div className='sidebar'>
-//             <div className="p-[20px]">
-//                 <Image
-//                     src={"/logo/agricme-logo.png"}
-//                     alt="logo"
-//                     width={160}
-//                     height={36.91}
-//                 />
-//             </div>
-//             <div className="sidebar-links px-[20px]">
-//                 <SideBarIcons />
-//             </div>
-//            <div>
-//             <div className="border-t border-[#D4D4D4] mt-[20px]"></div>
-//                 <Link href={""} className="flex items-center gap-3 text-[#D4D4D4] px-[20px] py-[10px]">
-//                     <IoHelpCircleSharp  className="text-[20px]"/>
-//                     <p>Help</p>
-//                 </Link>
-//            </div>
-//            <div className="mt-[40px] flex justify-center">
-//                 <div className="bg-[#EFD372] h-[130px] w-[170px] rounded-[12px]">
-//                     <div className="flex justify-center">
-//                         <div className="bg-[#EFD372] h-[60px] w-[60px] rounded-full mt-[-30px] flex justify-center items-center">
-//                             <div className="flex justify-center">
-//                                 {/* <Image
-//                                 src={"/dashboard/lightbulb.png"}
-//                                 alt="lightbulb"
-//                                 width={120}
-//                                 height={150}
-//                                 className="lightbulb object-cover"
-//                                 /> */}
-//                                 {/* <img src="/dashboard/lightbulb.png" alt="lightbulb"  className="lightbulb object-cover h-[130px] w-[120px]"/> */}
-//                             </div>
-//                         </div>
-//                     </div>
-//                     <div className="text-center text-[12px] flex flex-col items-center text-black">
-//                         <span className="text-[10px]">Thoughts time</span>
-//                         <p className="w-[90%] leading-4 mt-1">If you aren’t willing to own a stock for 10 years, don’t even think about owning it for 10 minutes.</p>
-//                     </div>
-//                 </div>
-//            </div>
-//            <Link href={""} className="flex items-center gap-3 text-[#D4D4D4] px-[20px] py-[10px]">
-//                 <IoIosLogOut className="text-[20px] text-red-400"/>
-//                 <p>Logout</p>
-//             </Link>
-
-//         </div>
-//     )
-// }
-
-// export default SideBar
 "use client";
 import { cn } from "@/utils/cn";
 import Link, { LinkProps } from "next/link";
 import React, { useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdClose, MdMenu } from "react-icons/md";
-// import { IconMenu2, IconX } from "@tabler/icons-react";
 
 interface Links {
   label: string;
@@ -149,7 +89,7 @@ export const DesktopSidebar = ({
     <>
       <motion.div
         className={cn(
-          "h-full px-4 py-4 hidden md:flex md:flex-col bg-neutral-100 dark:bg-neutral-800 w-[250px] flex-shrink-0",
+          "h-full px-4 py-4 hidden md:flex md:flex-col dark:bg-neutral-100 bg-neutral-800 w-[250px] flex-shrink-0",
           className
         )}
         animate={{
@@ -175,7 +115,7 @@ export const MobileSidebar = ({
     <>
       <div
         className={cn(
-          "h-10 px-4 py-4 flex flex-row md:hidden  items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
+          "h-10 px-4 py-4 flex flex-row md:hidden  items-center justify-between dark:bg-neutral-100 bg-neutral-800 w-full"
         )}
         {...props}
       >
@@ -197,12 +137,12 @@ export const MobileSidebar = ({
                 ease: "easeInOut",
               }}
               className={cn(
-                "fixed h-full w-full inset-0 bg-white dark:bg-neutral-900 p-10 z-[100] flex flex-col justify-between",
+                "fixed h-full w-full inset-0 dark:bg-white bg-neutral-900 p-10 z-[100] flex flex-col justify-between",
                 className
               )}
             >
               <div
-                className="absolute right-10 top-10 z-50 text-neutral-800 dark:text-neutral-200"
+                className="absolute right-10 top-10 z-50 dark:text-neutral-800 text-neutral-200"
                 onClick={() => setOpen(!open)}
               >
                 {/* <IconX /> */}
@@ -227,6 +167,15 @@ export const SidebarLink = ({
   props?: LinkProps;
 }) => {
   const { open, animate } = useSidebar();
+  // const [label, setLabel] = useState<string>();
+  // const [isActive, setIsActive] = useState<boolean>(false);
+  // const handleClick = (clickedLabel: string) => {
+  //   if (label === clickedLabel) {
+  //     setIsActive(true);
+  //   } else if (label !== clickedLabel) {
+  //     setIsActive(false);
+  //   }
+  // };
   return (
     <Link
       href={link.href}
@@ -234,16 +183,22 @@ export const SidebarLink = ({
         "flex items-center justify-start gap-2  group/sidebar py-2",
         className
       )}
+      // onClick={() => {
+      //   setLabel(link.label);
+      //   handleClick(link.label);
+      // }}
       {...props}
     >
       {link.icon}
+      {/* <div className={`${isActive && "stroke-[#7EB693] fill-[#7EB693]"}`}>
+      </div> */}
 
       <motion.span
         animate={{
           display: animate ? (open ? "inline-block" : "none") : "inline-block",
           opacity: animate ? (open ? 1 : 0) : 1,
         }}
-        className="dark:text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0"
+        className={`text-neutral-200 text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0`}
       >
         {link.label}
       </motion.span>
