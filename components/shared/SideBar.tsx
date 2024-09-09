@@ -180,7 +180,7 @@ export const SidebarLink = ({
     <Link
       href={link.href}
       className={cn(
-        "flex items-center justify-start gap-2  group/sidebar py-2",
+        `flex items-center justify-start gap-2  group/sidebar py-2.5 mb-6 lg:mb-0`,
         className
       )}
       // onClick={() => {

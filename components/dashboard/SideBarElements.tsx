@@ -20,7 +20,7 @@ const SideBarElements = () => {
         <SidebarBody className="justify-between gap-10">
           <div className="flex flex-col flex-1 overflow-y-auto">
             {open ? <Logo /> : <LogoIcon />}
-            <div className="mt-8 flex flex-col gap-2">
+            <div className="mt-[4rem] lg:mt-8 flex flex-col gap-2">
               {sideBarLinks.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />
               ))}
