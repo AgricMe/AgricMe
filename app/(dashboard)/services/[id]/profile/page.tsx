@@ -24,7 +24,7 @@ const EditPage = () => {
       <div className="bg-[#fff] pb-2 px-1.5">
         <Nav />
       </div>
-      <div className="bg-[#eff6f1] h-screen py-8 px-4 md:px-6 lg:px-[3.5rem]">
+      <div className="bg-[#eff6f1] min-h-screen py-8 px-4 md:px-6 lg:px-[3.5rem]">
         <div
           className={`bg-[#fff] flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start w-full h-auto px-6 py-8 md:py-6 shadow-md rounded-xl`}
         >
