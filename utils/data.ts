@@ -167,6 +167,8 @@ export const chatListData = [
   },
 ];
 
+
+/* services page data */
 export const servicesData = [
   {
     id: 1,
