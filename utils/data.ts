@@ -328,3 +328,78 @@ export const serviceHistoryData = [
     amount: 50000,
   },
 ];
+
+export const productsData = [
+  {
+    id: 1,
+    img: productImg,
+    name: "Vel euismod",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 2,
+    img: productImg,
+    name: "Ultricies condimentum",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 3,
+    img: productImg,
+    name: "Vitae suspendisse",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 4,
+    img: productImg,
+    name: "Sed fermentum",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 5,
+    img: productImg,
+    name: "Vel euismod",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 6,
+    img: productImg,
+    name: "Ultricies condimentum",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 7,
+    img: productImg,
+    name: "Vitae suspendisse",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 8,
+    img: productImg,
+    name: "Sed fermentum",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 9,
+    img: productImg,
+    name: "Vel euismod",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 10,
+    img: productImg,
+    name: "Ultricies condimentum",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 11,
+    img: productImg,
+    name: "Vitae suspendisse",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 12,
+    img: productImg,
+    name: "Sed fermentum",
+    price: "$16.00 - $48.00",
+  },
+];

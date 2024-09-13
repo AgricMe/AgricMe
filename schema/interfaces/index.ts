@@ -18,6 +18,13 @@ export interface Product {
   quantity: number;
 }
 
+export interface MarketProduct {
+  id: number;
+  img: StaticImageData;
+  name: string;
+  price: string;
+}
+
 export interface Transaction {
   id: number;
   customer: string;
