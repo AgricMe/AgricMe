@@ -13,6 +13,7 @@ interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
   ref?: React.LegacyRef<HTMLSelectElement>;
   helperText?: string;
   helperTextProps?: HTMLAttributes<HTMLHeadingElement>;
+  flex?: boolean;
 }
 
 export default function SelectField({
@@ -22,10 +23,11 @@ export default function SelectField({
   helperTextProps,
   label,
   LabelProps,
+  flex,
   ...props
 }: Props) {
   return (
-    <div className={`flex gap-1 flex-col w-full`}>
+    <div className={`flex gap-1 ${flex ? "flex-row" : "flex-col"} w-full`}>
       {label && (
         <label
           {...LabelProps}
