@@ -39,6 +39,7 @@ a {
   border-radius: 20px;
   width: 4px;
 }
+
 *::-webkit-scrollbar-thumb {
   background-color: #367b63;
   border-radius: 20px;

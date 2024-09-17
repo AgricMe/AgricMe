@@ -7,6 +7,8 @@ interface Props {
   closeProfile(): void;
 }
 
+/* Todo - Chatee and user profile */
+
 const ChateeProfile = ({ closeProfile }: Props) => {
   return (
     <div className="w-full h-screen bg-white p-3 flex flex-col shadow-md rounded-sm transition-all duration-300">

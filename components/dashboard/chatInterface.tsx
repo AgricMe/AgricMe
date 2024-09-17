@@ -133,7 +133,7 @@ const ChatInterface = ({ openProfile }: Props) => {
         </div>
       </div>
       {/* Chat Messages */}
-      <div className="flex-1 overflow-y-scroll p-4">
+      <div className="flex-1 overflow-y-scroll py-4 px:1.5 me:p-4">
         {messages.map((message, index) => (
           <div
             key={index}
