@@ -25,7 +25,7 @@ function Home() {
       <OfferSection />
       <Products />
       <Testimonial />
-      <FourthSection />
+     /* <FourthSection /> */
       <NewsLetter />
       <Footer />
     </div>
