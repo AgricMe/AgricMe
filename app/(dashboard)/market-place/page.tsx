@@ -27,7 +27,7 @@ const Page = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center pb-8">
           <div className="w-full flex flex-row justify-between items-center lg:items-start lg:flex-col mb-6 lg:mb-0">
             <h1
-              className={`text-[.95rem] md:text-[1.3rem] lg:text-[1.55rem] text-gray-500 font-normal ${cursive.className}`}
+              className={`text-[1.05rem] md:text-[1.3rem] lg:text-[1.55rem] text-gray-500 font-normal ${cursive.className}`}
             >
               E-commerce Accessories & Fashion Items
             </h1>
@@ -125,7 +125,7 @@ const Page = () => {
                   className="accent-green-600"
                 />
                 <p className="text-[.85rem] text-gray-400">
-                  Unique Furnitture Restor
+                  Unique Furniture Restor
                 </p>
               </div>
               <div className="flex gap-2 mb-3">
@@ -136,7 +136,7 @@ const Page = () => {
                   className="accent-green-600"
                 />
                 <p className="text-[.85rem] text-gray-400">
-                  Dream Furnitture Flipping
+                  Dream Furniture Flipping
                 </p>
               </div>
               <div className="flex gap-2 mb-3">
