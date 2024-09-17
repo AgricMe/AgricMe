@@ -49,7 +49,10 @@ const OfferSection = () => {
   ];
 
   return (
-    <div className="flex justify-center bg-[#fff] px-[1.5rem] md:px-[3rem] lg:px-[4rem]">
+    <div
+      id="services"
+      className="flex justify-center bg-[#fff] px-[1.5rem] md:px-[3rem] lg:px-[4rem]"
+    >
       <motion.div
         className="w-full bg-[#1b3e32] rounded-[20px] my-[10px] pb-0 md:pb-[20px]"
         ref={ref}
