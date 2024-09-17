@@ -22,19 +22,19 @@ const Nav = () => {
           className="w-[100px] md:w-[160px]"
         />
         <div className="lg:flex hidden justify-between items-center w-[50%]">
-          <Link href={"/"} className={`text-[17px] text-[#274c5b]`}>
+          <Link href={"/#home"} className={`text-[17px] text-[#274c5b]`}>
             Home
           </Link>
           <Link href={"/agrions"} className={`text-[17px] text-[#274c5b] `}>
             Dashboard
           </Link>
-          <Link href={"/"} className={`text-[17px] text-[#274c5b]`}>
+          <Link href={"/#services"} className={`text-[17px] text-[#274c5b]`}>
             Services
           </Link>
-          <Link href={"/"} className={`text-[17px] text-[#274c5b] `}>
+          <Link href={"/#products"} className={`text-[17px] text-[#274c5b] `}>
             Product
           </Link>
-          <Link href={"/"} className={`text-[17px] text-[#274c5b] `}>
+          <Link href={"/#contact"} className={`text-[17px] text-[#274c5b] `}>
             Contact
           </Link>
         </div>
@@ -57,7 +57,7 @@ const Nav = () => {
       {toggleMenu && (
         <ul className="w-full h-auto absolute top-[100%] left-0 bg-[#f6f8fb] flex flex-col px-6 py-4 md:py-8 shadow-md text-center z-50">
           <Link
-            href={"/"}
+            href={"/#home"}
             className={`hover:bg-[#1b3e32] hover:text-[#fff] py-2.5 md:py-4 px-6 rounded-lg text-[1.1rem] md:text-[1.4rem] text-[#274c5b] mb-4 duration-300`}
           >
             Home
@@ -69,19 +69,19 @@ const Nav = () => {
             Dashboard
           </Link>
           <Link
-            href={"/"}
+            href={"/#services"}
             className={`hover:bg-[#1b3e32] hover:text-[#fff] py-2.5 md:py-4 px-6 rounded-lg text-[1.1rem] md:text-[1.4rem] text-[#274c5b] mb-4 duration-300`}
           >
             Services
           </Link>
           <Link
-            href={"/"}
+            href={"/#products"}
             className={`hover:bg-[#1b3e32] hover:text-[#fff] py-2.5 md:py-4 px-6 rounded-lg text-[1.1rem] md:text-[1.4rem] text-[#274c5b] mb-4 duration-300`}
           >
             Product
           </Link>
           <Link
-            href={"/"}
+            href={"/#contact"}
             className={`hover:bg-[#1b3e32] hover:text-[#fff] py-2.5 md:py-4 px-6 rounded-lg text-[1.1rem] md:text-[1.4rem] text-[#274c5b] duration-300`}
           >
             Contact

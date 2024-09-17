@@ -5,7 +5,10 @@ import { FaPinterest } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <section className="footer mt-[50px] w-full flex flex-col px-[1.5rem] md:px-[3rem] lg:px-[4rem]">
+    <section
+      id="contact"
+      className="footer mt-[50px] w-full flex flex-col px-[1.5rem] md:px-[3rem] lg:px-[4rem]"
+    >
       <section className="w-full grid grid-cols-1 lg:grid-cols-[auto,700px,auto]">
         <article className="w-full relative lg:p-[30px] col-span-1">
           <h1>Contact Us</h1>

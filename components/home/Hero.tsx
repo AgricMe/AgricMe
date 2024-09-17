@@ -5,7 +5,10 @@ import Image from "next/image";
 import { cn } from "@/utils/cn";
 const Hero = () => {
   return (
-    <div className="flex justify-center relative py-[4rem] lg:py-0 px-[1.5rem] md:px-[3rem] lg:px-[4rem] z-30">
+    <div
+      id="home"
+      className="flex justify-center relative py-[4rem] lg:py-0 px-[1.5rem] md:px-[3rem] lg:px-[4rem] z-30"
+    >
       <div className="w-full h-full lg:h-[500px] flex flex-col lg:flex-row justify-between items-center">
         <div className="w-full lg:w-[50%] mb-[4rem] lg:mb-0 text-start">
           <p className="font-bold text-[1.05rem] text-[#274C5B]/70">
@@ -15,7 +18,7 @@ const Hero = () => {
             Connecting a Global market and bringing visibility
           </h2>
           <div className="flex justify-start items-center">
-            <Link href={"/login"}>
+            <Link href={"/agrions"}>
               <button
                 className={cn(
                   "px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
