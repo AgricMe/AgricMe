@@ -405,3 +405,78 @@ export const productsData = [
     price: "$16.00 - $48.00",
   },
 ];
+
+export const singleServiceData = [
+  {
+    id: 0,
+    title: "Description",
+    name: "Varios Tempor",
+    desc: "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo, tortor sed donec tempus. Imperdiet consequat, quis diam arcu, nulla lobortis justo netus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .",
+    details: [
+      {
+        id: 1,
+        info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
+      },
+      {
+        id: 2,
+        info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
+      },
+      {
+        id: 3,
+        info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
+      },
+      {
+        id: 4,
+        info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: "Additional Info",
+    name: "fringilla vulputate",
+    desc: "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Nonetus dis. Eu in fringilla vulputate nunc nec. Dui, massa viverr .",
+    details: [
+      {
+        id: 1,
+        info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Reviews",
+    name: "vulputate integer",
+    desc: "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non varius proin sed urna, egestas consequat laoreet diam tincidunt. Magna eget faucibus cras justo.",
+    details: [
+      {
+        id: 1,
+        info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
+      },
+      {
+        id: 2,
+        info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Video",
+    name: "mauris varius",
+    desc: "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non",
+    details: [
+      {
+        id: 1,
+        info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
+      },
+      {
+        id: 2,
+        info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
+      },
+      {
+        id: 3,
+        info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
+      },
+    ],
+  },
+];
