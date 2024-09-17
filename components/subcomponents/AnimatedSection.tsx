@@ -13,7 +13,7 @@ const AnimatedSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIsVisible((prevIsVisible) => !prevIsVisible);
-    }, 7000);
+    }, 12000);
 
     return () => clearInterval(interval);
   }, [isVisible]);

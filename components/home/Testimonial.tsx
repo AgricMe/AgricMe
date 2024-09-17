@@ -61,9 +61,10 @@ const Testimonial = () => {
           </div>
           <div className="flex flex-col items-center mt-[10px]">
             <p className="w-full lg:w-[55%] mb-[15px]">
-              Simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been.
+              Agricme has revolutionized the way I connect with other farmers.
+              It&#39;s more than just a platform - it is a thriving community
+              where i can share knowledge, trade goods, and find the support i
+              need to grow my business.
             </p>
             <h3 className="text-[20px] text-[#274c5b]">Sara Taylor</h3>
             <small>Consumer</small>
