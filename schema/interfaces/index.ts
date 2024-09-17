@@ -23,7 +23,7 @@ export interface MarketProduct {
   img: StaticImageData;
   name: string;
   price: string;
-  grid: boolean;
+  grid?: boolean;
 }
 
 export interface Transaction {
