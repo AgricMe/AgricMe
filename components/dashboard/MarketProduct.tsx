@@ -45,7 +45,7 @@ const MarketProduct = ({ id, img, name, price, grid }: IProduct) => {
               <h1
                 className={`text-[1rem] md:text-[1.15rem] text-gray-500 ${cursive.className}`}
               >
-                Playwood Veggies
+                {name}
               </h1>
               <div className="flex justify-center items-center gap-1.5 my-2">
                 <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
