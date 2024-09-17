@@ -7,6 +7,10 @@ import avatar5 from "@/public/dashboard/avatar5.jpg";
 import avatar6 from "@/public/dashboard/avatar6.jpg";
 import avatar7 from "@/public/dashboard/avatar7.jpg";
 import avatar8 from "@/public/dashboard/avatar8.jpg";
+import tomatoImg from "@/public/component-images/tomato.jpg";
+import yamImg from "@/public/component-images/yam.jpg";
+import garriImg from "@/public/component-images/garri.jpg";
+import turkeyImg from "@/public/component-images/turkey.jpg";
 
 export const metrixData = [
   {
@@ -478,5 +482,56 @@ export const singleServiceData = [
         info: "dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend",
       },
     ],
+  },
+];
+
+export const trendingProductsData = [
+  {
+    id: 1,
+    img: tomatoImg,
+    name: "Tomato",
+    price: "$1.00 - $2.00",
+  },
+  {
+    id: 2,
+    img: yamImg,
+    name: "Yam",
+    price: "$3.00 - $10.00",
+  },
+  {
+    id: 3,
+    img: turkeyImg,
+    name: "Turkey",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 4,
+    img: garriImg,
+    name: "Garri",
+    price: "$5.00 - $20.00",
+  },
+  {
+    id: 5,
+    img: tomatoImg,
+    name: "Tomato",
+    price: "$1.00 - $2.00",
+  },
+  {
+    id: 6,
+    img: yamImg,
+    name: "Yam",
+    price: "$3.00 - $10.00",
+  },
+  {
+    id: 7,
+    img: turkeyImg,
+    name: "Turkey",
+    price: "$16.00 - $48.00",
+  },
+  {
+    id: 8,
+    img: productImg,
+    name: "Vegetables",
+    price: "$12.00 - $45.00",
   },
 ];

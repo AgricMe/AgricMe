@@ -9,10 +9,10 @@ const Hero = () => {
       <div className="w-full h-full lg:h-[500px] flex flex-col lg:flex-row justify-between items-center">
         <div className="w-full lg:w-[50%] mb-[4rem] lg:mb-0 text-start">
           <p className="font-bold text-[1.05rem] text-[#274C5B]/70">
-            A Social Platform for Farmers
+            A Robust Agricultural Platform
           </p>
           <h2 className="text-[35px] md:text-[33px] text-[#274c5b] w-full lg:w-[90%] font-bold my-4 lg:my-0">
-            An Avenue for Empowering Farmers, Building Communities
+            Connecting a Global market and bringing visibility
           </h2>
           <div className="flex justify-start items-center">
             <Link href={"/login"}>

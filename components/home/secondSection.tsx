@@ -11,7 +11,7 @@ const SecondSection = () => {
           </span>
           <div className="flex flex-col md:flex-row items-center text-center md:text-start">
             <span className="mr-auto text-[28px] md:text-[35px] lg:text-[40px] text-[#274c5b] w-full md:max-w-[600px] font-bold">
-              Discover weekly content about organic food, & more
+              Discover weekly content on agricultural news and trends.
             </span>
             <button className="bottom mt-2.5 md:mt-0">
               <span>More news</span>
@@ -58,11 +58,12 @@ const SecondSection = () => {
                 <span>By Rachi Card</span>
               </span>
               <span className="text-[15px] md:text-[18px] mb-[8px]">
-                The Benefits of Vitamin D & How to Get It
+                Rising Food Prices Spark Outrage Among Consumers
               </span>
               <span>
-                Simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum
+                In recent weeks, consumers across the country have been
+                grappling with steep increases in food prices, needing to
+                widespread frustration and anger...
               </span>
               <button>Read More</button>
             </div>
@@ -89,12 +90,12 @@ const SecondSection = () => {
                 />
                 <span>By Rachi Card</span>
               </span>
-              <span className="text-[15px] md:text-[18px] mb-[8px]">
-                The Benefits of Vitamin D & How to Get It
+              <span className="text-[15px] md:text-[18px] mb-[8px] capitalize">
+                Global Outburst of bird flu triggers alarm and response
               </span>
               <span>
-                Simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum
+                A recent outbreak of avian influenza, commonly known as bird
+                flu, has caused widespread concerns across the globe.
               </span>
               <button>Read More</button>
             </div>
