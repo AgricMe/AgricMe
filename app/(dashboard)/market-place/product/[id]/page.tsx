@@ -58,7 +58,7 @@ const Page = () => {
             <h1
               className={`text-[1.35rem] md:text-[1.75rem] text-gray-500 ${cursive.className}`}
             >
-              Playwood Veggies
+              Ultricies Condimentum
             </h1>
             <div className="flex justify-start items-center gap-2">
               <MdOutlineStar size={15} className="text-yellow-500" />
@@ -140,7 +140,11 @@ const Page = () => {
                       index === item.id
                         ? "text-green-500 underline"
                         : "text-gray-500"
-                    } font-normal cursor-pointer ${cursive.className}`}
+                    } ${
+                      item.id === 1 && "text-center"
+                    } font-normal cursor-pointer duration-300 ${
+                      cursive.className
+                    }`}
                     onClick={() => setIndex(item.id)}
                   >
                     {item.title}
@@ -151,15 +155,15 @@ const Page = () => {
           </div>
           <div className="flex flex-col">
             <p
-              className={`text-[1rem] md:text-[1.15rem] text-gray-400 capitalize ${cursive.className}`}
+              className={`text-[1rem] md:text-[1.15rem] text-gray-400 duration-300 capitalize ${cursive.className}`}
             >
               {item.name}
             </p>
-            <p className="text-[.75rem] md:text-[.9rem] text-gray-400 my-4">
+            <p className="text-[.75rem] md:text-[.9rem] text-gray-400 duration-300 my-4">
               {item.desc}
             </p>
             <p
-              className={`text-[1rem] md:text-[1.15rem] text-gray-400 mb-3 ${cursive.className}`}
+              className={`text-[1rem] md:text-[1.15rem] text-gray-400 duration-300 mb-3 ${cursive.className}`}
             >
               More details
             </p>
@@ -168,13 +172,13 @@ const Page = () => {
                 return (
                   <div
                     key={detail.id}
-                    className="flex justify-start items-center gap-1.5 md:gap-4"
+                    className="flex justify-start items-center gap-1.5 md:gap-4 duration-300"
                   >
                     <MdArrowForward
                       size={18}
-                      className="w-[10%] md:w-auto text-[#274c5b]"
+                      className="w-[10%] md:w-auto text-[#274c5b] duration-300"
                     />
-                    <p className="text-[.7rem] md:text-[.9rem] text-gray-400 my-4 capitalize">
+                    <p className="text-[.7rem] md:text-[.9rem] text-gray-400 my-4 capitalize duration-300">
                       {detail.info}
                     </p>
                   </div>
@@ -186,7 +190,7 @@ const Page = () => {
 
         <div className="w-full h-full mt-[3rem]">
           <h1
-            className={`text-[1.15rem] lg:text-[1.35rem] mb-6 text-gray-500 font-normal ${cursive.className}`}
+            className={`text-[1.2rem] lg:text-[1.45rem] mb-6 text-gray-500 font-normal ${cursive.className}`}
           >
             Related Products
           </h1>
