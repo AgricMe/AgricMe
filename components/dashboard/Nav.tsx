@@ -1,8 +1,14 @@
+"use client";
+
 import { FaAngleRight } from "react-icons/fa6";
 import { FaBell } from "react-icons/fa6";
 import Image from "next/image";
+import SelectField from "../forms/selectField";
+import { useState } from "react";
+import { MdOutlineMailOutline } from "react-icons/md";
 
 const Nav = () => {
+  const [language, setLanguage] = useState<string>();
   return (
     <div className="w-[100%] relative dash-nav shadow-slate-300 flex flex-col-reverse md:flex-row">
       <div className="inp-btn w-full md:w-auto mt-2">
@@ -37,7 +43,26 @@ const Nav = () => {
         </div>
       </div>
       <div className="hidden md:flex profile-acct items-center gap-5">
-        <div>
+        <div className="flex items-center gap-8">
+          <div>
+            <SelectField
+              value={language}
+              onChange={(e) => setLanguage(e.target.value)}
+            >
+              <option value={"Select-Language"} disabled>
+                Select Language
+              </option>
+              <option value={"English"}>English</option>
+            </SelectField>
+          </div>
+          <div>
+            <MdOutlineMailOutline
+              size={26}
+              className="text-gray-400 cursor-pointer"
+            />
+          </div>
+        </div>
+        <div className="ml-[4rem]">
           {" "}
           <FaBell className="text-gray-400 text-2xl rotate-12" />
         </div>
