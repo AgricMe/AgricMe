@@ -11,6 +11,12 @@ import tomatoImg from "@/public/component-images/tomato.jpg";
 import yamImg from "@/public/component-images/yam.jpg";
 import garriImg from "@/public/component-images/garri.jpg";
 import turkeyImg from "@/public/component-images/turkey.jpg";
+import img1 from "@/public/component-images/post-1.jpg";
+import img2 from "@/public/component-images/post-2.jpg";
+import img31 from "@/public/component-images/post-3-1.jpg";
+import img32 from "@/public/component-images/post-3-2.jpg";
+import img33 from "@/public/component-images/post-3-3.jpg";
+import img34 from "@/public/component-images/post-3-4.jpg";
 
 export const metrixData = [
   {
@@ -170,7 +176,6 @@ export const chatListData = [
     img: avatar8,
   },
 ];
-
 
 /* services page data */
 export const servicesData = [
@@ -533,5 +538,29 @@ export const trendingProductsData = [
     img: productImg,
     name: "Vegetables",
     price: "$12.00 - $45.00",
+  },
+];
+
+export const postsData = [
+  {
+    id: 1,
+    img: [img1],
+    content:
+      "Raising healthy, happy birds is my passion. From the farm to your table, we ensure quality care every step of the way. Porus to bring you fresh, sustainable produce from my flock! With a commitment to ethical farming practices and the well-being of each bird, we strive to deliver the best quality products while supporting the environment and our local community.",
+    tag: "#Passion for farming",
+  },
+  {
+    id: 2,
+    img: [img2],
+    content:
+      "My drive to achieve sustainable farming was heightened when i started my NGO. My goals were clear: promote agricultural development, ensure food security, and empower rural communities. However, reaching and communicating with farmers to adopt new innovatioons proved challenging. That's when the farmer-buyer relationship platform became a game changer.                                                                    By fostering direct connections, it has empowered farmers to embrace new techniques and technologies more readily. The platform streamlined outreach, enabling us to provide timely support and resources. As a result, farmers are now adapting faster, increasing productivity, and driving sustainable farming practices - bringing us closer to our mission.",
+    tag: "#Farming made easy",
+  },
+  {
+    id: 3,
+    img: [img31, img32, img33, img34],
+    content:
+      "Bird rearing is my passion, and i take pride in raising healthy birds with care. Though it may seem tough, i ensure that each bird is ethically raised and prepared for consumption, offering customers the freshest and most responsibly sourced poultry possible.",
+    tag: "#Take a look at my workshop",
   },
 ];
