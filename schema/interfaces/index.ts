@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import { TransactionStatus } from "../enums";
+import { ReactNode } from "react";
 
 export interface Metrix {
   id: number;
@@ -59,4 +60,11 @@ export interface ServiceHistory {
   address: string;
   paymentMethod: string;
   amount: number;
+}
+
+export interface Post {
+  id: number;
+  img: StaticImageData[];
+  content: string;
+  tag: string;
 }

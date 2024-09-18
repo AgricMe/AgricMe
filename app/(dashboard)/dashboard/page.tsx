@@ -3,7 +3,7 @@ import Metrix from "@/components/dashboard/Metrix";
 import Nav from "@/components/dashboard/Nav";
 import { metrixData, topProductsData, transactionData } from "@/utils/data";
 import Image from "next/image";
-import img1 from "@/public/component-images/butcher-image.jpg";
+import img1 from "@/public/component-images/dashboard.png";
 import Product from "@/components/dashboard/Product";
 import Transaction from "@/components/dashboard/Transaction";
 
@@ -25,12 +25,16 @@ const page = () => {
               </h3>
               <p className="text-[.85rem] text-green-400">Detail</p>
             </div>
-            <Image src={img1} alt="Sales Data Image" className="h-[250px]" />
+            <Image
+              src={img1}
+              alt="Sales Data Image"
+              className="h-[250px] md:h-[350px]"
+            />
           </>
         }
         rightSide={
-          <>
-            <div className="flex justify-between items-start pb-4">
+          <div className="md:h-[385px]">
+            <div className="flex justify-between items-start mb-4 md:mb-[3rem]">
               <h3 className="text-[1.2rem] text-[#000] font-bold">
                 Top Products
               </h3>
@@ -67,13 +71,13 @@ const page = () => {
                 </div>
               );
             })}
-          </>
+          </div>
         }
       />
       <DashboardInfoContainer
         leftSide={
-          <>
-            <div className="flex justify-between items-start pb-4">
+          <div className="md:h-[415px]">
+            <div className="flex justify-between items-start mb-4 md:mb-[3rem]">
               <h3 className="text-[1.2rem] text-[#000] font-bold">
                 Latest Transactions
               </h3>
@@ -117,7 +121,7 @@ const page = () => {
                 </div>
               );
             })}
-          </>
+          </div>
         }
         rightSide={
           <>
@@ -134,7 +138,11 @@ const page = () => {
                 <option value="Nigeria">Nigeria</option>
               </select>
             </div>
-            <Image src={img1} alt="Sales Data Image" className="h-[255px]" />
+            <Image
+              src={img1}
+              alt="Customer Segmentation Image"
+              className="h-[250px] md:h-[350px]"
+            />
           </>
         }
       />

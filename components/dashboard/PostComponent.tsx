@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FaRegHeart } from "react-icons/fa";
 import { FaRegCommentAlt } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
-import img from "@/public/icons/secondSections/image1.jpg";
+import { Post } from "@/schema/interfaces";
 
-const PostComponent = () => {
+const PostComponent = ({ img, content, tag }: Post) => {
   return (
     <div className="bg-gray-100 flex items-center justify-center mt-5">
       <div className="bg-white p-4 md:p-8 rounded-lg shadow-md w-full">
@@ -42,18 +42,33 @@ const PostComponent = () => {
             </button>
           </div>
         </div>
-
-        <div className="w-full mb-4">
-          <Image src={img} alt="post-img" className="rounded-md" />
+        <div
+          className={`grid ${
+            img.length >= 2 ? "grid-cols-2" : "grid-cols-1"
+          } gap-2 lg:gap-4 mb-4`}
+        >
+          {img.map((image, index) => {
+            return (
+              <div key={index} className={`w-full`}>
+                <Image
+                  src={image}
+                  alt="post-img"
+                  className={`${
+                    img.length >= 2 &&
+                    "md:w-[250px] md:h-[250px] lg:w-full lg:h-[300px]"
+                  } rounded-md`}
+                />
+              </div>
+            );
+          })}
         </div>
+
         {/* Message */}
         <div className="mb-4">
           <p className="text-gray-800 text-[.85rem] md:text-[.95rem]">
-            Just another day at the farm🐱 Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Optio sed similique recusandae earum
-            iusto molestias ex repudiandae eaque beatae nostrum.
+            {content}
             <a href="" className="text-blue-600">
-              #FarmingMadeEasy
+              {tag}
             </a>
           </p>
         </div>
