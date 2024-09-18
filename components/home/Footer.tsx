@@ -44,7 +44,7 @@ const Footer = () => {
                 fontWeight: "400",
               }}
             >
-              AgricMe stands as an innovative and purpose-driven agricultural social platform, meticulously designed to revolutionize farmer interactions and trade within the agricultural sector.
+              jgffvk
             </div>
             <h3 className="agri">
               <span className="agri1">
