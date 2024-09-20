@@ -564,3 +564,46 @@ export const postsData = [
     tag: "#Take a look at my workshop",
   },
 ];
+
+export const cartItemsData = [
+  {
+    id: 1,
+    img: productImg,
+    name: "Vegetables",
+    price: "$20.00",
+    quantity: 3,
+    total: "$60.00",
+  },
+  {
+    id: 2,
+    img: yamImg,
+    name: "Yam",
+    price: "$20.00",
+    quantity: 1,
+    total: "$20.00",
+  },
+  {
+    id: 3,
+    img: tomatoImg,
+    name: "Tomato",
+    price: "$10.00",
+    quantity: 4,
+    total: "$40.00",
+  },
+  {
+    id: 4,
+    img: turkeyImg,
+    name: "Turkey",
+    price: "$20.00",
+    quantity: 1,
+    total: "$20.00",
+  },
+  {
+    id: 5,
+    img: garriImg,
+    name: "Garri",
+    price: "$20.00",
+    quantity: 2,
+    total: "$40.00",
+  },
+];

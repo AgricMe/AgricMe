@@ -3,23 +3,18 @@ const config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
   ],
   theme: {
-    // colors: {
-    //   black : '#274C5B',
-    //   yellow : '#EFD372',
-    //   green : '#7EB693',
-    //   white : '#ffff'
-    // },
-    extend: {},
+    extend: {
+      colors: {
+        customBlue: "#25196B",
+        customPink: "#D994A7",
+        customDeepBlue: "#25196B",
+        customLightBlue: "#94D9CD",
+      },
+    },
   },
-  plugins: [
-    require("daisyui"),
-  ],
-}
+  plugins: [require("daisyui")],
+};
 
-
-
-export default config
-
+export default config;

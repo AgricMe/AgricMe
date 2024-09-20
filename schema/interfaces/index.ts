@@ -68,3 +68,12 @@ export interface Post {
   content: string;
   tag: string;
 }
+
+export interface CartItem {
+  id: number;
+  img: StaticImageData;
+  name: string;
+  price: string;
+  quantity: number;
+  total: string;
+}
