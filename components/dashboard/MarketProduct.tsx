@@ -18,7 +18,7 @@ const MarketProduct = ({ id, img, name, price, grid }: IProduct) => {
       className={`w-full h-full flex ${
         !grid
           ? "flex-col md:flex-row justify-center items-center md:items-start px-6 py-4 md:gap-[2rem] lg:gap-[6rem]"
-          : "flex-col justify-center items-center px-2 py-4"
+          : "flex-col justify-center items-center px-4 py-4"
       }  bg-[#fff] rounded-lg shadow-md`}
     >
       <div
@@ -26,12 +26,18 @@ const MarketProduct = ({ id, img, name, price, grid }: IProduct) => {
           grid && "w-full"
         } h-[200px] flex justify-center items-center`}
       >
-        <Image src={img} alt={name} />
+        {grid ? (
+          <Image src={img} alt={name} className="h-[180px] rounded-lg" />
+        ) : (
+          <Image src={img} alt={name} className="rounded-lg" />
+        )}
       </div>
       <div className="mt-4">
         {grid ? (
           <>
-            <p className="text-[1.05rem] text-blue-600 pb-1">{name}</p>
+            <p className="text-[1.05rem] text-blue-600 pb-1 text-center">
+              {name}
+            </p>
             <div className="flex justify-center items-center gap-2 my-2">
               <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
               <div className="w-2 h-2 bg-green-500 rounded-full"></div>

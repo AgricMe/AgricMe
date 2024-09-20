@@ -61,7 +61,7 @@ const Page = () => {
             <h1
               className={`text-[1.35rem] md:text-[1.75rem] text-gray-500 ${cursive.className}`}
             >
-              Ultricies Condimentum
+              Vegetables
             </h1>
             <div className="flex justify-start items-center gap-2">
               <MdOutlineStar size={15} className="text-yellow-500" />

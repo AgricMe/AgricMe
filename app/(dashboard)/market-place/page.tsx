@@ -16,7 +16,7 @@ const cursive = Courgette({
 const Page = () => {
   const [page, setPage] = useState<string>();
   const [sort, setSort] = useState<string>();
-  const [grid, setGrid] = useState<boolean>(true);
+  const [grid, setGrid] = useState<boolean>(false);
   const [price, setPrice] = useState<number>();
   return (
     <section className="pb-10 px-1">
