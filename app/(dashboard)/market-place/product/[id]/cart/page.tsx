@@ -27,8 +27,8 @@ const Page = () => {
         <div className="bg-[#fff] pb-2 px-1.5">
           <Nav />
         </div>
-        <div className="bg-[#eff6f1] min-h-screen py-8 md:py-0 px-4 md:pl-8 lg:pl-[3.5rem]">
-          <div className="w-full flex gap-8">
+        <div className="bg-[#eff6f1] min-h-screen py-8 px-2 md:py-0 md:px-4 md:pl-8 lg:pl-[3.5rem]">
+          <div className="w-full flex flex-col lg:flex-row gap-8">
             <div className="w-full flex flex-col md:py-8">
               <div className="flex justify-between items-start mb-6">
                 <p
@@ -57,12 +57,12 @@ const Page = () => {
                   return (
                     <div
                       key={item.id}
-                      className={`flex justify-between items-center cursor-pointer py-3 px-4 rounded-md ${
+                      className={`flex justify-between items-center cursor-pointer py-3 px-2 md:px-4 rounded-md ${
                         product === item && "bg-[#EFD37250]"
                       }`}
                       onClick={() => setProduct(item)}
                     >
-                      <div className="basis-[40%] flex items-center gap-4">
+                      <div className="basis-[40%] flex flex-col md:flex-row items-start md:items-center gap-1 md:gap-4">
                         <div className="relative bg-[#fff] p-4 rounded-md shadow-md">
                           <Image
                             src={item.img}
@@ -75,14 +75,22 @@ const Page = () => {
                             className="absolute top-[-4%] right-[-4%] text-[#000] cursor-pointer"
                           />
                         </div>
-                        <div className="flex flex-col gap-1.5">
+                        <div className="flex flex-col gap-1.5 ml-2 mt-2 md:ml-0 md:mt-0">
                           <h3
                             className={`text-[.95rem] text-gray-400 ${cursive.className}`}
                           >
                             {item.name}
                           </h3>
-                          <p className={`text-[.8rem] text-gray-400`}>Color:</p>
-                          <p className={`text-[.8rem] text-gray-400`}>Size:</p>
+                          <p
+                            className={`hidden md:block text-[.8rem] text-gray-400`}
+                          >
+                            Color:
+                          </p>
+                          <p
+                            className={`hidden md:block text-[.8rem] text-gray-400`}
+                          >
+                            Size:
+                          </p>
                         </div>
                       </div>
                       <p className="basis-[17%] text-[.95rem] text-gray-400 text-center">
@@ -101,19 +109,19 @@ const Page = () => {
               <div className="w-full flex justify-between items-center mt-10">
                 <button
                   type="button"
-                  className="bg-[#274C5B] text-[#fff] px-4 py-2 rounded-md"
+                  className="bg-[#274C5B] text-[#fff] px-2.5 md:px-4 py-2 rounded-md"
                 >
                   Update Cart
                 </button>
                 <button
                   type="button"
-                  className="bg-[#274C5B] text-[#fff] px-4 py-2 rounded-md"
+                  className="bg-[#274C5B] text-[#fff] px-2.5 md:px-4 py-2 rounded-md"
                 >
                   Clear Cart
                 </button>
                 <button
                   type="button"
-                  className="bg-[#274C5B] text-[#fff] px-4 py-2 rounded-md"
+                  className="bg-[#274C5B] text-[#fff] px-2.5 md:px-4 py-2 rounded-md"
                   onClick={() => setIsModalOpen(true)}
                 >
                   Checkout
@@ -121,9 +129,9 @@ const Page = () => {
               </div>
             </div>
             {product && (
-              <div className="w-[45vw] flex flex-col bg-[#F9F8F8] px-4 py-[4rem]">
-                <div className="w-full h-auto flex items-center gap-6">
-                  <div className="w-full h-full flex justify-center items-center bg-[#F9F8F8] p-4 rounded-md shadow-md cursor-pointer">
+              <div className="w-full lg:w-[45vw] flex flex-col bg-[#F9F8F8] px-2.5 md:px-4 py-[4rem]">
+                <div className="w-full h-auto flex items-center gap-3 md:gap-6">
+                  <div className="w-full h-[172px] lg:h-full flex justify-center items-center bg-[#F9F8F8] p-4 rounded-md shadow-md cursor-pointer">
                     <Image
                       src={product.img}
                       alt={product.name}
@@ -139,7 +147,7 @@ const Page = () => {
                       height={100}
                     />
                     <div className="absolute top-[46%] right-[30%] w-4 h-4 bg-green-700 border-2 border-[#fff] rounded-full"></div>
-                    <p className="text-[.85rem] text-[#333] font-bold py-2">
+                    <p className="text-[.85rem] text-[#333] text-center font-bold py-2">
                       Ronald Richards
                     </p>
                     <div className="flex gap-4 cursor-pointer">
@@ -182,7 +190,7 @@ const Page = () => {
                 <p className={`text-[.85rem] text-[#222] my-12 text-center`}>
                   Put a call through to complete this transaction
                 </p>
-                <div className="flex items-center gap-8">
+                <div className="flex items-center gap-2 md:gap-8">
                   <div className="w-full h-[70px] flex justify-center items-center bg-gradient-to-r from-customBlue to-customPink rounded-xl cursor-pointer">
                     <div className="border border-[#fff] rounded-full p-2">
                       <PiPhoneCallFill size={30} className="text-green-500" />
