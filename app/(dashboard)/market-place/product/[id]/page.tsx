@@ -12,6 +12,8 @@ import {
 import { FaFacebook, FaInstagram, FaRegHeart, FaTwitter } from "react-icons/fa";
 import { productsData, singleServiceData } from "@/utils/data";
 import MarketProduct from "@/components/dashboard/MarketProduct";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 
 const cursive = Courgette({
   subsets: ["latin"],
@@ -19,6 +21,7 @@ const cursive = Courgette({
 });
 
 const Page = () => {
+  const { id: productId } = useParams<{ id: string }>();
   const [index, setIndex] = useState(0);
   const item = singleServiceData[index];
   return (
@@ -92,9 +95,12 @@ const Page = () => {
                   size={18}
                   className="text-green-500 cursor-pointer"
                 />
-                <p className={`text-[1rem] text-gray-400 ${cursive.className}`}>
+                <Link
+                  href={`/market-place/product/${productId}/cart`}
+                  className={`text-[1rem] text-gray-400 ${cursive.className}`}
+                >
                   Add To Cart
-                </p>
+                </Link>
               </div>
               <FaRegHeart size={16} className="text-gray-500 cursor-pointer" />
             </div>
