@@ -4,6 +4,8 @@ import Link, { LinkProps } from "next/link";
 import React, { useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdClose, MdMenu } from "react-icons/md";
+import { FaBell } from "react-icons/fa";
+import Image from "next/image";
 
 interface Links {
   label: string;
@@ -119,6 +121,26 @@ export const MobileSidebar = ({
         )}
         {...props}
       >
+        <div className="flex md:hidden profile-acct items-center gap-5">
+          <div>
+            <Image
+              src={"/dashboard/dash-profile-img.jpg"}
+              alt="pfp-img"
+              width={55}
+              height={55}
+              className="object-cover rounded-full"
+            />
+          </div>
+          <div className="relative">
+            {" "}
+            <Link href={"/notifications"}>
+              <FaBell className="text-gray-400 text-2xl rotate-12 cursor-pointer" />
+            </Link>
+            <div className="absolute top-0 right-0 bg-red-600 w-3.5 h-3.5 rounded-full text-white text-[.6rem] font-bold flex justify-center items-center">
+              6
+            </div>
+          </div>
+        </div>
         <div className="flex justify-end z-20 w-full">
           <MdMenu
             size={35}

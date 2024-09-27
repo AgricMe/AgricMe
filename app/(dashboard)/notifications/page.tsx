@@ -1,7 +1,14 @@
 import Nav from "@/components/dashboard/Nav";
-import Service from "@/components/dashboard/Service";
 import { notificationsData } from "@/utils/data";
+import { Courgette } from "next/font/google";
 import Image from "next/image";
+import avatar from "@/public/dashboard/avatar8.jpg";
+import { IoIosArrowForward } from "react-icons/io";
+
+const cursive = Courgette({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const page = () => {
   return (
@@ -9,18 +16,71 @@ const page = () => {
       <div className="bg-[#fff] pb-2 px-1.5">
         <Nav />
       </div>
-      <div className="bg-[#eff6f1] min-h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-8 gap-8 px-4 md:px-8 lg:px-[3.5rem]">
-        {notificationsData.map((notification) => {
-          return (
-            <div
-              className="flex justify-start items-start"
-              key={notification.id}
-            >
-              <Image src={notification.img} alt={notification.name} />
-              <div className="flex flex-col"></div>
-            </div>
-          );
-        })}
+      <div className="py-8 px-2 md:w-[80vw] lg:w-[60vw] mx-auto">
+        <h1
+          className={`text-[1.65rem] md:text-[1.75rem] lg:text-[1.85rem] mt-1.5 mb-5 md:mt-6 md:mb-8 text-gray-500 font-normal ${cursive.className}`}
+        >
+          Notifications
+        </h1>
+        <div
+          className={`flex justify-start items-center py-2.5 px-1.5 md:px-4 bg-[#7EB693] rounded-2xl cursor-pointer mb-3`}
+        >
+          <Image
+            src={avatar}
+            alt={"features-img"}
+            width={60}
+            height={60}
+            className="rounded-full mr-4"
+          />
+          <div className="flex flex-col">
+            <h3 className={`text-[.9rem] text-[#fff] font-semibold`}>
+              We released some new features
+            </h3>
+            <p className={`text-[.85rem] text-[#fff] mt-1.5`}>
+              Check them out!
+            </p>
+          </div>
+          <IoIosArrowForward
+            size={20}
+            className="cursor-pointer text-[#fff] ml-auto"
+          />
+        </div>
+        <div className="bg-[#fff] py-2 rounded-2xl shadow-lg">
+          {notificationsData.map((notification) => {
+            return (
+              <div
+                className={`flex justify-start items-start md:items-center py-4 ${
+                  notification.id < notificationsData.length &&
+                  "border-b border-gray-100"
+                }`}
+                key={notification.id}
+              >
+                <Image
+                  src={notification.img}
+                  alt={notification.name}
+                  width={60}
+                  height={60}
+                  className="rounded-full ml-1.5 md:ml-4 mr-4"
+                />
+                <div className="flex flex-col mr-1.5 md:mr-4">
+                  <h3 className={`text-[.85rem] text-[#666]`}>
+                    <span
+                      className={`${
+                        notification.id === 1 && "text-[#333] font-bold"
+                      }`}
+                    >
+                      {notification.name}
+                    </span>{" "}
+                    {notification.content}
+                  </h3>
+                  <p className={`text-[.75rem] text-[#666] mt-1.5`}>
+                    {notification.date}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

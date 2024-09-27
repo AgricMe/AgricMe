@@ -620,7 +620,7 @@ export const notificationsData = [
     img: avatar3,
     name: "Hey Peter",
     content:
-      "we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
+      ", we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
     date: "1 month ago",
   },
   {
@@ -628,7 +628,7 @@ export const notificationsData = [
     img: avatar4,
     name: "Hey Peter",
     content:
-      "we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
+      ", we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
     date: "1 month ago",
   },
   {
@@ -636,15 +636,31 @@ export const notificationsData = [
     img: avatar5,
     name: "Hey Peter",
     content:
-      "we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
+      ", we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
     date: "1 month ago",
   },
   {
     id: 5,
     img: avatar6,
+    name: "Hey John",
+    content:
+      ", we’ve got a new user research opportunity for you. Neil is looking for people like you.",
+    date: "2 month ago",
+  },
+  {
+    id: 6,
+    img: avatar7,
     name: "Hey Peter",
     content:
-      "we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
+      ", we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
     date: "1 month ago",
+  },
+  {
+    id: 7,
+    img: avatar8,
+    name: "Hey John",
+    content:
+      ", we’ve got a new user research opportunity for you. Neil is looking for people like you.",
+    date: "2 month ago",
   },
 ];

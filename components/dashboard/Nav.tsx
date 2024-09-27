@@ -38,7 +38,7 @@ const Nav = () => {
           <button className="hidden bg-[#274C5B] rounded-2xl text-[.95rem] text-white py-2 px-6 md:flex items-center gap-2">
             Explore <FaAngleRight />
           </button>
-          <button className="md:hidden bg-green-400 rounded-2xl text-[.95rem] text-white py-2 px-6 flex items-center gap-2">
+          <button className="md:hidden bg-[#7EB693] rounded-2xl text-[.95rem] text-white py-2 px-6 flex items-center gap-2">
             <FaAngleRight />
           </button>
         </div>
@@ -80,26 +80,6 @@ const Nav = () => {
             height={35}
             className="object-cover rounded-full"
           />
-        </div>
-      </div>
-      <div className="flex md:hidden absolute top-[-95%] left-3 profile-acct items-center gap-5">
-        <div>
-          <Image
-            src={"/dashboard/dash-profile-img.jpg"}
-            alt="pfp-img"
-            width={35}
-            height={35}
-            className="object-cover rounded-full"
-          />
-        </div>
-        <div className="relative">
-          {" "}
-          <Link href={"/notifications"}>
-            <FaBell className="text-gray-400 text-2xl rotate-12 cursor-pointer" />
-          </Link>
-          <div className="absolute top-0 right-0 bg-red-600 w-3.5 h-3.5 rounded-full text-white text-[.6rem] font-bold flex justify-center items-center">
-            6
-          </div>
         </div>
       </div>
     </div>
