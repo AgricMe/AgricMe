@@ -606,3 +606,45 @@ export const cartItemsData = [
     total: "$40.00",
   },
 ];
+
+export const notificationsData = [
+  {
+    id: 1,
+    img: avatar2,
+    name: "Brian Griffin",
+    content: "wants to collaborate",
+    date: "5 days ago",
+  },
+  {
+    id: 2,
+    img: avatar3,
+    name: "Hey Peter",
+    content:
+      "we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
+    date: "1 month ago",
+  },
+  {
+    id: 3,
+    img: avatar4,
+    name: "Hey Peter",
+    content:
+      "we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
+    date: "1 month ago",
+  },
+  {
+    id: 4,
+    img: avatar5,
+    name: "Hey Peter",
+    content:
+      "we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
+    date: "1 month ago",
+  },
+  {
+    id: 5,
+    img: avatar6,
+    name: "Hey Peter",
+    content:
+      "we’ve got a new user research opportunity for you. Adam from The Mayor’s Office is looking for people like you.",
+    date: "1 month ago",
+  },
+];

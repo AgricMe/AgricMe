@@ -6,6 +6,7 @@ import Image from "next/image";
 import SelectField from "../forms/selectField";
 import { useState } from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
+import Link from "next/link";
 
 const Nav = () => {
   const [language, setLanguage] = useState<string>();
@@ -62,9 +63,14 @@ const Nav = () => {
             />
           </div>
         </div>
-        <div className="ml-[4rem]">
+        <div className="ml-[4rem] relative">
           {" "}
-          <FaBell className="text-gray-400 text-2xl rotate-12" />
+          <Link href={"/notifications"}>
+            <FaBell className="text-gray-400 text-2xl rotate-12 cursor-pointer" />
+          </Link>
+          <div className="absolute top-0 right-0 bg-red-600 w-3.5 h-3.5 rounded-full text-white text-[.6rem] font-bold flex justify-center items-center">
+            6
+          </div>
         </div>
         <div>
           <Image
@@ -86,9 +92,14 @@ const Nav = () => {
             className="object-cover rounded-full"
           />
         </div>
-        <div>
+        <div className="relative">
           {" "}
-          <FaBell className="text-gray-400 text-2xl rotate-12" />
+          <Link href={"/notifications"}>
+            <FaBell className="text-gray-400 text-2xl rotate-12 cursor-pointer" />
+          </Link>
+          <div className="absolute top-0 right-0 bg-red-600 w-3.5 h-3.5 rounded-full text-white text-[.6rem] font-bold flex justify-center items-center">
+            6
+          </div>
         </div>
       </div>
     </div>
