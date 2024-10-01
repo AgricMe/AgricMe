@@ -73,13 +73,15 @@ const Nav = () => {
           </div>
         </div>
         <div>
-          <Image
-            src={"/dashboard/dash-profile-img.jpg"}
-            alt="pfp-img"
-            width={35}
-            height={35}
-            className="object-cover rounded-full"
-          />
+          <Link href={`/profile`}>
+            <Image
+              src={"/dashboard/dash-profile-img.jpg"}
+              alt="pfp-img"
+              width={35}
+              height={35}
+              className="object-cover rounded-full"
+            />
+          </Link>
         </div>
       </div>
     </div>
