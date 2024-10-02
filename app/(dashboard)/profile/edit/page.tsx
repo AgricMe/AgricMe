@@ -85,7 +85,6 @@ const EditPage = () => {
               InputProps={{
                 placeholder: "Enter your CAC Number",
                 type: "tel",
-                required: true,
                 value: CACNumber,
                 onChange(e) {
                   let id = Number(e.target.value);

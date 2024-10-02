@@ -8,7 +8,16 @@ import { useState } from "react";
 
 const EditPage = () => {
   const [activeId, setActiveId] = useState<string>("1");
+  const [firstName, setFirstName] = useState<string>("");
+  const [lastName, setLastName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [country, setCountry] = useState<string>("");
+  const [city, setCity] = useState<string>("");
+  const [state, setState] = useState<string>("");
+  const [address1, setAddress1] = useState<string>("");
+  const [address2, setAddress2] = useState<string>("");
+  const [zipcode, setZipCode] = useState<string>("");
   const [currentpassword, setCurrentPassword] = useState<string>();
   const [newpassword, setNewPassword] = useState<string>();
   const [newpassword2, setNewPassword2] = useState<string>();
@@ -80,7 +89,235 @@ const EditPage = () => {
           </div>
         </div>
         <div className="md:px-6">
-          <div className="bg-[#fff] w-full h-auto px-4 md:px-10 py-8 md:py-6 shadow-md rounded-xl">
+          <div className="bg-[#fff] w-full h-auto px-4 md:px-10 py-8 md:py-6 shadow-md rounded-xl transition-all duration-500">
+            {activeId === "1" && (
+              <div className="flex flex-col gap-[6rem]">
+                <div className="flex flex-col gap-2.5">
+                  <h1 className="text-[1.4rem] md:text-[1.8rem] text-[#222] font-bold ">
+                    General Settings
+                  </h1>
+                  <p className="text-[#444] font-semibold text-[1rem]">
+                    Your current primary email address is{" "}
+                    <span className="text-[#7EB693]">
+                      dashprops@example.com
+                    </span>
+                  </p>
+                  <div className="border-b-2 border-gray-100 pt-2"></div>
+                  <div className="flex flex-col gap-[3rem] mt-4">
+                    <div className="flex justify-between items-center">
+                      <h3 className="w-[45%] text-[1.1rem] text-[#333] font-medium">
+                        Avatar
+                      </h3>
+                      <div className="w-full flex items-end gap-4">
+                        <button
+                          type="button"
+                          className="bg-[#fff] text-[#7EB693] border border-gray-200 px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium"
+                        >
+                          Change
+                        </button>
+                        <button
+                          type="button"
+                          className="bg-[#fff] text-[#7EB693] border border-gray-200 px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <h3 className="w-[45%] text-[1.1rem] text-[#333] font-medium">
+                        Cover Photo
+                      </h3>
+                      <div className="w-full h-[170px] flex justify-center items-center border border-gray-200 rounded-xl">
+                        <p className="text-gray-400 font-semibold text-[1rem]">
+                          Drag image here. or
+                          <span className="text-[#7EB693]"> Browse Files</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    className="w-[10%] ml-[31%] my-2 text-[#7EB693] bg-[#fff] border border-gray-200 py-2 rounded-md shadow-sm text-[.95rem] font-semibold"
+                  >
+                    Change
+                  </button>
+                </div>
+                <div className="flex flex-col gap-2.5">
+                  <h1 className="text-[1.4rem] md:text-[1.8rem] text-[#222] font-bold ">
+                    Basic Information
+                  </h1>
+                  <p className="text-[#444] font-semibold text-[1rem]">
+                    Update some personal information. Your address will never be
+                    publicly available.
+                  </p>
+                  <div className="border-b-2 border-gray-100 pt-2"></div>
+                  <div className="flex flex-col gap-4 mt-4">
+                    <div className="flex justify-between items-center">
+                      <h3 className="w-[45%] text-[1.1rem] text-[#333] font-medium">
+                        Full Name
+                      </h3>
+                      <div className="w-full flex gap-4">
+                        <TextField
+                          InputProps={{
+                            placeholder: "First Name",
+                            type: "text",
+                            required: true,
+                            value: firstName,
+                            onChange(e) {
+                              setFirstName(e.target.value);
+                            },
+                            className: "text-[.95rem] font-medium p-3.5",
+                          }}
+                        />
+                        <TextField
+                          InputProps={{
+                            placeholder: "Last Name",
+                            type: "text",
+                            required: true,
+                            value: lastName,
+                            onChange(e) {
+                              setLastName(e.target.value);
+                            },
+                            className: "text-[.95rem] font-medium p-3.5",
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <h3 className="w-[45%] text-[1.1rem] text-[#333] font-medium">
+                        Email
+                      </h3>
+                      <TextField
+                        InputProps={{
+                          placeholder: "Email address",
+                          type: "email",
+                          required: true,
+                          value: email,
+                          onChange(e) {
+                            setEmail(e.target.value);
+                          },
+                          className: "text-[.95rem] font-medium p-3.5",
+                        }}
+                      />
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <h3 className="w-[45%] text-[1.1rem] text-[#333] font-medium">
+                        Phone <span className="text-gray-400"> (Optional)</span>
+                      </h3>
+                      <TextField
+                        InputProps={{
+                          placeholder: "Phone",
+                          type: "tel",
+                          value: phone,
+                          onChange(e) {
+                            setPhone(e.target.value);
+                          },
+                          className: "text-[.95rem] font-medium p-3.5",
+                        }}
+                      />
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <h3 className="w-[45%] text-[1.1rem] text-[#333] font-medium">
+                        Location
+                      </h3>
+                      <div className="w-full flex flex-col gap-4">
+                        <SelectField
+                          value={country}
+                          onChange={(e) => setCountry(e.target.value)}
+                          className="text-[1rem] font-medium p-3.5 text-gray-400"
+                        >
+                          <option value={"Select Country"}>
+                            Select Country
+                          </option>
+                          <option value={"Nigeria"}>Nigeria</option>
+                        </SelectField>
+                        <TextField
+                          InputProps={{
+                            placeholder: "City",
+                            type: "text",
+                            required: true,
+                            value: city,
+                            onChange(e) {
+                              setCity(e.target.value);
+                            },
+                            className: "text-[.95rem] font-medium p-3.5",
+                          }}
+                        />
+                        <TextField
+                          InputProps={{
+                            placeholder: "State",
+                            type: "text",
+                            required: true,
+                            value: state,
+                            onChange(e) {
+                              setState(e.target.value);
+                            },
+                            className: "text-[.95rem] font-medium p-3.5",
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <h3 className="w-[45%] text-[1.1rem] text-[#333] font-medium">
+                        Address line 1
+                      </h3>
+                      <TextField
+                        InputProps={{
+                          placeholder: "Address line 1",
+                          type: "text",
+                          value: address1,
+                          required: true,
+                          onChange(e) {
+                            setAddress1(e.target.value);
+                          },
+                          className: "text-[.95rem] font-medium p-3.5",
+                        }}
+                      />
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <h3 className="w-[45%] text-[1.1rem] text-[#333] font-medium">
+                        Address line 2{" "}
+                        <span className="text-gray-400"> (Optional)</span>
+                      </h3>
+                      <TextField
+                        InputProps={{
+                          placeholder: "Address line 2",
+                          type: "text",
+                          value: address2,
+                          onChange(e) {
+                            setAddress2(e.target.value);
+                          },
+                          className: "text-[.95rem] font-medium p-3.5",
+                        }}
+                      />
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <h3 className="w-[45%] text-[1.1rem] text-[#333] font-medium">
+                        Zip Code
+                      </h3>
+                      <TextField
+                        InputProps={{
+                          placeholder: "Zip Code",
+                          type: "text",
+                          value: zipcode,
+                          required: true,
+                          onChange(e) {
+                            setZipCode(e.target.value);
+                          },
+                          className: "text-[.95rem] font-medium p-3.5",
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    className="w-[15%] mx-auto mt-8 mb-2 bg-[#7EB693] text-[#fff] py-3 rounded-md shadow-sm text-[.95rem] font-semibold"
+                  >
+                    Save Changes
+                  </button>
+                </div>
+              </div>
+            )}
             {activeId === "2" && (
               <div className="flex flex-col gap-2.5">
                 <h1 className="text-[1.4rem] md:text-[1.8rem] text-[#222] font-bold ">
@@ -188,16 +425,16 @@ const EditPage = () => {
                       Ensure that these requirements are met:
                     </p>
                     <ul className="w-[45%] ml-[2.5rem]">
-                      <li className="list-disc text-[#444]">
+                      <li className="list-disc text-[#444] text-[.95rem]">
                         Minimum 8 characters long - the more, the better
                       </li>
-                      <li className="list-disc text-[#444]">
+                      <li className="list-disc text-[#444] text-[.95rem]">
                         At least one lowercase character
                       </li>
-                      <li className="list-disc text-[#444]">
+                      <li className="list-disc text-[#444] text-[.95rem]">
                         At least one uppercase character
                       </li>
-                      <li className="list-disc text-[#444]">
+                      <li className="list-disc text-[#444] text-[.95rem]">
                         At least one number, symbol, or whitespace character
                       </li>
                     </ul>
@@ -205,7 +442,7 @@ const EditPage = () => {
                 </div>
                 <button
                   type="button"
-                  className="w-[15%] mx-auto mt-8 mb-2 bg-green-700 text-[#fff] py-3 rounded-md shadow-sm text-[.95rem] font-semibold"
+                  className="w-[15%] mx-auto mt-8 mb-2 bg-[#7EB693] text-[#fff] py-3 rounded-md shadow-sm text-[.95rem] font-semibold"
                 >
                   Save Changes
                 </button>
