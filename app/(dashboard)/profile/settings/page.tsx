@@ -3,8 +3,8 @@ import Nav from "@/components/dashboard/Nav";
 import SelectField from "@/components/forms/selectField";
 import TextField from "@/components/forms/textField";
 import avatar2 from "@/public/dashboard/avatar2.jpg";
-import Image from "next/image";
 import { useState } from "react";
+import { MdImage } from "react-icons/md";
 
 const EditPage = () => {
   const [activeId, setActiveId] = useState<string>("1");
@@ -127,11 +127,23 @@ const EditPage = () => {
                       <h3 className="w-[45%] text-[1.1rem] text-[#333] font-medium">
                         Cover Photo
                       </h3>
-                      <div className="w-full h-[170px] flex justify-center items-center border border-gray-200 rounded-xl">
-                        <p className="text-gray-400 font-semibold text-[1rem]">
-                          Drag image here. or
-                          <span className="text-[#7EB693]"> Browse Files</span>
-                        </p>
+                      <div className="relative w-full h-[170px] flex flex-col justify-center items-center border border-gray-200 rounded-xl cursor-pointer">
+                        <div className="absolute flex flex-col justify-center items-center">
+                          <MdImage size={28} className="text-gray-400" />
+                          <p className="text-gray-400 font-semibold text-[1rem]">
+                            Drag image here. or
+                            <span className="text-[#7EB693]">
+                              {" "}
+                              Browse Files
+                            </span>
+                          </p>
+                        </div>
+                        <input
+                          type="file"
+                          name="cover-photo"
+                          id="cover-photo"
+                          className="w-full h-full opacity-0 cursor-pointer"
+                        />
                       </div>
                     </div>
                   </div>
