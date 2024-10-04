@@ -23,18 +23,20 @@ const Page = () => {
       </div>
       <div className="bg-[#eff6f1] min-h-screen py-8 px-4 md:px-8 lg:px-[3.5rem]">
         <div
-          className={`bg-[#fff] flex justify-between items-end w-full h-[70vh] px-4 md:px-10 py-8 md:py-6 shadow-md rounded-xl`}
+          className={`bg-[#fff] flex flex-col md:flex-row justify-between items-end w-full h-[70vh] px-4 md:px-10 py-8 md:py-6 shadow-md rounded-xl`}
         >
-          <div className="w-full flex items-end gap-8">
+          <div className="w-full flex flex-col items-center md:flex-row md:items-end gap-8">
             <Image
               src={avatar2}
               alt="profile-img"
               width={120}
               height={120}
-              className="rounded-full border-4 border-gray-200 mb-[3.5rem]"
+              className="rounded-full border-4 border-gray-200 mb-[1rem] md:mb-[3.5rem]"
             />
-            <div className="flex flex-col mb-10">
-              <h2 className={`${cursive.className} text-[#222] text-[1.35rem]`}>
+            <div className="flex flex-col mb-4 md:mb-10">
+              <h2
+                className={`${cursive.className} text-[#222] text-[1.35rem] text-center md:text-start`}
+              >
                 Devon Lane
               </h2>
               <div className="flex items-center gap-2 mt-2">
@@ -56,7 +58,7 @@ const Page = () => {
               </p>
             </div>
           </div>
-          <div className="w-full flex justify-end gap-4">
+          <div className="w-full flex justify-center md:justify-end gap-4">
             <Link
               href={`/profile/edit`}
               className="bg-[#fff] text-[#444] border border-gray-400 px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium"

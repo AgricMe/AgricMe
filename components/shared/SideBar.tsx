@@ -123,13 +123,15 @@ export const MobileSidebar = ({
       >
         <div className="flex md:hidden profile-acct items-center gap-5">
           <div>
-            <Image
-              src={"/dashboard/dash-profile-img.jpg"}
-              alt="pfp-img"
-              width={55}
-              height={55}
-              className="object-cover rounded-full"
-            />
+            <Link href={"/profile"}>
+              <Image
+                src={"/dashboard/dash-profile-img.jpg"}
+                alt="pfp-img"
+                width={55}
+                height={55}
+                className="object-cover rounded-full"
+              />
+            </Link>
           </div>
           <div className="relative">
             {" "}
