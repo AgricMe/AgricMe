@@ -1,11 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Nav from "@/components/dashboard/Nav";
-import { productsData } from "@/utils/data";
-import SelectField from "@/components/forms/selectField";
 import { Courgette } from "next/font/google";
 import { MdOutlineLocationOn } from "react-icons/md";
-import TextField from "@/components/forms/textField";
 import Image from "next/image";
 import avatar2 from "@/public/dashboard/avatar2.jpg";
 import Link from "next/link";

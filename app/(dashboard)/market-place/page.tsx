@@ -7,6 +7,8 @@ import SelectField from "@/components/forms/selectField";
 import { Courgette } from "next/font/google";
 import { MdGridView, MdOutlineStar, MdViewList } from "react-icons/md";
 import TextField from "@/components/forms/textField";
+import { IoIosArrowForward } from "react-icons/io";
+import Image from "next/image";
 
 const cursive = Courgette({
   subsets: ["latin"],
@@ -89,6 +91,19 @@ const Page = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div
+          className={`flex justify-start items-center py-2.5 px-1.5 md:px-4 bg-[#7EB693] rounded-2xl cursor-pointer mb-3`}
+        >
+          <h3
+            className={`text-[.8rem] md:text-[.95rem] text-gray-500 font-normal ${cursive.className}`}
+          >
+            Click here to upload goods/services
+          </h3>
+          <IoIosArrowForward
+            size={20}
+            className="cursor-pointer text-[#fff] ml-auto"
+          />
         </div>
         <div className="w-full flex md:gap-4 lg:gap-0">
           {!grid && (
