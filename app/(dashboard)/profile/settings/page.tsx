@@ -2,9 +2,31 @@
 import Nav from "@/components/dashboard/Nav";
 import SelectField from "@/components/forms/selectField";
 import TextField from "@/components/forms/textField";
-import avatar2 from "@/public/dashboard/avatar2.jpg";
 import { useState } from "react";
 import { MdImage } from "react-icons/md";
+
+const settingsData = [
+  {
+    id: "1",
+    title: "General Settings",
+  },
+  {
+    id: "2",
+    title: "Email",
+  },
+  {
+    id: "3",
+    title: "Change Password",
+  },
+  {
+    id: "4",
+    title: "Preferences",
+  },
+  {
+    id: "5",
+    title: "Delete Account",
+  },
+];
 
 const EditPage = () => {
   const [activeId, setActiveId] = useState<string>("1");
@@ -36,56 +58,21 @@ const EditPage = () => {
           </h3>
 
           <div className="flex flex-col md:flex-row items-center gap-4 mt-6 md:mt-0">
-            <button
-              id="1"
-              type="button"
-              className={`${
-                activeId === "1" ? "bg-yellow-600" : "bg-yellow-300"
-              } text-[#444] px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium duration-300`}
-              onClick={() => setActiveId("1")}
-            >
-              General Settings
-            </button>
-            <button
-              id="2"
-              type="button"
-              className={`${
-                activeId === "2" ? "bg-yellow-600" : "bg-yellow-300"
-              } text-[#444] px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium duration-300`}
-              onClick={() => setActiveId("2")}
-            >
-              Email
-            </button>
-            <button
-              id="3"
-              type="button"
-              className={`${
-                activeId === "3" ? "bg-yellow-600" : "bg-yellow-300"
-              } text-[#444] px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium duration-300`}
-              onClick={() => setActiveId("3")}
-            >
-              Change Password
-            </button>
-            <button
-              id="4"
-              type="button"
-              className={`${
-                activeId === "4" ? "bg-yellow-600" : "bg-yellow-300"
-              } text-[#444] px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium duration-300`}
-              onClick={() => setActiveId("4")}
-            >
-              Preferences
-            </button>
-            <button
-              id="5"
-              type="button"
-              className={`${
-                activeId === "5" ? "bg-yellow-600" : "bg-yellow-300"
-              } text-[#444] px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium duration-300`}
-              onClick={() => setActiveId("5")}
-            >
-              Delete Account
-            </button>
+            {settingsData.map((setting) => {
+              return (
+                <button
+                  key={setting.id}
+                  id={setting.id}
+                  type="button"
+                  className={`${
+                    activeId === setting.id ? "bg-yellow-600" : "bg-yellow-300"
+                  } text-[#444] px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium duration-300`}
+                  onClick={() => setActiveId(setting.id)}
+                >
+                  {setting.title}
+                </button>
+              );
+            })}
           </div>
         </div>
         <div className="md:px-6">

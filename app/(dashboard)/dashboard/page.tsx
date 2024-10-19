@@ -1,7 +1,7 @@
 import DashboardInfoContainer from "@/components/dashboard/DashboardInfoContainer";
 import Metrix from "@/components/dashboard/Metrix";
 import Nav from "@/components/dashboard/Nav";
-import { metrixData, topProductsData, transactionData } from "@/utils/data";
+import { metrixData, topProductsData, transactionData } from "@/lib/data/data";
 import Image from "next/image";
 import img1 from "@/public/component-images/dashboard.png";
 import Product from "@/components/dashboard/Product";

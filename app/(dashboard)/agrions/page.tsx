@@ -1,7 +1,7 @@
 import Nav from "@/components/dashboard/Nav";
 import PostComponent from "@/components/dashboard/PostComponent";
 import UploadPost from "@/components/dashboard/UploadPost";
-import { postsData } from "@/utils/data";
+import { postsData } from "@/lib/data/data";
 
 const page = () => {
   return (

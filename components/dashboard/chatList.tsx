@@ -1,5 +1,5 @@
 import { Chat as IChat } from "@/schema/interfaces";
-import { chatListData } from "@/utils/data";
+import { chatListData } from "@/lib/data/data";
 import Link from "next/link";
 import { BiSolidMessageRoundedDots } from "react-icons/bi";
 import { FaEllipsisH } from "react-icons/fa";

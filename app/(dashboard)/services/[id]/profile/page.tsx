@@ -3,7 +3,7 @@
 import Nav from "@/components/dashboard/Nav";
 import ServiceHistory from "@/components/dashboard/ServiceHistory";
 import avatar2 from "@/public/dashboard/avatar2.jpg";
-import { serviceHistoryData } from "@/utils/data";
+import { serviceHistoryData } from "@/lib/data/data";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";

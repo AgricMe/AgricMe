@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Nav from "@/components/dashboard/Nav";
 import { Courgette } from "next/font/google";
-import { cartItemsData } from "@/utils/data";
+import { cartItemsData } from "@/lib/data/data";
 import Image from "next/image";
 import { CartItem } from "@/schema/interfaces";
 import avatar from "@/public/dashboard/avatar1.jpg";

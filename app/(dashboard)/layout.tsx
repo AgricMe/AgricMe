@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../../components/css/dashboard.css";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils/cn";
 import SideBarElements from "@/components/dashboard/SideBarElements";
 
 export const metadata: Metadata = {

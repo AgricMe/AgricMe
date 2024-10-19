@@ -1,6 +1,6 @@
 import React from "react";
 import { ProductCard } from "./ProductCard";
-import { trendingProductsData } from "@/utils/data";
+import { trendingProductsData } from "@/lib/data/data";
 const Products = () => {
   return (
     <div

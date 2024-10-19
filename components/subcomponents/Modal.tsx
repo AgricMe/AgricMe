@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import React, {
   ReactNode,
@@ -9,8 +9,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { useRouter } from 'next/navigation'
-
+import { useRouter } from "next/navigation";
 
 interface ModalContextType {
   open: boolean;
@@ -41,8 +40,6 @@ export function Modal({ children }: { children: ReactNode }) {
   return <ModalProvider>{children}</ModalProvider>;
 }
 
-
-
 export const ModalTrigger = ({
   children,
   className,
@@ -51,7 +48,7 @@ export const ModalTrigger = ({
   className?: string;
 }) => {
   const { setOpen } = useModal();
-  const router = useRouter()
+  const router = useRouter();
   return (
     <button
       className={cn(
@@ -77,7 +74,6 @@ export const ModalBody = ({
   const modalRef = useRef(null);
   const { setOpen } = useModal();
   useOutsideClick(modalRef, () => setOpen(false));
-
 
   return (
     <AnimatePresence>
@@ -190,7 +186,7 @@ const Overlay = ({ className }: { className?: string }) => {
 
 const CloseIcon = () => {
   const { setOpen } = useModal();
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <button

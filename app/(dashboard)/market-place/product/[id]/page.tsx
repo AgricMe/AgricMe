@@ -10,7 +10,7 @@ import {
   MdOutlineStar,
 } from "react-icons/md";
 import { FaFacebook, FaInstagram, FaRegHeart, FaTwitter } from "react-icons/fa";
-import { productsData, singleServiceData } from "@/utils/data";
+import { productsData, singleServiceData } from "@/lib/data/data";
 import MarketProduct from "@/components/dashboard/MarketProduct";
 import Link from "next/link";
 import { useParams } from "next/navigation";

@@ -1,6 +1,11 @@
 import { StaticImageData } from "next/image";
 import { TransactionStatus } from "../enums";
-import { ReactNode } from "react";
+
+export interface DefaultModel {
+  id: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 export interface Metrix {
   id: number;

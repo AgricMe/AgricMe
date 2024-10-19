@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import RQProvider from "@/providers/reactQuery.provider";
+import { Toaster } from "react-hot-toast";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -19,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.className}>{children}</body>
+      <RQProvider>
+        <body className={manrope.className}>
+          <Toaster position="top-right" reverseOrder={false} />
+          {children}
+        </body>
+      </RQProvider>
     </html>
   );
 }

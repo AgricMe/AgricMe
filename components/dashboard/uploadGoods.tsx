@@ -125,7 +125,7 @@ const UploadGoodsModal = () => {
             </div>
           )}
           {step === 1 && isOpen && (
-            <div className="w-full flex items-start gap-[8rem] mt-6 duration-300">
+            <div className="w-full flex items-start gap-10 md:gap-[8rem] mt-6 duration-300">
               <h3 className={`w-[25%] text-[.9rem] text-green-800`}>
                 {Category}
               </h3>
@@ -243,7 +243,7 @@ const UploadGoodsModal = () => {
                 </div>
               )}
               {step === 3 && isOpen && (
-                <div className="w-full flex items-start gap-[8rem] mt-6 duration-300">
+                <div className="w-full flex items-start gap-10 md:gap-[8rem] mt-6 duration-300">
                   <h3 className={`w-[25%] text-[.9rem] text-green-800`}>
                     {State}
                   </h3>

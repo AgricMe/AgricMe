@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Nav from "@/components/dashboard/Nav";
-import { productsData } from "@/utils/data";
+import { productsData } from "@/lib/data/data";
 import MarketProduct from "@/components/dashboard/MarketProduct";
 import SelectField from "@/components/forms/selectField";
 import { Courgette } from "next/font/google";

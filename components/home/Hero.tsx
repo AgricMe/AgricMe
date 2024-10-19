@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import "../css/home.css";
 import Image from "next/image";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils/cn";
 const Hero = () => {
   return (
     <div

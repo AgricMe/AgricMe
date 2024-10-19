@@ -1,5 +1,5 @@
 import Nav from "@/components/dashboard/Nav";
-import { notificationsData } from "@/utils/data";
+import { notificationsData } from "@/lib/data/data";
 import { Courgette } from "next/font/google";
 import Image from "next/image";
 import avatar from "@/public/dashboard/avatar8.jpg";

@@ -1,6 +1,6 @@
 import Nav from "@/components/dashboard/Nav";
 import Service from "@/components/dashboard/Service";
-import { servicesData } from "@/utils/data";
+import { servicesData } from "@/lib/data/data";
 
 const page = () => {
   return (

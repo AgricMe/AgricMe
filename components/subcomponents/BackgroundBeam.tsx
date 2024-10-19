@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/utils/cn";
+import { cn } from "@/lib/utils/cn";
 
 export const BackgroundBeam = React.memo(
   ({ className }: { className?: string }) => {
@@ -140,5 +140,4 @@ export const BackgroundBeam = React.memo(
 
 BackgroundBeam.displayName = "BackgroundBeams";
 
-
-export default BackgroundBeam
+export default BackgroundBeam;
