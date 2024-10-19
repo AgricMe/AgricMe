@@ -128,7 +128,7 @@ export const chatListData = [
     id: 4,
     name: "Courtney Henry",
     content:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, laboriosam.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, laborijdkosam.",
     img: avatar5,
   },
   {
