@@ -25,8 +25,8 @@ const Nav = () => {
           <Link href={"/#home"} className={`text-[17px] text-[#274c5b]`}>
             Home
           </Link>
-          <Link href={"/agrions"} className={`text-[17px] text-[#274c5b] `}>
-            Dashboard
+          <Link href={"/#about"} className={`text-[17px] text-[#274c5b] `}>
+            About
           </Link>
           <Link href={"/#services"} className={`text-[17px] text-[#274c5b]`}>
             Services
@@ -63,10 +63,10 @@ const Nav = () => {
             Home
           </Link>
           <Link
-            href={"/agrions"}
+            href={"/#about"}
             className={`hover:bg-[#1b3e32] hover:text-[#fff] py-2.5 md:py-4 px-6 rounded-lg text-[1.1rem] md:text-[1.4rem] text-[#274c5b] mb-4 duration-300`}
           >
-            Dashboard
+            About
           </Link>
           <Link
             href={"/#services"}
