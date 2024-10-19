@@ -1,11 +1,10 @@
 import React from "react";
 import Nav from "@/components/home/Nav";
 import Hero from "@/components/home/Hero";
-import AnimationWrapper from "./AnimationWrapper";
+import AnimationWrapper from "@/app/AnimationWrapper";
 import SecondSection from "@/components/home/secondSection";
 import Testimonial from "@/components/home/Testimonial";
 import Footer from "@/components/home/Footer";
-import FourthSection from "@/components/home/FourthSection";
 import NewsLetter from "@/components/home/NewsLetter";
 import BackgroundBeam from "@/components/subcomponents/BackgroundBeam";
 import FirstSection from "@/components/home/FirstSection";
@@ -25,7 +24,6 @@ function Home() {
       <OfferSection />
       <Products />
       <Testimonial />
-      {/* <FourthSection /> */}
       <NewsLetter />
       <Footer />
     </div>
