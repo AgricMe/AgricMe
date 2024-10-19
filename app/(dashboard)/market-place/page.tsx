@@ -23,7 +23,7 @@ const Page = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <>
-      {isOpen && <UploadGoodsModal />}
+      {isOpen && <UploadGoodsModal close={() => setIsOpen(false)} />}
       <section className="pb-10 px-1">
         <div className="bg-[#fff] pb-2 px-1.5">
           <Nav />

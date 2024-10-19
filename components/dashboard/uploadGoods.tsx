@@ -2,6 +2,7 @@ import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import ModalOverlay from "../shared/modalOverlay";
 import { Courgette } from "next/font/google";
 import { useState } from "react";
+import { RiCloseLine } from "react-icons/ri";
 
 const cursive = Courgette({
   subsets: ["latin"],
@@ -51,7 +52,12 @@ const states = [
     content: ["Oye", "Others"],
   },
 ];
-const UploadGoodsModal = () => {
+
+interface Props {
+  close: () => void;
+}
+
+const UploadGoodsModal = ({ close }: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [Category, setCategory] = useState<string>();
   const [Content, setContent] = useState<string>();
@@ -60,6 +66,13 @@ const UploadGoodsModal = () => {
   const [step, setStep] = useState<0 | 1 | 2 | 3 | 4>(0);
   return (
     <ModalOverlay width={800}>
+      <div className="flex justify-end items-center">
+        <RiCloseLine
+          size={26}
+          className="text-[#444] cursor-pointer"
+          onClick={close}
+        />
+      </div>
       <div className="flex flex-col justify-center items-center py-8">
         <div className="w-full flex flex-col bg-gray-300 border border-gray-400 p-3 rounded-md shadow-md mb-4">
           {step < 2 && (
