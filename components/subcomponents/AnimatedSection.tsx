@@ -18,7 +18,10 @@ const AnimatedSection = () => {
     return () => clearInterval(interval);
   }, [isVisible]);
   return (
-    <div className="relative w-full flex justify-between flex-col-reverse lg:flex-row-reverse overflow-hidden">
+    <div
+      id="about"
+      className="relative w-full flex justify-between flex-col-reverse lg:flex-row-reverse overflow-hidden"
+    >
       <section
         className={`w-full lg:w-[47%] relative ease-in-out duration-[0.6s] ${
           isVisible ? "left-0 opacity-100" : "left-[103%] opacity-0"
