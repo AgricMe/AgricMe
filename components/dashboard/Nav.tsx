@@ -43,7 +43,7 @@ const Nav = () => {
           </button>
         </div>
       </div>
-      <div className="flex profile-acct items-center gap-5">
+      <div className="hidden md:flex profile-acct items-center gap-5">
         <div className="flex items-center gap-8">
           <div>
             <SelectField
