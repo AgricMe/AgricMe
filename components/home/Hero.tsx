@@ -18,7 +18,7 @@ const Hero = () => {
             Connecting a Global market and bringing visibility
           </h2>
           <div className="flex justify-start items-center">
-            <Link href={"/agrions"}>
+            <Link href={"/signup"}>
               <button
                 className={cn(
                   "px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
