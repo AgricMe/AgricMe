@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import '@/components/css/form.css'
-// import { Roboto, Open_Sans } from "next/font/google";
-// import "./globals.css";
-
-// const inter = Open_Sans({ subsets: ["cyrillic"], weight: "300" });
+import "@/components/css/form.css";
 
 export const metadata: Metadata = {
-  title: "Login",
-  description: "Login to AgricMe",
+  title: "AgricMe",
+  description: "A social platform for farmers",
 };
 
 export default function SignupLayout({
@@ -17,9 +13,7 @@ export default function SignupLayout({
 }>) {
   return (
     <>
-        <main className={`form-layout`}>
-            {children}
-        </main>
+      <main className={`form-layout`}>{children}</main>
     </>
   );
 }

@@ -664,3 +664,27 @@ export const notificationsData = [
     date: "2 month ago",
   },
 ];
+
+
+export const navData = [
+  {
+    id: 1,
+    title: "About Us",
+    href: "/#about"
+  },
+  {
+    id: 2,
+    title: "Services",
+    href: "/#services"
+  },
+  {
+    id: 3,
+    title: "Products",
+    href: "/#products"
+  },
+  {
+    id: 4,
+    title: "Contact",
+    href: "/#contact"
+  }
+]
