@@ -1,3 +1,4 @@
+import { TransactionStatus } from "@/schema/enums";
 import { Transaction as ITransaction } from "@/schema/interfaces";
 
 const Transaction = ({
@@ -22,9 +23,9 @@ const Transaction = ({
       </p>
       <p
         className={`basis-[17%] ${
-          status === "Done"
+          status === TransactionStatus.COMPLETED
             ? "bg-green-100 text-green-600 text-[.85rem] text-center p-2 rounded-full"
-            : status === "Failed"
+            : status === TransactionStatus.FAILED
             ? "bg-red-100 text-red-600 text-[.75rem] text-center p-2 rounded-full"
             : "bg-orange-100 text-orange-600 text-center text-[.7rem] p-2 rounded-full"
         }`}

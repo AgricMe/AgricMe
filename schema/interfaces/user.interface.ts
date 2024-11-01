@@ -1,5 +1,5 @@
-import { DefaultModel } from ".";
-import { UserRoles } from "../enums/user.enum";
+import { DefaultModel } from '.';
+import { UserRoles } from '../enums/user.enum';
 
 export interface User extends DefaultModel {
   email: string;
