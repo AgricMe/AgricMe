@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 import { TransactionStatus } from "../enums";
 
 export interface DefaultModel {
-  id: string;
+  _id: string;
   createdAt: Date;
   updatedAt: Date;
 }
