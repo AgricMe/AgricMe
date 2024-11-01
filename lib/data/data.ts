@@ -76,7 +76,7 @@ export const transactionData = [
     product: "Roaster",
     brand: "Levis",
     quantity: "1 pc",
-    status: TransactionStatus.DONE,
+    status: TransactionStatus.COMPLETED,
   },
   {
     id: 2,
@@ -100,7 +100,7 @@ export const transactionData = [
     product: "Veggies",
     brand: "Pull & Bear",
     quantity: "1 pc",
-    status: TransactionStatus.DONE,
+    status: TransactionStatus.COMPLETED,
   },
 ];
 
@@ -665,26 +665,25 @@ export const notificationsData = [
   },
 ];
 
-
 export const navData = [
   {
     id: 1,
     title: "About Us",
-    href: "/#about"
+    href: "/#about",
   },
   {
     id: 2,
     title: "Services",
-    href: "/#services"
+    href: "/#services",
   },
   {
     id: 3,
     title: "Products",
-    href: "/#products"
+    href: "/#products",
   },
   {
     id: 4,
     title: "Contact",
-    href: "/#contact"
-  }
-]
+    href: "/#contact",
+  },
+];

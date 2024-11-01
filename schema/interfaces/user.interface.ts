@@ -1,14 +1,16 @@
-import { DefaultModel } from '.';
-import { UserRoles } from '../enums/user.enum';
+import { DefaultModel } from ".";
+import { Interests, RoleNames } from "../enums/user.enum";
 
 export interface User extends DefaultModel {
-  email: string;
-  fullName: string;
+  firstName: string;
+  lastName: string;
   userName: string;
-  profileImage: string;
-  country: string;
-  cityOfResidence: string;
+  email: string;
+  password: string;
+  bio: string;
   phoneNumber: string;
-  birthday: string;
-  role: UserRoles;
+  location: string;
+  job: string;
+  interest: Interests[];
+  role: RoleNames[];
 }
