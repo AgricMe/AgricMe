@@ -1,4 +1,4 @@
-import { https } from "@/lib/config/axios.config";
+import { http } from "@/lib/config/axios.config";
 import { errorHandler } from "@/lib/utils/error";
 import { TokenStorage, UserStorage } from "@/lib/utils/localStorage";
 import { LoginDTO, SignUpDTO } from "@/schema/dto/auth.dto";
@@ -10,9 +10,17 @@ export const useSignUp = (data: SignUpDTO): useMutateResult<{}> => {
   const payload = useMutation({
     mutationKey: ["useSignUp"],
     mutationFn: async () => {
-      const response = await https.post("auth/signup", {
+      const response = await http.post("auth/signup", {
+        firstName: data?.firstName,
+        lastName: data?.lastName,
+        userName: data?.userName,
         email: data?.email,
         password: data?.password,
+        bio: data?.bio,
+        phoneNumber: data?.phoneNumber,
+        location: data?.location,
+        job: data?.job,
+        interest: data?.interest,
         role: data?.role,
       });
 
@@ -33,13 +41,10 @@ export const useLogin = (
   const payload = useMutation({
     mutationKey: ["useLogin"],
     mutationFn: async () => {
-      const response = await https.post<{ accessToken: string }>(
-        "/auth/login",
-        {
-          email: data.email,
-          password: data.password,
-        }
-      );
+      const response = await http.post<{ accessToken: string }>("/auth/login", {
+        email: data.email,
+        password: data.password,
+      });
 
       await TokenStorage.store(response?.data?.accessToken);
 
