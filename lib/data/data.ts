@@ -471,7 +471,7 @@ export const singleServiceData = [
     id: 3,
     title: "Video",
     name: "mauris varius",
-    desc: "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est bibendum. Scelerisque a, risus ac ante. Velit consectetur neque, elit, aliquet. Non",
+    desc: "Aliquam dis vulputate vulputate integer sagittis. Faucibus dolor ornare faucibus vel sed et eleifend habitasse amet. Montes, mauris varius ac est biben, risus ac ante. Velit consectetur neque, elit, aliquet. Non",
     details: [
       {
         id: 1,
