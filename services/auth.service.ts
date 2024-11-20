@@ -6,10 +6,10 @@ import { useMutateResult } from "@/schema/interfaces/query.interface";
 import { useMutation } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
-export const useSignUp = (data: SignUpDTO): useMutateResult<{}> => {
+export const useSignUp = (): useMutateResult<{}> => {
   const payload = useMutation({
     mutationKey: ["useSignUp"],
-    mutationFn: async () => {
+    mutationFn: async (data: SignUpDTO) => {
       const response = await http.post("auth/signup", {
         firstName: data?.firstName,
         lastName: data?.lastName,
