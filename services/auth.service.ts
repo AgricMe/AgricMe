@@ -20,8 +20,8 @@ export const useSignUp = (): useMutateResult<{}> => {
         phoneNumber: data?.phoneNumber,
         location: data?.location,
         job: data?.job,
-        interest: data?.interest,
-        role: data?.role,
+        interest: data?.interests,
+        role: data?.roles,
       });
 
       return response?.data;
@@ -35,12 +35,10 @@ export const useSignUp = (): useMutateResult<{}> => {
   return payload;
 };
 
-export const useLogin = (
-  data: LoginDTO
-): useMutateResult<{ accessToken: string }> => {
+export const useLogin = (): useMutateResult<{ accessToken: string }> => {
   const payload = useMutation({
     mutationKey: ["useLogin"],
-    mutationFn: async () => {
+    mutationFn: async (data: LoginDTO) => {
       const response = await http.post<{ accessToken: string }>("/auth/login", {
         email: data.email,
         password: data.password,

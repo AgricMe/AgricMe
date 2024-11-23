@@ -1,13 +1,15 @@
 "use client";
 
-import React, { FormEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import Link from "next/link";
 import logo from "@/public/logo/agricme-logo.png";
 import { Interests, RoleNames } from "@/schema/enums/user.enum";
 import TextField from "./textField";
-import { useSignUp } from "@/services/auth.service";
+import { useLogin, useSignUp } from "@/services/auth.service";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 type formVariant = {
   page: string;
@@ -18,30 +20,80 @@ export default function Form({ page }: formVariant) {
   const [lastName, setLastName] = useState<string>();
   const [userName, setUserName] = useState<string>();
   const [email, setEmail] = useState<string>();
-  const [password, setPassword] = useState<string>();
+  const [password, setPassword] = useState<string>("");
   const [bio, setBio] = useState<string>();
-  const [phoneNumber, setPhoneNumber] = useState<string>();
-  const [location, setLocation] = useState<string>();
-  const [job, setJob] = useState<string>();
-  const [interest, setInterest] = useState<Interests[]>();
-  const [role, setRole] = useState<RoleNames[]>();
-  const mutation = useSignUp();
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [location, setLocation] = useState<string>("");
+  const [job, setJob] = useState<string>("");
+  const [interests, setInterests] = useState<Interests[] | string[]>();
+  const [roles, setRoles] = useState<RoleNames[] | string[]>();
+  const signUpMutation = useSignUp();
+  const logInMutation = useLogin();
+  const { push } = useRouter();
+
+  const handleInterestsChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      if (interests === undefined) {
+        setInterests([value]);
+      } else {
+        setInterests([...interests, value]);
+      }
+    } else {
+      setInterests(interests?.filter((interest) => interest !== value));
+    }
+  };
+
+  const handleRolesChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value, checked } = e.target;
+    if (checked) {
+      if (roles === undefined) {
+        setRoles([value]);
+      } else {
+        setRoles([...roles, value]);
+      }
+    } else {
+      setRoles(roles?.filter((role) => role !== value));
+    }
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await mutation.mutateAsync({
-      firstName,
-      lastName,
-      userName,
-      email,
-      password,
-      bio,
-      phoneNumber,
-      location,
-      job,
-      interest,
-      role,
-    });
+
+    if (page === "Create Account") {
+      await signUpMutation.mutateAsync({
+        firstName,
+        lastName,
+        userName,
+        email,
+        password,
+        bio,
+        phoneNumber,
+        location,
+        job,
+        interests,
+        roles,
+      });
+      // navigate to home page;
+      toast.success("Account Created Successfully", {
+        duration: 3000,
+        id: "signUp",
+      });
+      push(`/login`);
+    }
+
+    if (page === "Log In") {
+      await logInMutation.mutateAsync({
+        email,
+        password,
+      });
+      // navigate to dashboard page;
+      toast.success("Login Successful", {
+        duration: 3000,
+        id: "logIn",
+      });
+      push(`/dashboard`);
+    }
   };
 
   return (
@@ -73,6 +125,7 @@ export default function Form({ page }: formVariant) {
               <>
                 <TextField
                   label="UserName"
+                  id="UserName"
                   InputProps={{
                     placeholder: "Enter your username",
                     type: "text",
@@ -89,6 +142,7 @@ export default function Form({ page }: formVariant) {
                 />
                 <TextField
                   label="First Name"
+                  id="FirstName"
                   InputProps={{
                     placeholder: "Enter your first name",
                     type: "text",
@@ -105,6 +159,7 @@ export default function Form({ page }: formVariant) {
                 />
                 <TextField
                   label="Last Name"
+                  id="LastName"
                   InputProps={{
                     placeholder: "Enter your last name",
                     type: "text",
@@ -121,6 +176,7 @@ export default function Form({ page }: formVariant) {
                 />
                 <TextField
                   label="Email"
+                  id="Email"
                   InputProps={{
                     placeholder: "Enter your Email Address",
                     type: "email",
@@ -137,6 +193,7 @@ export default function Form({ page }: formVariant) {
                 />
                 <TextField
                   label="Password"
+                  id="Password"
                   InputProps={{
                     placeholder: "Enter your Password",
                     type: "password",
@@ -150,27 +207,188 @@ export default function Form({ page }: formVariant) {
                   LabelProps={{
                     className: "text-[.8rem] text-[#fff] font-[500]",
                   }}
+                  helperText={
+                    password!.length < 8 ? "password strength: weak" : ""
+                  }
                 />
               </>
             ) : (
-              <>
-                <TextField
-                  label="UserName"
-                  InputProps={{
-                    placeholder: "Enter your username",
-                    type: "text",
-                    required: true,
-                    value: userName,
-                    onChange(e) {
-                      setUserName(e.target.value);
-                    },
-                  }}
-                  className="w-full"
-                  LabelProps={{
-                    className: "text-[.8rem] text-[#fff] font-[500]",
-                  }}
-                />
-              </>
+              page == "Create Account" &&
+              step === 1 && (
+                <>
+                  <TextField
+                    label="Bio"
+                    id="Bio"
+                    InputProps={{
+                      placeholder: "Enter your bio",
+                      type: "text",
+                      required: true,
+                      value: bio,
+                      onChange(e) {
+                        setBio(e.target.value);
+                      },
+                    }}
+                    className="w-full"
+                    LabelProps={{
+                      className: "text-[.8rem] text-[#fff] font-[500]",
+                    }}
+                    multiline
+                  />
+                  <TextField
+                    label="Phone Number"
+                    id="PhoneNumber"
+                    InputProps={{
+                      placeholder: "Enter your Phone Number",
+                      type: "text",
+                      required: true,
+                      value: phoneNumber,
+                      onChange(e) {
+                        setPhoneNumber(e.target.value);
+                      },
+                    }}
+                    className="w-full"
+                    LabelProps={{
+                      className: "text-[.8rem] text-[#fff] font-[500]",
+                    }}
+                    helperText={
+                      !phoneNumber.startsWith("+234")
+                        ? "Phone Number must start with +234"
+                        : phoneNumber.length !== 14
+                        ? "Incorrect phone number"
+                        : ""
+                    }
+                  />
+                  <TextField
+                    label="Location"
+                    id="Location"
+                    InputProps={{
+                      placeholder: "Enter your Location",
+                      type: "text",
+                      required: true,
+                      value: location,
+                      onChange(e) {
+                        setLocation(e.target.value);
+                      },
+                    }}
+                    className="w-full"
+                    LabelProps={{
+                      className: "text-[.8rem] text-[#fff] font-[500]",
+                    }}
+                  />
+                  <TextField
+                    label="Job"
+                    id="Job"
+                    InputProps={{
+                      placeholder: "Enter your Job",
+                      type: "text",
+                      required: true,
+                      value: job,
+                      onChange(e) {
+                        setJob(e.target.value);
+                      },
+                    }}
+                    className="w-full"
+                    LabelProps={{
+                      className: "text-[.8rem] text-[#fff] font-[500]",
+                    }}
+                  />
+                  <label htmlFor="Interests" className="text-[#fff] mt-1 mb-4">
+                    What best describes you:
+                    <div className="flex flex-col gap-4 mt-3">
+                      <div className="flex gap-x-4">
+                        <input
+                          type="checkbox"
+                          name="buyer"
+                          id="buyer"
+                          value={RoleNames.BUYER}
+                          className="accent-green-800"
+                          onChange={handleRolesChange}
+                        />
+                        <p className="text-white text-[.85rem]">Buyer</p>
+                      </div>
+                      <div className="flex gap-x-4">
+                        <input
+                          type="checkbox"
+                          name="seller"
+                          id="seller"
+                          value={RoleNames.SELLER}
+                          className="accent-green-800"
+                          onChange={handleRolesChange}
+                        />
+                        <p className="text-white text-[.85rem]">Seller</p>
+                      </div>
+                      <div className="flex gap-x-4">
+                        <input
+                          type="checkbox"
+                          name="service_provider"
+                          id="service_provider"
+                          value={RoleNames.SERVICE_PROVIDER}
+                          className="accent-green-800"
+                          onChange={handleRolesChange}
+                        />
+                        <p className="text-white text-[.85rem]">
+                          Service Provider
+                        </p>
+                      </div>
+                    </div>
+                  </label>
+                  <label htmlFor="Interests" className="text-[#fff] mb-4">
+                    Your core interests:
+                    <div className="flex flex-col gap-4 mt-3">
+                      <div className="flex gap-x-4">
+                        <input
+                          type="checkbox"
+                          name="animal_production"
+                          id="animal_production"
+                          value={Interests.ANIMAL_PRODUCTION}
+                          className="accent-green-800"
+                          onChange={handleInterestsChange}
+                        />
+                        <p className="text-white text-[.85rem]">
+                          Animal Production
+                        </p>
+                      </div>
+                      <div className="flex gap-x-4">
+                        <input
+                          type="checkbox"
+                          name="farming"
+                          id="farming"
+                          value={Interests.FARMING}
+                          className="accent-green-800"
+                          onChange={handleInterestsChange}
+                        />
+                        <p className="text-white text-[.85rem]">Farming</p>
+                      </div>
+                      <div className="flex gap-x-4">
+                        <input
+                          type="checkbox"
+                          name="agric_businesses"
+                          id="agric_businesses"
+                          value={Interests.AGRIC_BUSINESSES}
+                          className="accent-green-800"
+                          onChange={handleInterestsChange}
+                        />
+                        <p className="text-white text-[.85rem]">
+                          Agric Businesses
+                        </p>
+                      </div>
+                      <div className="flex gap-x-4">
+                        <input
+                          type="checkbox"
+                          name="service_provider"
+                          id="service_provider"
+                          value={Interests.SERVICE_PROVIDER}
+                          className="accent-green-800"
+                          onChange={handleInterestsChange}
+                        />
+                        <p className="text-white text-[.85rem]">
+                          Service Provider
+                        </p>
+                      </div>
+                    </div>
+                  </label>
+                </>
+              )
             )}
             {page === "Log In" && (
               <>
@@ -231,7 +449,9 @@ export default function Form({ page }: formVariant) {
                 }
               }}
             >
-              {page === "Create Account"
+              {signUpMutation.isPending || logInMutation.isPending
+                ? "submitting..."
+                : page === "Create Account"
                 ? step === 0
                   ? "Continue"
                   : "Submit"

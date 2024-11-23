@@ -11,6 +11,6 @@ export interface User extends DefaultModel {
   phoneNumber: string;
   location: string;
   job: string;
-  interest: Interests[];
-  role: RoleNames[];
+  interests: Interests[];
+  roles: RoleNames[];
 }

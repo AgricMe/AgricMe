@@ -6,6 +6,7 @@ import { Sidebar, SidebarBody, SidebarLink } from "@/components/shared/SideBar";
 import { sideBarLinks } from "@/components/dashboard/SideBarLinks";
 import { PiExportBold } from "react-icons/pi";
 import { Courgette } from "next/font/google";
+import { logout } from "@/services/auth.service";
 
 const cursive = Courgette({
   subsets: ["latin"],
@@ -30,11 +31,13 @@ const SideBarElements = () => {
             <SidebarLink
               link={{
                 label: "Logout",
-                href: "/",
                 icon: (
                   <PiExportBold
                     size={20}
                     className="flex-shrink-0 rotate-90 text-red-600"
+                    onClick={() => {
+                      logout();
+                    }}
                   />
                 ),
               }}
