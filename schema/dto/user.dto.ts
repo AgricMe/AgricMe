@@ -11,6 +11,6 @@ export type EditProfileDTO = Partial<{
   phoneNumber: string;
   location: string;
   job: string;
-  interest: Interests[];
-  role: RoleNames[];
+  interests: Interests[];
+  roles: RoleNames[];
 }>;

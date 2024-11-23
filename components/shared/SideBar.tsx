@@ -9,7 +9,7 @@ import Image from "next/image";
 
 interface Links {
   label: string;
-  href: string;
+  href?: string;
   icon: React.JSX.Element | React.ReactNode;
 }
 
@@ -191,41 +191,64 @@ export const SidebarLink = ({
   props?: LinkProps;
 }) => {
   const { open, animate } = useSidebar();
-  // const [label, setLabel] = useState<string>();
-  // const [isActive, setIsActive] = useState<boolean>(false);
-  // const handleClick = (clickedLabel: string) => {
-  //   if (label === clickedLabel) {
-  //     setIsActive(true);
-  //   } else if (label !== clickedLabel) {
-  //     setIsActive(false);
-  //   }
-  // };
+
   return (
-    <Link
-      href={link.href}
-      className={cn(
-        `flex items-center justify-start gap-2  group/sidebar py-2.5 mb-6 lg:mb-0`,
-        className
-      )}
-      // onClick={() => {
-      //   setLabel(link.label);
-      //   handleClick(link.label);
-      // }}
-      {...props}
-    >
-      {link.icon}
-      {/* <div className={`${isActive && "stroke-[#7EB693] fill-[#7EB693]"}`}>
+    <>
+      {!link?.href ? (
+        <div
+          className={cn(
+            `flex items-center justify-start gap-2  group/sidebar py-2.5 mb-6 lg:mb-0`,
+            className
+          )}
+          {...props}
+        >
+          {link.icon}
+          <motion.span
+            animate={{
+              display: animate
+                ? open
+                  ? "inline-block"
+                  : "none"
+                : "inline-block",
+              opacity: animate ? (open ? 1 : 0) : 1,
+            }}
+            className={`text-neutral-200 dark:text-black text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0`}
+          >
+            {link.label}
+          </motion.span>
+        </div>
+      ) : (
+        <Link
+          href={link.href}
+          className={cn(
+            `flex items-center justify-start gap-2  group/sidebar py-2.5 mb-6 lg:mb-0`,
+            className
+          )}
+          // onClick={() => {
+          //   setLabel(link.label);
+          //   handleClick(link.label);
+          // }}
+          {...props}
+        >
+          {link.icon}
+          {/* <div className={`${isActive && "stroke-[#7EB693] fill-[#7EB693]"}`}>
       </div> */}
 
-      <motion.span
-        animate={{
-          display: animate ? (open ? "inline-block" : "none") : "inline-block",
-          opacity: animate ? (open ? 1 : 0) : 1,
-        }}
-        className={`text-neutral-200 dark:text-black text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0`}
-      >
-        {link.label}
-      </motion.span>
-    </Link>
+          <motion.span
+            animate={{
+              display: animate
+                ? open
+                  ? "inline-block"
+                  : "none"
+                : "inline-block",
+              opacity: animate ? (open ? 1 : 0) : 1,
+            }}
+            className={`text-neutral-200 dark:text-black text-sm group-hover/sidebar:translate-x-1 transition duration-150 whitespace-pre inline-block !p-0 !m-0`}
+          >
+            {link.label}
+          </motion.span>
+        </Link>
+      )}
+    </>
   );
 };
