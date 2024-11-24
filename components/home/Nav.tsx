@@ -78,6 +78,20 @@ const Nav = () => {
               </Link>
             );
           })}
+          <div className="flex lg:hidden justify-center gap-6">
+            <Link
+              href={"/login"}
+              className={`text-[#274c5b] text-sm font-semibold px-10 py-3 border border-[#367b63] rounded-md`}
+            >
+              Log In
+            </Link>
+            <Link
+              href={"/signup"}
+              className={`bg-[#367b63] text-[#fff] text-sm font-semibold px-10 py-3 rounded-md`}
+            >
+              Sign Up
+            </Link>
+          </div>
         </ul>
       )}
     </div>
