@@ -6,6 +6,7 @@ export interface SignUpDTO {
   userName: string;
   email: string;
   password: string;
+  profilePicture?: string;
   bio: string;
   phoneNumber: string;
   location: string;

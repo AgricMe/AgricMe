@@ -16,8 +16,8 @@ const Loader = ({ loading, loadingText, ...props }: Props) => {
       {...props}
       className={`flex justify-center items-center gap-2  ${props.className}`}
     >
-      <BiLoaderAlt size={24} className="text-[#00628f] animate-spin" />
-      {loadingText && <p className="text-[#00628f] my-auto">{loadingText}</p>}
+      <BiLoaderAlt size={24} className="text-[#7EB693] animate-spin" />
+      {loadingText && <p className="text-[#7EB693] my-auto">{loadingText}</p>}
     </div>
   );
 };
