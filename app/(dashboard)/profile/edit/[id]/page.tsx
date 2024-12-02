@@ -3,18 +3,40 @@ import Nav from "@/components/dashboard/Nav";
 import SelectField from "@/components/forms/selectField";
 import TextField from "@/components/forms/textField";
 import avatar2 from "@/public/dashboard/avatar2.jpg";
+import { useEditCompanyProfile } from "@/services/user.service";
 import Image from "next/image";
-import { useState } from "react";
+import { useParams, useRouter } from "next/navigation";
+import { FormEvent, useState } from "react";
+import toast from "react-hot-toast";
 
 const EditPage = () => {
+  const { id: companyId } = useParams<{ id: string }>();
   const [companyName, setCompanyName] = useState<string>();
   const [fullName, setFullName] = useState<string>();
   const [area, setArea] = useState<string>();
-  const [CACNumber, setCACNumber] = useState<number>();
+  const [CACNumber, setCACNumber] = useState<string>();
   const [email, setEmail] = useState<string>();
   const [countryCode, setCountryCode] = useState<string>();
-  const [phoneNumber, setPhoneNumber] = useState<number>();
+  const [phoneNumber, setPhoneNumber] = useState<string>();
   const [address, setAddress] = useState<string>();
+  const mutation = useEditCompanyProfile(companyId!);
+  const { push } = useRouter();
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    await mutation.mutateAsync({
+      companyName,
+      fullName,
+      area,
+      CACNumber,
+      email,
+      countryCode,
+      phoneNumber,
+      address,
+    });
+    toast.success("Company profile updated successfully");
+    push("/profile");
+  };
   return (
     <section className="pb-10 px-1">
       <div className="bg-[#fff] pb-2 px-1.5">
@@ -24,7 +46,8 @@ const EditPage = () => {
         Edit Profile
       </h3>
       <div className="bg-[#eff6f1] min-h-screen px-4 md:px-6 lg:px-[3.5rem]">
-        <div
+        <form
+          onSubmit={handleSubmit}
           className={`bg-[#fff] flex flex-col lg:flex-row justify-between items-center md:items-start w-full h-auto px-4 md:px-6 py-8 md:py-6 shadow-md rounded-xl`}
         >
           <div className="w-full lg:w-[40%] flex flex-col justify-center items-center lg:mr-10 mb-6 lg:mb-0">
@@ -87,15 +110,14 @@ const EditPage = () => {
                 type: "tel",
                 value: CACNumber,
                 onChange(e) {
-                  let id = Number(e.target.value);
-                  setCACNumber(id);
+                  setCACNumber(e.target.value);
                 },
               }}
               className="mt-4"
               LabelProps={{ className: "text-[.8rem] font-[500]" }}
             />
             <button
-              type="button"
+              type="submit"
               className="hidden lg:flex bg-[#7EB693] text-[#fff] mt-12 px-10 py-2.5 rounded-md shadow-sm text-[.95rem] font-semibold"
             >
               Save
@@ -142,8 +164,7 @@ const EditPage = () => {
                   required: true,
                   value: phoneNumber,
                   onChange(e) {
-                    let PhoneNumber = Number(e.target.value);
-                    setPhoneNumber(PhoneNumber);
+                    setPhoneNumber(e.target.value);
                   },
                 }}
               />
@@ -164,12 +185,12 @@ const EditPage = () => {
             />
           </div>
           <button
-            type="button"
+            type="submit"
             className="flex lg:hidden bg-[#7EB693] text-[#fff] mt-8 px-10 py-2.5 rounded-md shadow-sm text-[.95rem] font-semibold"
           >
             Save
           </button>
-        </div>
+        </form>
       </div>
     </section>
   );

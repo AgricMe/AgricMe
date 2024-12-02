@@ -1,7 +1,7 @@
 import { https } from "@/lib/config/axios.config";
 import { errorHandler } from "@/lib/utils/error";
 import { UserStorage } from "@/lib/utils/localStorage";
-import { EditProfileDTO } from "@/schema/dto/user.dto";
+import { EditCompanyProfileDTO, EditProfileDTO } from "@/schema/dto/user.dto";
 import { User } from "@/schema/interfaces/user.interface";
 import { useMutation, useQuery } from "@tanstack/react-query";
 
@@ -44,4 +44,21 @@ export const useGetProfile = () => {
   });
 
   return query;
+};
+
+export const useEditCompanyProfile = (companyId: string) => {
+  const mutation = useMutation({
+    mutationKey: ["useEditCompanyProfile"],
+    mutationFn: async (data: EditCompanyProfileDTO) => {
+      const response = await https.put(`/company/${companyId}`, data);
+
+      return response?.data;
+    },
+
+    onError(error) {
+      return errorHandler(error);
+    },
+  });
+
+  return mutation;
 };

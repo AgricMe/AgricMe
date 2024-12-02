@@ -3,33 +3,11 @@ import Nav from "@/components/dashboard/Nav";
 import SelectField from "@/components/forms/selectField";
 import TextField from "@/components/forms/textField";
 import Loader from "@/components/shared/loader";
+import { settingsData } from "@/lib/data/data";
 import { User } from "@/schema/interfaces/user.interface";
 import { useGetProfile } from "@/services/user.service";
 import { useEffect, useState } from "react";
 import { MdImage } from "react-icons/md";
-
-const settingsData = [
-  {
-    id: "1",
-    title: "General Settings",
-  },
-  {
-    id: "2",
-    title: "Email",
-  },
-  {
-    id: "3",
-    title: "Change Password",
-  },
-  {
-    id: "4",
-    title: "Preferences",
-  },
-  {
-    id: "5",
-    title: "Delete Account",
-  },
-];
 
 const EditPage = () => {
   const { data, isPending } = useGetProfile();
@@ -70,7 +48,7 @@ const EditPage = () => {
           </h3>
 
           <div className="flex flex-col md:flex-row items-center gap-4 mt-6 md:mt-0">
-            {settingsData.map((setting) => {
+            {settingsData?.map((setting) => {
               return (
                 <button
                   key={setting.id}
