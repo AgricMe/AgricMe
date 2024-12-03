@@ -1,3 +1,5 @@
+"use client";
+
 import type { Metadata } from "next";
 import "../../components/css/dashboard.css";
 import { cn } from "@/lib/utils/cn";
@@ -5,7 +7,7 @@ import SideBarElements from "@/components/dashboard/SideBarElements";
 import { useGetProfile } from "@/services/user.service";
 import DotLoader from "@/components/shared/dot-loader";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Dashboard",
   description: "Dashboard",
 };

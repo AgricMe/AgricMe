@@ -687,3 +687,26 @@ export const navData = [
     href: "/#contact",
   },
 ];
+
+export const settingsData = [
+  {
+    id: "1",
+    title: "General Settings",
+  },
+  {
+    id: "2",
+    title: "Email",
+  },
+  {
+    id: "3",
+    title: "Change Password",
+  },
+  {
+    id: "4",
+    title: "Preferences",
+  },
+  {
+    id: "5",
+    title: "Delete Account",
+  },
+];
