@@ -65,13 +65,13 @@ const Page = () => {
             </div>
             <div className="w-full flex justify-center md:justify-end gap-4">
               <Link
-                href={`/profile/edit/${user?.company?._id}`}
+                href={`/profile/edit/company`}
                 className="bg-[#fff] text-[#444] border border-gray-400 px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium"
               >
                 Edit Profile
               </Link>
               <Link
-                href={`/profile/settings`}
+                href={`/profile/settings/${user?._id}`}
                 className="bg-[#fff] text-[#444] border border-gray-400 px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium"
               >
                 Settings

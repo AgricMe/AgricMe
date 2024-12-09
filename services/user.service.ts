@@ -1,7 +1,7 @@
 import { https } from "@/lib/config/axios.config";
 import { errorHandler } from "@/lib/utils/error";
 import { UserStorage } from "@/lib/utils/localStorage";
-import { EditCompanyProfileDTO, EditProfileDTO } from "@/schema/dto/user.dto";
+import { EditProfileDTO } from "@/schema/dto/user.dto";
 import { User } from "@/schema/interfaces/user.interface";
 import { useMutation, useQuery } from "@tanstack/react-query";
 
@@ -46,11 +46,45 @@ export const useGetProfile = () => {
   return query;
 };
 
-export const useEditCompanyProfile = (companyId: string) => {
+export const useChangeEmail = () => {
   const mutation = useMutation({
-    mutationKey: ["useEditCompanyProfile"],
-    mutationFn: async (data: EditCompanyProfileDTO) => {
-      const response = await https.put(`/company/${companyId}`, data);
+    mutationKey: ["useChangeEmail"],
+    mutationFn: async (data: {email: string}) => {
+      const response = await https.post(`user/change-email`, data);
+
+      return response?.data;
+    },
+
+    onError(error) {
+      return errorHandler(error);
+    },
+  });
+
+  return mutation;
+};
+
+export const useChangePassword = () => {
+  const mutation = useMutation({
+    mutationKey: ["useChangePassword"],
+    mutationFn: async (data: {currentPassword: string, newPassword: string}) => {
+      const response = await https.post(`user/change-password`, data);
+
+      return response?.data;
+    },
+
+    onError(error) {
+      return errorHandler(error);
+    },
+  });
+
+  return mutation;
+};
+
+export const useDeleteAccount = () => {
+  const mutation = useMutation({
+    mutationKey: ["useDeleteAccount"],
+    mutationFn: async (data: {email: string}) => {
+      const response = await https.delete(`user/${data.email}`);
 
       return response?.data;
     },
