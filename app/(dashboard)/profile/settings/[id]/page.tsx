@@ -8,7 +8,7 @@ import { uploadFile } from '@/lib/utils/file';
 import { DateFormat, Default, Language, TimeZone } from '@/schema/enums/preference.enum';
 import { User } from "@/schema/interfaces/user.interface";
 import { useEditPreference } from '@/services/preference.service';
-import { useChangeEmail, useChangePassword, useEditProfile, useGetProfile } from "@/services/user.service";
+import { useChangeEmail, useChangePassword, useDeleteAccount, useEditProfile, useGetProfile } from "@/services/user.service";
 import { useParams } from 'next/navigation';
 import { FormEvent, useEffect, useState } from "react";
 import toast from 'react-hot-toast';
@@ -34,18 +34,20 @@ const EditPage = () => {
   const [currentpassword, setCurrentPassword] = useState<string>('');
   const [newpassword, setNewPassword] = useState<string>('');
   const [newpassword2, setNewPassword2] = useState<string>('');
-  const [language, setLanguage] = useState<Language>(Language.ENGLISH);
-  const [timezone, setTimeZone] = useState<TimeZone>(TimeZone.GMT_PLUS_5_30);
-  const [dateformat, setDateFormat] = useState<DateFormat>(DateFormat.NO_PREFERENCE);
-  const [defaultOption, setDefaultOption] = useState<Default>(Default.OFF);
+  const [language, setLanguage] = useState<string>(Language.ENGLISH);
+  const [timezone, setTimeZone] = useState<string>(TimeZone.GMT_PLUS_5_30);
+  const [dateformat, setDateFormat] = useState<string>(DateFormat.NO_PREFERENCE);
+  const [defaultOption, setDefaultOption] = useState<string>(Default.OFF);
 
   const mutation = useEditProfile(userId!);
   const emailMutation = useChangeEmail();
   const passwordMutation = useChangePassword();
   const preferenceMutation = useEditPreference();
+  const accountDeletionMutation = useDeleteAccount()
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if(activeId === "1"){
       let avatarUrl,coverPhotoUrl;
       if(avatar){
@@ -66,27 +68,39 @@ const EditPage = () => {
       });
       toast.success('General settings updated successfully');
     }
+
     if(activeId === "2"){
       await emailMutation.mutateAsync({
         email
       });
       toast.success('Email has been successfully changed');
     }
+
     if(activeId === "3"){
       await passwordMutation.mutateAsync({
         currentPassword: currentpassword,
         newPassword: newpassword
       });
-      toast.success('Email has been successfully changed');
+      toast.success('Password has been successfully changed');
     }
+
     if(activeId === "4"){
       await preferenceMutation.mutateAsync({
         language,
         timeZone: timezone,
         dateFormat: dateformat,
         default: defaultOption
-      })
+      });
+      toast.success('Preferences has been updated successfully');
     }
+
+    if(activeId === "5"){
+      await accountDeletionMutation.mutateAsync({
+        email
+      });
+      toast.success('Account has been deleted successfully');
+    }
+
   };
 
   useEffect(() => {
