@@ -1,5 +1,7 @@
 import { DefaultModel } from ".";
-import { Interests, RoleNames } from "../enums/user.enum";
+import { Interests, RoleNames, VerificationStatus } from "../enums/user.enum";
+import { Company } from './company.interface';
+import { Preference } from './preference.interface';
 
 export interface User extends DefaultModel {
   firstName: string;
@@ -9,21 +11,15 @@ export interface User extends DefaultModel {
   password: string;
   bio: string;
   profilePicture: string;
+  coverPhoto: string;
   phoneNumber: string;
   location: string;
+  address: string;
+  zipCode: string;
   job: string;
+  verificationStatus: VerificationStatus;
   company?: Company;
+  preference: Preference;
   interests: Interests[];
   roles: RoleNames[];
-}
-
-export interface Company extends DefaultModel {
-  companyName: string;
-  fullName: string;
-  area: string;
-  CACNumber: string;
-  email: string;
-  countryCode: string;
-  phoneNumber: string;
-  address: string;
 }

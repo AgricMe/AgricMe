@@ -4,37 +4,116 @@ import SelectField from "@/components/forms/selectField";
 import TextField from "@/components/forms/textField";
 import Loader from "@/components/shared/loader";
 import { settingsData } from "@/lib/data/data";
+import { uploadFile } from '@/lib/utils/file';
+import { DateFormat, Default, Language, TimeZone } from '@/schema/enums/preference.enum';
 import { User } from "@/schema/interfaces/user.interface";
-import { useGetProfile } from "@/services/user.service";
-import { useEffect, useState } from "react";
+import { useEditPreference } from '@/services/preference.service';
+import { useChangeEmail, useChangePassword, useDeleteAccount, useEditProfile, useGetProfile } from "@/services/user.service";
+import { useParams } from 'next/navigation';
+import { FormEvent, useEffect, useState } from "react";
+import toast from 'react-hot-toast';
 import { MdImage } from "react-icons/md";
 
 const EditPage = () => {
   const { data, isPending } = useGetProfile();
   const user: User = data;
+  const {id:userId} = useParams<{id: string}>();
   const [activeId, setActiveId] = useState<string>("1");
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
+  const [avatar,setAvatar] = useState<File>();
+  const [coverPhoto,setCoverPhoto] = useState<File>();
   const [country, setCountry] = useState<string>("");
   const [city, setCity] = useState<string>("");
   const [state, setState] = useState<string>("");
   const [address1, setAddress1] = useState<string>("");
   const [address2, setAddress2] = useState<string>("");
   const [zipcode, setZipCode] = useState<string>("");
-  const [currentpassword, setCurrentPassword] = useState<string>();
-  const [newpassword, setNewPassword] = useState<string>();
-  const [newpassword2, setNewPassword2] = useState<string>();
-  const [language, setLanguage] = useState<string>("");
-  const [timezone, setTimeZone] = useState<string>("");
-  const [dateformat, setDateFormat] = useState<string>("");
+  const [currentpassword, setCurrentPassword] = useState<string>('');
+  const [newpassword, setNewPassword] = useState<string>('');
+  const [newpassword2, setNewPassword2] = useState<string>('');
+  const [language, setLanguage] = useState<string>(Language.ENGLISH);
+  const [timezone, setTimeZone] = useState<string>(TimeZone.GMT_PLUS_5_30);
+  const [dateformat, setDateFormat] = useState<string>(DateFormat.NO_PREFERENCE);
+  const [defaultOption, setDefaultOption] = useState<string>(Default.OFF);
+
+  const mutation = useEditProfile(userId!);
+  const emailMutation = useChangeEmail();
+  const passwordMutation = useChangePassword();
+  const preferenceMutation = useEditPreference();
+  const accountDeletionMutation = useDeleteAccount()
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if(activeId === "1"){
+      let avatarUrl,coverPhotoUrl;
+      if(avatar){
+        avatarUrl = await uploadFile(avatar);
+      }
+      if(coverPhoto){
+        coverPhotoUrl = await uploadFile(coverPhoto!);
+      }
+      await mutation.mutateAsync({
+        profilePicture: avatarUrl,
+        coverPhoto: coverPhotoUrl,
+        firstName,
+        lastName,
+        phoneNumber: phone,
+        location: `${country} ${state} ${city}`,
+        address: `${address1} ${address2}`,
+        zipCode: zipcode
+      });
+      toast.success('General settings updated successfully');
+    }
+
+    if(activeId === "2"){
+      await emailMutation.mutateAsync({
+        email
+      });
+      toast.success('Email has been successfully changed');
+    }
+
+    if(activeId === "3"){
+      await passwordMutation.mutateAsync({
+        currentPassword: currentpassword,
+        newPassword: newpassword
+      });
+      toast.success('Password has been successfully changed');
+    }
+
+    if(activeId === "4"){
+      await preferenceMutation.mutateAsync({
+        language,
+        timeZone: timezone,
+        dateFormat: dateformat,
+        default: defaultOption
+      });
+      toast.success('Preferences has been updated successfully');
+    }
+
+    if(activeId === "5"){
+      await accountDeletionMutation.mutateAsync({
+        email
+      });
+      toast.success('Account has been deleted successfully');
+    }
+
+  };
 
   useEffect(() => {
     setFirstName(user?.firstName);
     setLastName(user?.lastName);
     setEmail(user?.email);
     setPhone(user?.phoneNumber);
+    setAddress1(user?.address);
+    setZipCode(user?.zipCode);
+    setLanguage(user?.preference?.language);
+    setTimeZone(user?.preference?.timeZone);
+    setDateFormat(user?.preference?.dateFormat);
+    setDefaultOption(user?.preference?.default);
   }, [user]);
   return (
     <section className="pb-10 px-1">
@@ -74,7 +153,7 @@ const EditPage = () => {
           ) : (
             <div className="bg-[#fff] w-full h-auto px-4 md:px-10 py-8 md:py-6 shadow-md rounded-xl transition-all duration-500">
               {activeId === "1" && (
-                <div className="flex flex-col gap-[6rem]">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-[6rem]">
                   <div className="flex flex-col gap-2.5">
                     <h1 className="text-[1.4rem] md:text-[1.8rem] text-[#222] font-bold ">
                       General Settings
@@ -123,6 +202,7 @@ const EditPage = () => {
                             type="file"
                             name="cover-photo"
                             id="cover-photo"
+                            // value={coverPhoto}
                             className="w-full h-full opacity-0 cursor-pointer"
                           />
                         </div>
@@ -304,16 +384,16 @@ const EditPage = () => {
                       </div>
                     </div>
                     <button
-                      type="button"
+                      type="submit"
                       className="w-[50%] md:w-[15%] mx-auto mt-8 mb-2 bg-[#7EB693] text-[#fff] py-3 rounded-md shadow-sm text-[.95rem] font-semibold"
                     >
                       Save Changes
                     </button>
                   </div>
-                </div>
+                </form>
               )}
               {activeId === "2" && (
-                <div className="flex flex-col gap-2.5">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-2.5">
                   <h1 className="text-[1.4rem] md:text-[1.8rem] text-[#222] font-bold ">
                     Email
                   </h1>
@@ -340,17 +420,17 @@ const EditPage = () => {
                         }}
                       />
                       <button
-                        type="button"
+                        type="submit"
                         className="w-[50%] md:w-[20%] mx-auto md:mx-0 bg-[#7EB693] text-[#fff] py-3 rounded-md shadow-sm text-[.95rem] font-semibold"
                       >
                         Save Changes
                       </button>
                     </div>
                   </div>
-                </div>
+                </form>
               )}
               {activeId === "3" && (
-                <div className="flex flex-col gap-2.5">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-2.5">
                   <h1 className="text-[1.4rem] md:text-[1.8rem] text-[#222] font-bold ">
                     Change your password
                   </h1>
@@ -409,6 +489,7 @@ const EditPage = () => {
                           },
                           className: "text-[.95rem] font-medium p-3.5",
                         }}
+                        helperText={newpassword !== newpassword2 ? 'Password does not match' : ''}
                       />
                     </div>
                     <div className="flex flex-col justify-start items-center md:ml-[3.5rem] mt-4">
@@ -435,15 +516,15 @@ const EditPage = () => {
                     </div>
                   </div>
                   <button
-                    type="button"
+                    type="submit"
                     className="w-[50%] md:w-[15%] mx-auto mt-8 mb-2 bg-[#7EB693] text-[#fff] py-3 rounded-md shadow-sm text-[.95rem] font-semibold"
                   >
                     Save Changes
                   </button>
-                </div>
+                </form>
               )}
               {activeId === "4" && (
-                <div className="flex flex-col gap-2.5">
+                <form onSubmit={handleSubmit} className="flex flex-col gap-2.5">
                   <h1 className="text-[1.4rem] md:text-[1.8rem] text-[#222] font-bold ">
                     Preferences
                   </h1>
@@ -465,7 +546,7 @@ const EditPage = () => {
                         <option value={"Select Language"} disabled>
                           Select Language
                         </option>
-                        <option value={"English"}>English</option>
+                        <option value={Language.ENGLISH}>English</option>
                       </SelectField>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between items-center">
@@ -481,7 +562,7 @@ const EditPage = () => {
                         <option value={"Select Time Zone"} disabled>
                           Select Time Zone
                         </option>
-                        <option value={"GMT +5.30"}>GMT +5.30</option>
+                        <option value={TimeZone.GMT_PLUS_5_30}>GMT +5.30</option>
                       </SelectField>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between items-center">
@@ -497,7 +578,7 @@ const EditPage = () => {
                         <option value={"Select Date Format"} disabled>
                           Select Date Format
                         </option>
-                        <option value={"No Preferences"}>No Preferences</option>
+                        <option value={DateFormat.NO_PREFERENCE}>No Preferences</option>
                       </SelectField>
                     </div>
                     <div className="flex flex-col md:flex-row justify-between items-center">
@@ -511,6 +592,8 @@ const EditPage = () => {
                             name="on"
                             id="on"
                             className="accent-green-700 cursor-pointer w-4 h-4"
+                            checked={defaultOption === Default.ON}
+                            value={defaultOption}
                           />
                           <p className="text-[1rem] text-[#333] font-medium">
                             On
@@ -521,8 +604,9 @@ const EditPage = () => {
                             type="radio"
                             name="off"
                             id="off"
-                            checked={true}
+                            checked={defaultOption === Default.OFF}
                             className="accent-green-700 cursor-pointer w-4 h-4"
+                            value={defaultOption}
                           />
                           <p className="text-[1rem] text-[#333] font-medium">
                             Off
@@ -573,15 +657,15 @@ const EditPage = () => {
                     </div>
                   </div>
                   <button
-                    type="button"
+                    type="submit"
                     className="w-[50%] md:w-[15%] mx-auto mt-8 mb-2 bg-green-700 text-[#fff] py-3 rounded-md shadow-sm text-[.95rem] font-semibold"
                   >
                     Save Changes
                   </button>
-                </div>
+                </form>
               )}
               {activeId === "5" && (
-                <div className="flex flex-col gap-2.5">
+                <form className="flex flex-col gap-2.5" onSubmit={handleSubmit}>
                   <h1 className="text-[1.4rem] md:text-[1.8rem] text-red-600 font-bold ">
                     Danger Zone
                   </h1>
@@ -598,7 +682,7 @@ const EditPage = () => {
                     Allow your username to become available to anyone
                   </p>
                   <button
-                    type="button"
+                    type="submit"
                     className="w-[50%] md:w-[15%] bg-red-600 text-[#fff] py-3 my-4 rounded-xl shadow-sm text-[.95rem] font-semibold"
                   >
                     Delete Account
@@ -608,7 +692,7 @@ const EditPage = () => {
                     <span className="text-[#7EB693]"> {user?.email} </span>
                     with any questions.
                   </p>
-                </div>
+                </form>
               )}
             </div>
           )}

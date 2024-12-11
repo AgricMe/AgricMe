@@ -3,14 +3,13 @@ import Nav from "@/components/dashboard/Nav";
 import SelectField from "@/components/forms/selectField";
 import TextField from "@/components/forms/textField";
 import avatar2 from "@/public/dashboard/avatar2.jpg";
-import { useEditCompanyProfile } from "@/services/user.service";
+import { useEditCompanyProfile } from "@/services/company.service";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 import toast from "react-hot-toast";
 
 const EditPage = () => {
-  const { id: companyId } = useParams<{ id: string }>();
   const [companyName, setCompanyName] = useState<string>();
   const [fullName, setFullName] = useState<string>();
   const [area, setArea] = useState<string>();
@@ -19,7 +18,7 @@ const EditPage = () => {
   const [countryCode, setCountryCode] = useState<string>();
   const [phoneNumber, setPhoneNumber] = useState<string>();
   const [address, setAddress] = useState<string>();
-  const mutation = useEditCompanyProfile(companyId!);
+  const mutation = useEditCompanyProfile();
   const { push } = useRouter();
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -69,7 +68,6 @@ const EditPage = () => {
                 InputProps={{
                   placeholder: "Enter your Company's Name",
                   type: "text",
-                  required: true,
                   value: companyName,
                   onChange(e) {
                     setCompanyName(e.target.value);
@@ -83,7 +81,6 @@ const EditPage = () => {
                 InputProps={{
                   placeholder: "Enter your Full Name",
                   type: "text",
-                  required: true,
                   value: fullName,
                   onChange(e) {
                     setFullName(e.target.value);
@@ -129,7 +126,6 @@ const EditPage = () => {
               InputProps={{
                 placeholder: "Enter your Email address",
                 type: "email",
-                required: true,
                 value: email,
                 onChange(e) {
                   setEmail(e.target.value);
@@ -161,7 +157,6 @@ const EditPage = () => {
                 InputProps={{
                   placeholder: "Enter your Phone Number",
                   type: "tel",
-                  required: true,
                   value: phoneNumber,
                   onChange(e) {
                     setPhoneNumber(e.target.value);
@@ -174,7 +169,6 @@ const EditPage = () => {
               InputProps={{
                 placeholder: "Enter your Address",
                 type: "text",
-                required: true,
                 value: address,
                 onChange(e) {
                   setAddress(e.target.value);

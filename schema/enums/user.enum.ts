@@ -11,3 +11,9 @@ export enum Interests {
   FARMING = "farming",
   SERVICE_PROVIDER = "service_provider",
 }
+
+export enum VerificationStatus {
+  PENDING = 'pending',
+  APPROVED = 'approved',
+  REJECTED = 'rejected',
+}
