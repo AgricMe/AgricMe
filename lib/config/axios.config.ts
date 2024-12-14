@@ -15,7 +15,7 @@ https.interceptors.request.use((request) => {
   const accessToken = TokenStorage.get();
 
   if (accessToken) {
-    request.headers["x-auth-token"] = `${accessToken}`;
+    request.headers["authorization"] = `${accessToken}`;
   }
 
   return request;
