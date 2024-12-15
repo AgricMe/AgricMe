@@ -9,14 +9,14 @@ export const useEditProfile = (userId: string) => {
   const mutation = useMutation<User, Error, EditProfileDTO>({
     mutationKey: ["useEditProfile"],
     mutationFn: async (data: EditProfileDTO) => {
-      const response = await https.put<{ updatedUser: User }>(
+      const response = await https.put(
         `/user/${userId}`,
         data
       );
 
-      await UserStorage.store(response?.data?.updatedUser);
+      await UserStorage.store(response?.data);
 
-      return response?.data?.updatedUser;
+      return response?.data;
     },
 
     onError(error) {

@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils/cn";
 import Link, { LinkProps } from "next/link";
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdClose, MdMenu } from "react-icons/md";
 import { FaBell } from "react-icons/fa";
@@ -116,7 +116,11 @@ export const MobileSidebar = ({
 }: React.ComponentProps<"div">) => {
   const { open, setOpen } = useSidebar();
   const { data } = useGetProfile();
-  const user:User = data;
+  const [user,setUser] = useState<User>(data);
+  
+  useEffect(() => {
+    setUser(data)
+  },[data])
   return (
     <>
       <div
