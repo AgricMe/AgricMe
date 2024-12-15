@@ -6,6 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { MdClose, MdMenu } from "react-icons/md";
 import { FaBell } from "react-icons/fa";
 import Image from "next/image";
+import { useGetProfile } from '@/services/user.service';
+import { User } from '@/schema/interfaces/user.interface';
 
 interface Links {
   label: string;
@@ -113,6 +115,8 @@ export const MobileSidebar = ({
   ...props
 }: React.ComponentProps<"div">) => {
   const { open, setOpen } = useSidebar();
+  const { data } = useGetProfile();
+  const user:User = data;
   return (
     <>
       <div
@@ -125,8 +129,8 @@ export const MobileSidebar = ({
           <div>
             <Link href={"/profile"}>
               <Image
-                src={"/dashboard/dash-profile-img.jpg"}
-                alt="pfp-img"
+                src={user?.profilePicture}
+                alt={user?.userName}
                 width={55}
                 height={55}
                 className="object-cover rounded-full"

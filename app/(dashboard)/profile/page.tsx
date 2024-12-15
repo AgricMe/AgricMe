@@ -16,7 +16,7 @@ const cursive = Courgette({
 });
 
 const Page = () => {
-  const { data, isPending } = useGetProfile();
+  const { data, isLoading } = useGetProfile();
   const user: User = data;
   return (
     <section className="pb-10 px-1">
@@ -24,8 +24,8 @@ const Page = () => {
         <Nav />
       </div>
       <div className="bg-[#eff6f1] min-h-screen py-8 px-4 md:px-8 lg:px-[3.5rem]">
-        {isPending ? (
-          <Loader loading={isPending} loadingText="Fetching User Details..." />
+        {isLoading ? (
+          <Loader loading={isLoading} loadingText="Fetching User Details..." />
         ) : (
           <div
             className={`bg-[#fff] flex flex-col md:flex-row justify-between items-end w-full h-[70vh] px-4 md:px-10 py-8 md:py-6 shadow-md rounded-xl`}

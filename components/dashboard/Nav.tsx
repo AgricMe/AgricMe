@@ -7,9 +7,13 @@ import SelectField from "../forms/selectField";
 import { useState } from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import Link from "next/link";
+import { useGetProfile } from '@/services/user.service';
+import { User } from '@/schema/interfaces/user.interface';
 
 const Nav = () => {
   const [language, setLanguage] = useState<string>();
+  const { data } = useGetProfile();
+  const user:User = data;
   return (
     <div className="w-[100%] relative dash-nav shadow-slate-300 flex flex-col-reverse md:flex-row">
       <div className="inp-btn w-full md:w-auto mt-2">
@@ -75,8 +79,8 @@ const Nav = () => {
         <div>
           <Link href={`/profile`}>
             <Image
-              src={"/dashboard/dash-profile-img.jpg"}
-              alt="pfp-img"
+              src={user?.profilePicture}
+              alt={user?.userName}
               width={35}
               height={35}
               className="object-cover rounded-full"
