@@ -4,7 +4,7 @@ import { FaAngleRight } from "react-icons/fa6";
 import { FaBell } from "react-icons/fa6";
 import Image from "next/image";
 import SelectField from "../forms/selectField";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
 import Link from "next/link";
 import { useGetProfile } from '@/services/user.service';
@@ -13,7 +13,11 @@ import { User } from '@/schema/interfaces/user.interface';
 const Nav = () => {
   const [language, setLanguage] = useState<string>();
   const { data } = useGetProfile();
-  const user:User = data;
+  const [user,setUser] = useState<User>(data);
+
+  useEffect(() => {
+    setUser(data)
+  },[data])
   return (
     <div className="w-[100%] relative dash-nav shadow-slate-300 flex flex-col-reverse md:flex-row">
       <div className="inp-btn w-full md:w-auto mt-2">

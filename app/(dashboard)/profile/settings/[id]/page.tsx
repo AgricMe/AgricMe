@@ -689,7 +689,7 @@ const EditPage = () => {
                   </button>
                   <p className="text-[#555] font-semibold text-[1.1rem]">
                     Feel free to contact
-                    <span className="text-[#7EB693]"> {user?.email} </span>
+                    <span className="text-[#7EB693]"> agricmetech@gmail.com </span>
                     with any questions.
                   </p>
                 </form>
