@@ -17,10 +17,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { isPending } = useGetProfile();
+  const { isLoading } = useGetProfile();
   return (
     <>
-      {isPending ? (
+      {isLoading ? (
         <DotLoader />
       ) : (
         <div
