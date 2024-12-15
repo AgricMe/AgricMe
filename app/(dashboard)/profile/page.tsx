@@ -42,24 +42,24 @@ const Page = () => {
                 <h2
                   className={`${cursive.className} text-[#222] text-[1.35rem] text-center md:text-start`}
                 >
-                  {user?.lastName} {user?.firstName}
+                  {user.lastName} {user.firstName}
                 </h2>
                 <div className="flex items-center gap-2 mt-2">
                   <MdOutlineLocationOn size={18} className="text-gray-400" />
                   <p className="text-[#444] font-semibold text-[.95rem]">
-                    {user?.location}
+                    {user.location}
                   </p>
                 </div>
               </div>
               <div className="flex flex-col gap-4">
                 <p className="text-[#444] font-semibold text-[.95rem]">
-                  {user?.job}
+                  {user.job}
                 </p>
                 <p className="text-[#444] font-semibold text-[.95rem]">
-                  {user?.email}
+                  {user.email}
                 </p>
                 <p className="text-[#444] font-semibold text-[.95rem]">
-                  {user?.phoneNumber}
+                  {user.phoneNumber}
                 </p>
               </div>
             </div>
@@ -71,7 +71,7 @@ const Page = () => {
                 Edit Profile
               </Link>
               <Link
-                href={`/profile/settings/${user?._id}`}
+                href={`/profile/settings/${user._id}`}
                 className="bg-[#fff] text-[#444] border border-gray-400 px-8 py-2.5 rounded-md shadow-sm text-[.85rem] font-medium"
               >
                 Settings
