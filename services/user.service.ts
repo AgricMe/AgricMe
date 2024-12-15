@@ -32,11 +32,11 @@ export const useGetProfile = () => {
     queryKey: ["useGetProfile"],
     queryFn: async () => {
       try {
-        const response = await https.get<{ user: User }>(`/user/profile`);
+        const response = await https.get(`/user/profile`);
 
-        await UserStorage.store(response?.data?.user);
+        await UserStorage.store(response?.data);
 
-        return response?.data.user;
+        return response?.data;
       } catch (error) {
         return errorHandler(error);
       }
