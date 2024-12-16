@@ -41,12 +41,12 @@ export default function TextField({
         {multiline ? (
           <textarea
             {...InputProps}
-            className={`w-full h-[150px] p-2 outline-none text-[#444] text-[.8rem] rounded-md border-[1.5px] resize-none ${InputProps?.className}`}
+            className={`w-full h-[150px] p-2 outline-none text-[#444] text-[.8rem] dark:bg-white rounded-md border-[1.5px] resize-none ${InputProps?.className}`}
           />
         ) : (
           <input
             {...InputProps}
-            className={`w-full p-2 outline-none text-[#444] text-[.8rem] rounded-md border-[1.5px] focus:border-[#7EB693] ${InputProps?.className}`}
+            className={`w-full p-2 outline-none text-[#444] text-[.8rem] dark:bg-white rounded-md border-[1.5px] focus:border-[#7EB693] ${InputProps?.className}`}
           />
         )}
         {inputSuffix}
