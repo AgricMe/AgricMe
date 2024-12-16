@@ -42,7 +42,7 @@ const EditPage = () => {
         <Nav />
       </div>
       <h3 className="text-[1.2rem] md:text-[1.6rem] text-[#222] font-bold my-4 px-4 md:px-6 lg:px-[3.5rem]">
-        Edit Profile
+        Edit Company Profile
       </h3>
       <div className="bg-[#eff6f1] min-h-screen px-4 md:px-6 lg:px-[3.5rem]">
         <form
@@ -52,13 +52,13 @@ const EditPage = () => {
           <div className="w-full lg:w-[40%] flex flex-col justify-center items-center lg:mr-10 mb-6 lg:mb-0">
             <Image
               src={avatar2}
-              alt="profile-img"
+              alt="company-logo"
               width={120}
               height={120}
               className="rounded-full border-4 border-[#7EB693]"
             />
             <p className="text-[#444] font-semibold text-[.95rem] mt-4">
-              Edit Profile Picture
+              Edit Company Logo
             </p>
           </div>
           <div className="w-full flex flex-col items-start lg:mr-10">
