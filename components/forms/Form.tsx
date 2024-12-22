@@ -7,7 +7,7 @@ import Link from "next/link";
 import logo from "@/public/logo/agricme-logo.png";
 import { Interests, RoleNames } from "@/schema/enums/user.enum";
 import TextField from "./textField";
-import { useLogin, useSignUp } from "@/services/auth.service";
+import { useLogin, useSignInWithGoogle, useSignUp } from "@/services/auth.service";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
@@ -29,6 +29,7 @@ export default function Form({ page }: formVariant) {
   const [roles, setRoles] = useState<RoleNames[] | string[]>();
   const signUpMutation = useSignUp();
   const logInMutation = useLogin();
+  const googleAuth = useSignInWithGoogle;
   const { push } = useRouter();
 
   const handleInterestsChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -107,18 +108,20 @@ export default function Form({ page }: formVariant) {
             {page}
           </h3>
           <div className="oauth flex flex-col md:flex-row">
-            <button className="auth text-sm md:text-base">
+            <button className="auth text-sm md:text-base" onClick={() => {
+              googleAuth();
+            }}>
               <span>
                 <FcGoogle />
               </span>{" "}
               Continue with Google
             </button>
-            <button className="auth text-sm md:text-base">
+            {/* <button className="auth text-sm md:text-base">
               <span>
                 <FaFacebook />
               </span>{" "}
               Continue with facebook
-            </button>
+            </button> */}
           </div>
           <form className="form" onSubmit={handleSubmit}>
             {page == "Create Account" && step === 0 ? (
