@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "@/components/css/form.css";
+import { Suspense } from 'react';
+import DotLoader from '@/components/shared/dot-loader';
 
 export const metadata: Metadata = {
   title: "AgricMe",
@@ -13,7 +15,11 @@ export default function SignupLayout({
 }>) {
   return (
     <>
-      <main className={`form-layout`}>{children}</main>
+      <main className={`form-layout`}>
+        <Suspense fallback={<DotLoader />}>
+          {children}
+        </Suspense>
+      </main>
     </>
   );
 }

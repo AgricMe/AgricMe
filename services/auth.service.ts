@@ -1,9 +1,10 @@
 import { http } from "@/lib/config/axios.config";
+import secrets from '@/lib/constants/secrets.const';
 import { errorHandler } from "@/lib/utils/error";
 import { TokenStorage, UserStorage } from "@/lib/utils/localStorage";
 import { LoginDTO, SignUpDTO } from "@/schema/dto/auth.dto";
 import { useMutateResult } from "@/schema/interfaces/query.interface";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
 export const useSignUp = (): useMutateResult<{}> => {
@@ -63,5 +64,17 @@ export const logout = () => {
 
   if (typeof window != "undefined") {
     window.location.href = "/login";
+  }
+};
+
+export const useSignInWithGoogle = () => {
+  if (typeof window != "undefined") {
+    window.location.href = `${secrets.apiUrl}/auth/google`;
+  }
+};
+
+export const useSignInWithFaceBook = () => {
+  if (typeof window != "undefined") {
+    window.location.href = `${secrets.apiUrl}/auth/facebook`;
   }
 };
