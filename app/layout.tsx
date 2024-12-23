@@ -3,6 +3,8 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import RQProvider from "@/providers/reactQuery.provider";
 import { Toaster } from "react-hot-toast";
+import { Suspense } from 'react';
+import DotLoader from '@/components/shared/dot-loader';
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -23,8 +25,10 @@ export default function RootLayout({
     <html lang="en">
       <RQProvider>
         <body className={manrope.className}>
-          <Toaster position="top-right" reverseOrder={false} />
-          {children}
+          <Suspense fallback={<DotLoader />}>
+            <Toaster position="top-right" reverseOrder={false} />
+            {children}
+          </Suspense>
         </body>
       </RQProvider>
     </html>

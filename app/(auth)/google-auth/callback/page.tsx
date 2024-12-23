@@ -2,23 +2,25 @@
 
 import DotLoader from '@/components/shared/dot-loader';
 import { TokenStorage } from '@/lib/utils/localStorage';
-import { useParams, useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect } from "react";
 
-const Page = () => {
+export default function Page() {
   const { push } = useRouter();
-  const access_token = useSearchParams().get('access_token');  
+  const searchParams = useSearchParams();  
+  const access_token = searchParams.get('access_token')
 
   useEffect(() => {
-    if (access_token) {
-      TokenStorage.store(access_token);
-      push("/dashboard"); 
-    }
-  },[]);
+    const storeToken = async () => {
+      if (access_token) {
+        await TokenStorage.store(access_token);
+        push("/dashboard"); 
+      }
+    };
+    storeToken();
+  },[push, access_token]);
 
   return <div className='flex justify-center items-center h-screen'>
-    <DotLoader  />    
+      <DotLoader  />    
   </div>
 };
-
-export default Page;
