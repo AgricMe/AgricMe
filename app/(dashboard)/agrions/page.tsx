@@ -1,6 +1,7 @@
 'use client';
 import Nav from '@/components/dashboard/Nav';
 import PostComponent from '@/components/dashboard/PostComponent';
+import ScrollContainers from '@/components/dashboard/scrollContainers';
 import UploadPost from '@/components/dashboard/UploadPost';
 import { agrionsConnectData, postsData } from '@/lib/data/data';
 import { User } from '@/schema/interfaces/user.interface';
@@ -36,11 +37,39 @@ const Page = () => {
 			<div className="flex flex-col md:flex-row justify-between mt-[40px] w-[100%] h-[200vh] relative px-1.5 md:px-0">
 				<div className="w-full md:w-[72%]">
 					<UploadPost />
+					<div className="w-full flex md:hidden justify-between items-center mt-8">
+						<ScrollContainers width={1300} displayWidgets={true}>
+							{agrionsConnectData.map((connect) => {
+								return (
+									<div
+										key={connect.id}
+										className={`min-w-[150px] h-[150px] flex flex-col justify-between items-center bg-white rounded-lg shadow-md p-2`}>
+										<Image
+											src={connect.img}
+											alt="profile-img"
+											width={40}
+											height={40}
+											className="rounded-full"
+										/>
+										<h2 className="font-medium text-[14px] text-gray-500 text-center">
+											{connect.name}
+										</h2>
+										<div className="flex justify-center items-center">
+											<HiOutlinePlusCircle
+												size={35}
+												className="text-gray-400 cursor-pointer"
+											/>
+										</div>
+									</div>
+								);
+							})}
+						</ScrollContainers>
+					</div>
 					{postsData.map((post) => {
 						return <PostComponent key={post.id} {...post} />;
 					})}
 				</div>
-				<div className="w-full md:w-[23%] my-6 md:my-0">
+				<div className="w-full md:w-[23%] my-6 md:my-0 hidden md:block">
 					<div className="p-3 text-black">
 						<h2 className="text-[14px] font-bold">Connects suggestions</h2>
 					</div>
