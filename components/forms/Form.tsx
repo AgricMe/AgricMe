@@ -2,13 +2,11 @@
 
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
 import Link from "next/link";
-import logo from "@/public/logo/agricme-logo.png";
 import { Interests, RoleNames } from "@/schema/enums/user.enum";
 import TextField from "./textField";
 import { useLogin, useSignInWithGoogle, useSignUp } from "@/services/auth.service";
-import toast from "react-hot-toast";
+import { toast } from 'sonner';
 import { useRouter } from "next/navigation";
 
 type formVariant = {

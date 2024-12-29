@@ -1,5 +1,5 @@
 import axios from "axios";
-import toast from "react-hot-toast";
+import { toast } from 'sonner';
 import { TokenStorage, UserStorage } from "../utils/localStorage";
 import secrets from "../constants/secrets.const";
 

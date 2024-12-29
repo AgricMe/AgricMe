@@ -1,13 +1,13 @@
-import toast from "react-hot-toast";
+import { toast } from 'sonner';
 
 export function errorHandler<T = any>(error: T | any) {
-  error =
-    error?.response?.data?.message ||
-    error?.response?.data?.error ||
-    error?.message ||
-    error;
-  toast.error(error, {
-    duration: 3000,
-  });
-  return error as T;
+	error =
+		error?.response?.data?.message ||
+		error?.response?.data?.error ||
+		error?.message ||
+		error;
+	toast.error(error, {
+		duration: 3000,
+	});
+	return error as T;
 }
