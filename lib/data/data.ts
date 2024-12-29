@@ -710,3 +710,57 @@ export const settingsData = [
     title: "Delete Account",
   },
 ];
+
+
+export const agrionsConnectData = [
+  {
+    id: 1,
+    name: 'Robert Foxx',
+    img: avatar2,
+  },
+  {
+    id: 2,
+    name: 'Brian Griffin',
+    img: avatar3,
+  },
+  {
+    id: 3,
+    name: 'Jace Carson',
+    img: avatar4,
+  },
+  {
+    id: 4,
+    name: 'Grace Spencer',
+    img: avatar5,
+  },
+  {
+    id: 5,
+    name: 'Billy Baker',
+    img: avatar6,
+  },
+  {
+    id: 6,
+    name: 'Favour Keating',
+    img: avatar7,
+  },
+  {
+    id: 7,
+    name: 'Damil Banks',
+    img: avatar8,
+  },
+  {
+    id: 8,
+    name: 'Danny Fox',
+    img: avatar4,
+  },
+  {
+    id: 9,
+    name: 'Ava Bleau',
+    img: avatar2,
+  },
+  {
+    id: 10,
+    name: 'Hannah Richie',
+    img: avatar6,
+  },
+]
