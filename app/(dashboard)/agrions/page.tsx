@@ -8,7 +8,7 @@ import { useGetProfile } from '@/services/user.service';
 import Image from 'next/image';
 import { HiOutlinePlusCircle } from 'react-icons/hi2';
 
-const page = () => {
+const Page = () => {
 	const { data } = useGetProfile();
 	const user: User = data;
 
@@ -76,4 +76,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;
