@@ -557,7 +557,7 @@ export const postsData = [
   },
   {
     id: 3,
-    img: [img31, img32, img33, img34],
+    img: [img31, img32, img33, img34, img1, img2],
     content:
       "Bird rearing is my passion, and i take pride in raising healthy birds with care. Though it may seem tough, i ensure that each bird is ethically raised and prepared for consumption, offering customers the freshest and most responsibly sourced poultry possible.",
     tag: "#Take a look at my workshop",
@@ -715,12 +715,12 @@ export const settingsData = [
 export const agrionsConnectData = [
   {
     id: 1,
-    name: 'Robert Foxx',
+    name: 'Alexander Zichenko',
     img: avatar2,
   },
   {
     id: 2,
-    name: 'Brian Griffin',
+    name: 'Marcus Rashford',
     img: avatar3,
   },
   {
