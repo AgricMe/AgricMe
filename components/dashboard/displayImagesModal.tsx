@@ -17,11 +17,7 @@ const DisplayImagesModal = ({ images, closeModal }: DisplayImagesModalProps) => 
 				<div className="space-y-8">
 					{images?.map((image, index) => (
 						<div key={index} className="relative">
-							<Image
-								src={image}
-								alt={`Image ${index + 1}`}
-								className="w-full object-cover rounded-lg"
-							/>
+							<Image src={image} alt={`Image ${index + 1}`} className="w-full object-cover rounded-lg" />
 						</div>
 					))}
 				</div>

@@ -7,8 +7,6 @@ import UploadPost from '@/components/dashboard/UploadPost';
 import { agrionsConnectData, postsData } from '@/lib/data/data';
 import { User } from '@/schema/interfaces/user.interface';
 import { useGetProfile } from '@/services/user.service';
-import Image from 'next/image';
-import { HiOutlinePlusCircle } from 'react-icons/hi2';
 
 const Page = () => {
 	const { data } = useGetProfile();
@@ -27,9 +25,7 @@ const Page = () => {
 						<p className="font-bold text-[15px]">
 							Get <span className="text-[#7EB693]">FREE DELIVERY</span> on every weekend
 						</p>
-						<button className="bg-[#7EB693] p-2 rounded-md text-white text-[12px] mt-4">
-							Post an Advert
-						</button>
+						<button className="bg-[#7EB693] p-2 rounded-md text-white text-[12px] mt-4">Post an Advert</button>
 					</div>
 				</div>
 				<div
