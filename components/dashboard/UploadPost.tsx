@@ -4,6 +4,7 @@ import { GoVideo } from 'react-icons/go';
 import { MdOutlineEdit } from 'react-icons/md';
 import TextField from '../forms/textField';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const UploadPost = () => {
 	const [post, setPost] = useState<string>('');
@@ -19,6 +20,13 @@ const UploadPost = () => {
 						<p className="text-[14px] text-gray-400 my-auto">Create post</p>
 					</div>
 					<div className="w-full flex justify-center items-center">
+						<Image
+							src="/dashboard/dash-profile-img.jpg"
+							alt="User Avatar"
+							width={8}
+							height={8}
+							className="w-8 h-8 rounded-full self-start mt-6 mr-2"
+						/>
 						<TextField
 							InputProps={{
 								placeholder: "What's on your mind?",
