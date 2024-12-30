@@ -1,4 +1,5 @@
 'use client';
+import ConnectSuggestions from '@/components/dashboard/connectSuggestions';
 import Nav from '@/components/dashboard/Nav';
 import PostComponent from '@/components/dashboard/PostComponent';
 import ScrollContainers from '@/components/dashboard/scrollContainers';
@@ -31,38 +32,21 @@ const Page = () => {
 						</button>
 					</div>
 				</div>
-				<div className="w-full md:w-[31%] h-[300px] rounded-xl hamburger-img"></div>
+				<div
+					className="w-full md:w-[31%] h-[300px] rounded-xl hidden md:block"
+					style={{
+						backgroundImage: `url('/dashboard/hamburger-img.png')`,
+						backgroundSize: 'cover',
+					}}></div>
 			</div>
 			{/* Posts Section */}
-			<div className="flex flex-col md:flex-row justify-between md:mt-[40px] w-[100%] h-[200vh] relative px-1.5 md:px-0">
+			<div className="flex flex-col md:flex-row justify-between md:mt-[0px] w-[100%] h-[200vh] relative px-1.5 md:px-0 mt-4">
 				<div className="w-full md:w-[72%]">
 					<UploadPost />
 					<div className="w-full flex md:hidden justify-between items-center mt-4 md:mt-8">
 						<ScrollContainers width={1300} displayWidgets={true}>
-							{agrionsConnectData.map((connect) => {
-								return (
-									<div
-										key={connect.id}
-										className={`min-w-[156px] h-[150px] flex flex-col justify-between items-center bg-white rounded-lg shadow-md p-2`}>
-										<Image
-											src={connect.img}
-											alt="profile-img"
-											width={40}
-											height={40}
-											className="rounded-full"
-										/>
-										<h2 className="font-medium text-[14px] text-gray-500 text-center">
-											{connect.name}
-										</h2>
-										<div className="flex justify-center items-center">
-											<HiOutlinePlusCircle
-												size={35}
-												className="text-gray-400 cursor-pointer"
-											/>
-										</div>
-									</div>
-								);
-							})}
+							<></>
+							<ConnectSuggestions data={agrionsConnectData} mobile />
 						</ScrollContainers>
 					</div>
 					{postsData.map((post) => {
@@ -74,30 +58,7 @@ const Page = () => {
 						<h2 className="text-[14px] font-bold">Connects suggestions</h2>
 					</div>
 					<div className="bg-white rounded-lg shadow-md w-full sticky top-[20px] p-4">
-						{agrionsConnectData.map((connect) => {
-							return (
-								<div
-									key={connect.id}
-									className={`w-full flex justify-between items-center ${
-										connect.id === agrionsConnectData.length ? 'mb-0' : 'mb-8'
-									}`}>
-									<Image
-										src={connect.img}
-										alt="profile-img"
-										width={40}
-										height={40}
-										className="rounded-full"
-									/>
-									<h2 className="font-medium text-[14px] text-gray-500">{connect.name}</h2>
-									<div className="flex justify-center items-center">
-										<HiOutlinePlusCircle
-											size={22}
-											className="text-gray-400 cursor-pointer"
-										/>
-									</div>
-								</div>
-							);
-						})}
+						<ConnectSuggestions data={agrionsConnectData} />
 					</div>
 				</div>
 			</div>

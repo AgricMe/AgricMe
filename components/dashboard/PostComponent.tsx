@@ -9,6 +9,7 @@ import TextField from '../forms/textField';
 import { LuSend } from 'react-icons/lu';
 import ModalOverlay from '../shared/modalOverlay';
 import { MdClose } from 'react-icons/md';
+import DisplayImagesModal from './displayImagesModal';
 
 const PostComponent = ({ img, content, tag }: Post) => {
 	const [comment, setComment] = useState<string>('');
@@ -22,26 +23,7 @@ const PostComponent = ({ img, content, tag }: Post) => {
 	return (
 		<>
 			{isModalOpen && (
-				<ModalOverlay width={900}>
-					<div className="flex flex-col overflow-y-scroll max-h-[85vh]">
-						<button
-							className="text-red-500 font-bold mb-4 self-end"
-							onClick={() => setIsModalOpen(false)}>
-							<MdClose size={28} />
-						</button>
-						<div className="space-y-8">
-							{img?.map((image, index) => (
-								<div key={index} className="relative">
-									<Image
-										src={image}
-										alt={`Image ${index + 1}`}
-										className="w-full object-cover rounded-lg"
-									/>
-								</div>
-							))}
-						</div>
-					</div>
-				</ModalOverlay>
+				<DisplayImagesModal images={img} closeModal={() => setIsModalOpen(false)} />
 			)}
 			<div className="bg-gray-100 flex items-center justify-center mt-1">
 				<div className="bg-white p-4 md:p-8 rounded-lg shadow-md w-full">
