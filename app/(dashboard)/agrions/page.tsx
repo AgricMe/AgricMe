@@ -34,16 +34,16 @@ const Page = () => {
 				<div className="w-full md:w-[31%] h-[300px] rounded-xl hamburger-img"></div>
 			</div>
 			{/* Posts Section */}
-			<div className="flex flex-col md:flex-row justify-between mt-[40px] w-[100%] h-[200vh] relative px-1.5 md:px-0">
+			<div className="flex flex-col md:flex-row justify-between md:mt-[40px] w-[100%] h-[200vh] relative px-1.5 md:px-0">
 				<div className="w-full md:w-[72%]">
 					<UploadPost />
-					<div className="w-full flex md:hidden justify-between items-center mt-8">
+					<div className="w-full flex md:hidden justify-between items-center mt-4 md:mt-8">
 						<ScrollContainers width={1300} displayWidgets={true}>
 							{agrionsConnectData.map((connect) => {
 								return (
 									<div
 										key={connect.id}
-										className={`min-w-[150px] h-[150px] flex flex-col justify-between items-center bg-white rounded-lg shadow-md p-2`}>
+										className={`min-w-[156px] h-[150px] flex flex-col justify-between items-center bg-white rounded-lg shadow-md p-2`}>
 										<Image
 											src={connect.img}
 											alt="profile-img"

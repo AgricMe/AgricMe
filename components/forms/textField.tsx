@@ -41,7 +41,7 @@ export default function TextField({
         {multiline ? (
           <textarea
             {...InputProps}
-            className={`w-full h-[150px] p-2 outline-none text-[#444] text-[.8rem] dark:bg-white rounded-md border-[1.5px] resize-none ${InputProps?.className}`}
+            className={`w-full h-[80px] md:h-[150px] p-2 outline-none text-[#444] text-[.8rem] dark:bg-white rounded-md border-[1.5px] resize-none ${InputProps?.className}`}
           />
         ) : (
           <input

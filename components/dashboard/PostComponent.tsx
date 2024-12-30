@@ -43,7 +43,7 @@ const PostComponent = ({ img, content, tag }: Post) => {
 					</div>
 				</ModalOverlay>
 			)}
-			<div className="bg-gray-100 flex items-center justify-center mt-5">
+			<div className="bg-gray-100 flex items-center justify-center mt-1">
 				<div className="bg-white p-4 md:p-8 rounded-lg shadow-md w-full">
 					{/* User Info with Three-Dot Menu */}
 					<div className="flex items-center justify-between mb-4">
