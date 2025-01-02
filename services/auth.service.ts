@@ -36,11 +36,11 @@ export const useSignUp = (): useMutateResult<{}> => {
 	return payload;
 };
 
-export const useLogin = (): useMutateResult<{ accessToken: string }> => {
+export const useLogin = () => {
 	const payload = useMutation({
 		mutationKey: ['useLogin'],
 		mutationFn: async (data: LoginDTO) => {
-			const response = await http.post<{ accessToken: string }>(
+			const response = await http.post<{ message: string }>(
 				'/auth/login',
 				{
 					email: data.email,
@@ -48,15 +48,14 @@ export const useLogin = (): useMutateResult<{ accessToken: string }> => {
 				}
 			);
 
-			await TokenStorage.store(response?.data?.accessToken);
+			// await TokenStorage.store(response?.data?.accessToken);
 
-			return response?.data;
+			return response?.data?.message;
 		},
 		onError(error) {
 			return errorHandler(error);
 		},
 	});
-
 	return payload;
 };
 
