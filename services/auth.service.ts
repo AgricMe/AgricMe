@@ -5,6 +5,7 @@ import { TokenStorage, UserStorage } from '@/lib/utils/localStorage';
 import { LoginDTO, SignUpDTO } from '@/schema/dto/auth.dto';
 import { useMutateResult } from '@/schema/interfaces/query.interface';
 import { useMutation } from '@tanstack/react-query';
+import { access } from 'fs';
 import { toast } from 'sonner';
 
 export const useSignUp = (): useMutateResult<{}> => {
@@ -40,15 +41,27 @@ export const useLogin = () => {
 	const payload = useMutation({
 		mutationKey: ['useLogin'],
 		mutationFn: async (data: LoginDTO) => {
-			const response = await http.post<{ message: string }>(
-				'/auth/login',
-				{
-					email: data.email,
-					password: data.password,
-				}
-			);
+			const response = await http.post<{ message: string }>('/auth/login', {
+				email: data.email,
+				password: data.password,
+			});
 
-			// await TokenStorage.store(response?.data?.accessToken);
+			return response?.data?.message;
+		},
+		onError(error) {
+			return errorHandler(error);
+		},
+	});
+	return payload;
+};
+
+export const useSignInWithAccessToken = () => {
+	const payload = useMutation({
+		mutationKey: ['useSignInWithAccessToken'],
+		mutationFn: async (data: { access_token: string }) => {
+			const response = await http.post<{ message: string }>('/auth/access_token-signIn', {
+				access_token: data.access_token,
+			});
 
 			return response?.data?.message;
 		},
