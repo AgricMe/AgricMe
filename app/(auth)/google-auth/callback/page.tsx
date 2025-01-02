@@ -6,7 +6,8 @@ import { useEffect } from 'react';
 
 export default function Page() {
 	const { push } = useRouter();
-	const isAuthenticated = useSearchParams().get('isAuthenticated');
+  const isAuthenticated = useSearchParams().get('isAuthenticated');
+  console.log(isAuthenticated);
 
 	useEffect(() => {
 		const storeToken = async () => {
