@@ -211,7 +211,7 @@ const PostComponent = ({ img, content, tag }: Post) => {
 													/>
 													<TextField
 														InputProps={{
-															placeholder: 'Add a comment...',
+															placeholder: 'Reply a comment...',
 															type: 'text',
 															required: true,
 															value: comment,

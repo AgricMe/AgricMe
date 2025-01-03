@@ -1,6 +1,5 @@
 import { https } from "@/lib/config/axios.config";
 import { errorHandler } from "@/lib/utils/error";
-import { UserStorage } from "@/lib/utils/localStorage";
 import { EditProfileDTO } from "@/schema/dto/user.dto";
 import { User } from "@/schema/interfaces/user.interface";
 import { useMutation, useQuery } from "@tanstack/react-query";
@@ -13,9 +12,6 @@ export const useEditProfile = (userId: string) => {
         `/user/${userId}`,
         data
       );
-
-      await UserStorage.store(response?.data);
-
       return response?.data;
     },
 
@@ -33,9 +29,6 @@ export const useGetProfile = () => {
     queryFn: async () => {
       try {
         const response = await https.get(`/user/profile`);
-
-        await UserStorage.store(response?.data);
-
         return response?.data;
       } catch (error) {
         return errorHandler(error);
@@ -51,7 +44,6 @@ export const useChangeEmail = () => {
     mutationKey: ["useChangeEmail"],
     mutationFn: async (data: {email: string}) => {
       const response = await https.post(`user/change-email`, data);
-
       return response?.data;
     },
 
@@ -68,7 +60,6 @@ export const useChangePassword = () => {
     mutationKey: ["useChangePassword"],
     mutationFn: async (data: {currentPassword: string, newPassword: string}) => {
       const response = await https.post(`user/change-password`, data);
-
       return response?.data;
     },
 
@@ -85,7 +76,6 @@ export const useDeleteAccount = () => {
     mutationKey: ["useDeleteAccount"],
     mutationFn: async (data: {email: string}) => {
       const response = await https.delete(`user/${data.email}`);
-
       return response?.data;
     },
 
