@@ -25,6 +25,7 @@ export default function Form({ page }: formVariant) {
 	const [job, setJob] = useState<string>('');
 	const [interests, setInterests] = useState<Interests[] | string[]>();
 	const [roles, setRoles] = useState<RoleNames[] | string[]>();
+	const [rememberMe, setRememberMe] = useState<boolean>(false);
 	const signUpMutation = useSignUp();
 	const logInMutation = useLogin();
 	const googleAuth = useSignInWithGoogle;
@@ -85,6 +86,7 @@ export default function Form({ page }: formVariant) {
 			await logInMutation.mutateAsync({
 				email,
 				password,
+				rememberMe,
 			});
 			// navigate to dashboard page;
 			toast.success('Login Successful', {
@@ -417,14 +419,20 @@ export default function Form({ page }: formVariant) {
 								/>
 							</>
 						)}
-						{/* <label className='label grid' htmlFor="password">Password
-                        <input className='w-full bg-white' type="password" name="password" id="password" />
-                    </label> */}
-						<label className="remember" htmlFor="remember">
-							<input className="text-white bg-white" type="checkbox" name="remember" id="remember" />
-							<span className="checkmark"></span>
-							Remember me
-						</label>
+						{page === 'Log In' && (
+							<label className="remember" htmlFor="remember">
+								<input
+									className="text-white bg-white cursor-pointer"
+									type="checkbox"
+									name="remember"
+									id="remember"
+									checked={rememberMe}
+									onClick={() => setRememberMe(!rememberMe)}
+								/>
+								<span className="checkmark"></span>
+								Remember me
+							</label>
+						)}
 						<button
 							className="submit text-[.95rem]"
 							onClick={() => {

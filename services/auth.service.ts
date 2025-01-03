@@ -1,12 +1,11 @@
 import { http } from '@/lib/config/axios.config';
 import secrets from '@/lib/constants/secrets.const';
 import { errorHandler } from '@/lib/utils/error';
-import { TokenStorage, UserStorage } from '@/lib/utils/localStorage';
 import { LoginDTO, SignUpDTO } from '@/schema/dto/auth.dto';
 import { useMutateResult } from '@/schema/interfaces/query.interface';
 import { useMutation } from '@tanstack/react-query';
-import { access } from 'fs';
 import { toast } from 'sonner';
+import Cookies from 'js-cookie';
 
 export const useSignUp = (): useMutateResult<{}> => {
 	const payload = useMutation({
@@ -41,7 +40,7 @@ export const useLogin = () => {
 	const payload = useMutation({
 		mutationKey: ['useLogin'],
 		mutationFn: async (data: LoginDTO) => {
-			const response = await http.post<{ message: string }>('/auth/login', {
+			const response = await http.post<{ message: string }>(`/auth/login?rememberMe=${data.rememberMe}`, {
 				email: data.email,
 				password: data.password,
 			});
@@ -73,8 +72,7 @@ export const useSignInWithAccessToken = () => {
 };
 
 export const logout = () => {
-	TokenStorage.remove();
-	UserStorage.remove();
+	Cookies.remove('access_token');
 	toast.success('Logged Out Successfully');
 
 	if (typeof window != 'undefined') {
