@@ -19,7 +19,7 @@ const NotFoundPage = () => {
 					<h1 className="text-[12rem] text-[#8FA8A8] font-extrabold">404</h1>
 					<h2 className="text-[#274C5B] text-[2.8rem] font-semibold mt-[-2rem]">Page Not Found</h2>
 					<p className="text-[#525C60] text-[14px] mb-4">
-						The page you are looking for doesn't exist or has been moved
+						The page you are looking for doesn&#39;t exist or has been moved
 					</p>
 					<Link href={'/'} className="w-[40%]">
 						<ButtonContained>
